@@ -1,0 +1,37 @@
+{#
+/**
+ * Componente SDC: tarjeta de programa.
+ * Uso en una vista o template:
+ *   {% include 'educon_advance:card-programa' with {
+ *     titulo: node.label, url: path('entity.node.canonical', {node: node.id}),
+ *     tipo: 'Curso', area: 'Derecho y Gestión Pública', ...
+ *   } %}
+ */
+#}
+<article class="card" data-animate>
+  <div class="card__media">
+    {% if premium %}<span class="card__badge">Premium</span>{% endif %}
+    {% if inscripciones_abiertas %}<span class="card__estado">{{ 'Inscripciones abiertas'|t }}</span>{% endif %}
+  </div>
+  <div class="card__body">
+    {% if tipo or area %}
+      <span class="card__meta">{{ tipo }}{% if tipo and area %} · {% endif %}{{ area }}</span>
+    {% endif %}
+    {% if aval %}
+      <span class="card__aval">{{ 'Avalado por'|t }} {{ aval }}</span>
+    {% endif %}
+    <h3><a href="{{ url }}">{{ titulo }}</a></h3>
+    {% if beneficio %}<p class="card__desc">{{ beneficio }}</p>{% endif %}
+    <ul class="card__datos">
+      {% if modalidad %}<li>{{ modalidad }}</li>{% endif %}
+      {% if fecha_inicio %}<li>{{ 'Inicia'|t }} {{ fecha_inicio }}</li>{% endif %}
+      {% if duracion %}<li>{{ duracion }}</li>{% endif %}
+    </ul>
+    {% if precio or nivel %}
+      <div class="card__footer">
+        {% if precio %}<span class="card__precio tabular">{{ precio }}</span>{% endif %}
+        {% if nivel %}<span class="card__nivel">{{ nivel }}</span>{% endif %}
+      </div>
+    {% endif %}
+  </div>
+</article>

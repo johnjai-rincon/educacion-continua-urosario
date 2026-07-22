@@ -1,0 +1,15 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Testimonio
+status: stable
+description: >
+  Quote con nombre, cargo y empresa (nueva sección "Historias rosaristas" del plan).
+  Se alimenta del content type Testimonio (requiere consentimiento registrado).
+props:
+  type: object
+  required: [quote, nombre]
+  properties:
+    quote: { type: string }
+    nombre: { type: string }
+    cargo: { type: string }
+    empresa: { type: string }
+    iniciales: { type: string, title: 'Iniciales para el avatar si no hay foto' }

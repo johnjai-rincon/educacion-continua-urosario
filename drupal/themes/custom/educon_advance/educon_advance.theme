@@ -1,0 +1,70 @@
+<?php
+
+/**
+ * @file
+ * Preprocess del tema EDUCON Advance (Drupal 10).
+ *
+ * Estrategia de temas del plan de rediseño (doc 03 §1.1):
+ *  - dark institucional (por defecto): home, catálogo, landings comerciales
+ *  - light editorial: detalle de programa y páginas de lectura larga
+ */
+
+declare(strict_types=1);
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function educon_advance_preprocess_html(array &$variables): void {
+  // Tema claro para el detalle de programa y páginas informativas.
+  $light_types = ['programa', 'page', 'faq'];
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof \Drupal\node\NodeInterface && in_array($node->bundle(), $light_types, TRUE)) {
+    $variables['html_attributes']->setAttribute('data-theme', 'light');
+  }
+
+  // theme-color coherente con el tema activo (guideline: meta theme-color).
+  $is_light = isset($variables['html_attributes']) &&
+    $variables['html_attributes']->offsetGet('data-theme') == 'light';
+  $variables['page']['#attached']['html_head'][] = [
+    [
+      '#tag' => 'meta',
+      '#attributes' => [
+        'name' => 'theme-color',
+        'content' => $is_light ? '#f4f6f8' : '#001d33',
+      ],
+    ],
+    'educon_theme_color',
+  ];
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function educon_advance_preprocess_node(array &$variables): void {
+  /** @var \Drupal\node\NodeInterface $node */
+  $node = $variables['node'];
+
+  if ($node->bundle() === 'programa') {
+    // Precio formateado con separador de miles es-CO (tabular-nums en CSS).
+    if ($node->hasField('field_precio') && !$node->get('field_precio')->isEmpty()) {
+      $variables['precio_formateado'] = '$ ' . number_format(
+        (float) $node->get('field_precio')->value, 0, ',', '.'
+      ) . ' COP';
+    }
+    // Estado de inscripción para el badge de la tarjeta.
+    if ($node->hasField('field_fecha_inicio') && !$node->get('field_fecha_inicio')->isEmpty()) {
+      $inicio = strtotime((string) $node->get('field_fecha_inicio')->value);
+      $variables['inscripciones_abiertas'] = $inicio !== FALSE && $inicio >= time();
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function educon_advance_theme_suggestions_page_alter(array &$suggestions, array $variables): void {
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof \Drupal\node\NodeInterface) {
+    $suggestions[] = 'page__' . $node->bundle();
+  }
+}

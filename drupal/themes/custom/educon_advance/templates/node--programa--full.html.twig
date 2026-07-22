@@ -1,0 +1,74 @@
+{#
+/**
+ * Detalle de programa — anatomía del plan (doc 04 §2.3):
+ * hero claro + ficha 6 datos + nav sticky + prosa + acordeón + docentes +
+ * formulario HubSpot + relacionados. El data-theme=light lo aplica
+ * educon_advance_preprocess_html().
+ *
+ * Campos esperados en el content type "programa" (doc 03 §3.1):
+ * field_tipo, field_area_macro, field_facultad, field_precio,
+ * field_fecha_inicio, field_horario, field_duracion, field_intensidad,
+ * field_modalidad, field_objetivos, field_dirigido_a, field_modulos
+ * (paragraphs), field_docentes (ref), field_codigo_hubspot, field_brochure.
+ */
+#}
+<article{{ attributes }}>
+
+  <section class="section" style="padding-block:2.2rem 2.6rem;">
+    <div class="container">
+      <p class="kicker">
+        {{ node.field_tipo.entity.label }} · {{ node.field_modalidad.entity.label }}
+        {% if node.field_facultad.entity %} · {{ 'Avalado por'|t }} {{ node.field_facultad.entity.label }}{% endif %}
+      </p>
+      <h1 class="display display--lg">{{ label }}</h1>
+      {% if content.body %}<div class="lead">{{ content.field_resumen }}</div>{% endif %}
+
+      <p style="display:flex; flex-wrap:wrap; gap:0.6rem; margin-top:1.6rem;">
+        <a class="btn btn--primary" href="#inscripcion">{{ 'Inscríbete / Pago en línea'|t }}</a>
+        {% if node.field_brochure.entity %}
+          <a class="btn btn--ghost" href="{{ file_url(node.field_brochure.entity.uri.value) }}" download>{{ 'Descargar brochure (PDF)'|t }}</a>
+        {% endif %}
+        <a class="btn btn--ghost" href="https://wa.me/573118385505" rel="noopener">{{ 'WhatsApp con un asesor'|t }}</a>
+      </p>
+
+      {% include 'educon_advance:ficha-programa' with {
+        datos: [
+          { etiqueta: 'Inversión'|t,  valor: precio_formateado|default('Consultar'|t) },
+          { etiqueta: 'Inicio'|t,     valor: node.field_fecha_inicio.value|date('d M Y') },
+          { etiqueta: 'Horario'|t,    valor: node.field_horario.value },
+          { etiqueta: 'Duración'|t,   valor: node.field_duracion.value },
+          { etiqueta: 'Intensidad'|t, valor: node.field_intensidad.value },
+          { etiqueta: 'Modalidad'|t,  valor: node.field_modalidad.entity.label },
+        ]
+      } only %}
+    </div>
+  </section>
+
+  <nav class="subnav" aria-label="{{ 'Secciones del programa'|t }}">
+    <div class="container">
+      <ul>
+        <li><a href="#descripcion">{{ 'Descripción'|t }}</a></li>
+        <li><a href="#objetivos">{{ 'Objetivos'|t }}</a></li>
+        <li><a href="#dirigido">{{ 'Dirigido a'|t }}</a></li>
+        <li><a href="#plan">{{ 'Plan de estudios'|t }}</a></li>
+        <li><a href="#profesores">{{ 'Profesores'|t }}</a></li>
+        <li><a href="#inscripcion">{{ 'Inscripción'|t }}</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container section prosa">
+    <section id="descripcion"><h2>{{ 'Descripción del programa'|t }}</h2>{{ content.body }}</section>
+    <section id="objetivos"><h2>{{ 'Objetivos de aprendizaje'|t }}</h2>{{ content.field_objetivos }}</section>
+    <section id="dirigido"><h2>{{ 'Dirigido a'|t }}</h2>{{ content.field_dirigido_a }}</section>
+    <section id="plan"><h2>{{ 'Plan de estudios'|t }}</h2>{{ content.field_modulos }}</section>
+    <section id="profesores"><h2>{{ 'Conoce a tus profesores'|t }}</h2>{{ content.field_docentes }}</section>
+    <section id="inscripcion" aria-label="{{ 'Inscripción'|t }}">
+      <div class="form-panel">
+        <p class="kicker">{{ 'Quiero más información'|t }}</p>
+        {# Formulario HubSpot existente: el bloque embebe el hsForm con field_codigo_hubspot #}
+        {{ content.field_codigo_hubspot }}
+      </div>
+    </section>
+  </div>
+</article>

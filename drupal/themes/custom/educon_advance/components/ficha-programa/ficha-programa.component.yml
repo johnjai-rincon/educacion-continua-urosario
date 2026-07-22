@@ -1,0 +1,15 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Ficha de programa
+status: stable
+description: Panel de 6 datos clave en el hero del detalle de programa (anatomía Harvard PDP).
+props:
+  type: object
+  properties:
+    datos:
+      type: array
+      title: 'Lista de pares etiqueta/valor (máx. 6)'
+      items:
+        type: object
+        properties:
+          etiqueta: { type: string }
+          valor: { type: string }

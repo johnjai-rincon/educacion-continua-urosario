@@ -1,0 +1,8 @@
+<dl class="ficha">
+  {% for dato in datos|slice(0, 6) %}
+    <div>
+      <dt>{{ dato.etiqueta }}</dt>
+      <dd class="tabular">{{ dato.valor }}</dd>
+    </div>
+  {% endfor %}
+</dl>

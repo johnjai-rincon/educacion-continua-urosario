@@ -1,0 +1,20 @@
+name: EDUCON Advance
+type: theme
+description: 'Nueva interfaz de Educación Continua UR — Kit de Marca oficial + estructura Rosario Advance. Componentes SDC.'
+package: EDUCON
+core_version_requirement: ^10.1 || ^11
+base theme: stable9
+
+libraries:
+  - educon_advance/global
+
+regions:
+  header: 'Header'
+  primary_menu: 'Menú principal'
+  hero: 'Hero'
+  content: 'Contenido'
+  sidebar: 'Barra lateral (filtros)'
+  footer_brand: 'Footer — Marca'
+  footer_first: 'Footer — Aprender'
+  footer_second: 'Footer — Audiencias'
+  footer_third: 'Footer — Universidad'

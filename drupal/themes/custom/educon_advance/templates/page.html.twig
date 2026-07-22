@@ -1,0 +1,56 @@
+{#
+/**
+ * Template base de página — EDUCON Advance.
+ * Estructura idéntica al prototipo (prototipo/*.html): header sticky,
+ * regiones de contenido y footer por audiencias.
+ */
+#}
+<a class="skip-link" href="#contenido">{{ 'Saltar al contenido principal'|t }}</a>
+
+<header class="header">
+  <div class="container header__inner">
+    {{ page.header }}
+    {{ page.primary_menu }}
+    <a class="btn btn--ghost header__cta" href="https://campus.urosario.edu.co">{{ 'Ingresar al campus'|t }}</a>
+    <a class="btn btn--primary header__cta" href="/buscar">{{ 'Inscríbete'|t }}</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="menu-movil" aria-label="{{ 'Abrir menú'|t }}">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <nav id="menu-movil" class="mobile-nav" hidden aria-label="{{ 'Menú móvil'|t }}">
+    {{ page.primary_menu }}
+  </nav>
+</header>
+
+<main id="contenido">
+  {{ page.hero }}
+  <div class="container">
+    {% if page.sidebar %}
+      <div class="catalogo">
+        <aside class="filtros" aria-label="{{ 'Filtros'|t }}">{{ page.sidebar }}</aside>
+        <div>{{ page.content }}</div>
+      </div>
+    {% else %}
+      {{ page.content }}
+    {% endif %}
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>{{ page.footer_brand }}</div>
+      <nav aria-label="{{ 'Aprender'|t }}">{{ page.footer_first }}</nav>
+      <nav aria-label="{{ 'Audiencias'|t }}">{{ page.footer_second }}</nav>
+      <nav aria-label="{{ 'Universidad'|t }}">{{ page.footer_third }}</nav>
+    </div>
+    <div class="footer__legal">
+      <span>© {{ 'now'|date('Y') }} Universidad del Rosario · Educación Continua y Consultoría</span>
+      <span>{{ 'Línea de atención'|t }}: (+57)&nbsp;601&nbsp;297&nbsp;0200</span>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/573118385505" rel="noopener" aria-label="{{ 'Escríbenos por WhatsApp'|t }}">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.4 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.3 1.3Z"/></svg>
+</a>

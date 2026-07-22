@@ -1,0 +1,49 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Tarjeta de programa
+status: stable
+description: >
+  Tarjeta rica del catálogo (plan de rediseño doc 04 §2.2): tipo, área, facultad
+  avaladora, título, modalidad, fecha, duración, PRECIO, estado y nivel.
+  Toda la superficie es clicable (patrón ::after sobre el enlace del título)
+  — corrige los 1.248 dead clicks/mes detectados en Clarity.
+props:
+  type: object
+  required: [titulo, url]
+  properties:
+    titulo:
+      type: string
+      title: Título del programa
+    url:
+      type: string
+      title: URL del detalle
+    tipo:
+      type: string
+      title: Tipo (Diplomado, Curso, Seminario, Taller)
+    area:
+      type: string
+      title: Área macro
+    aval:
+      type: string
+      title: Facultad avaladora
+    beneficio:
+      type: string
+      title: Beneficio en una línea
+    modalidad:
+      type: string
+    fecha_inicio:
+      type: string
+      title: Fecha de inicio (texto legible)
+    duracion:
+      type: string
+    precio:
+      type: string
+      title: Precio formateado (ej. $ 1.250.000 COP)
+    nivel:
+      type: string
+      title: Introductorio · Intermedio · Avanzado · Ejecutivo
+    premium:
+      type: boolean
+      default: false
+    inscripciones_abiertas:
+      type: boolean
+      default: true

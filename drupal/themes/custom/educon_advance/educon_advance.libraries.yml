@@ -1,0 +1,20 @@
+# Librerías del tema EDUCON Advance
+# educon.css / educon.js son LOS MISMOS archivos del prototipo (prototipo/assets/)
+# — fuente única de verdad del sistema de diseño.
+
+global:
+  version: 1.0.0
+  css:
+    theme:
+      css/educon.css: {}
+  js:
+    js/educon.js: { attributes: { defer: true } }
+  dependencies:
+    - core/drupal
+
+# Fuentes self-hosted (reemplazar los .woff2 al desplegar; ver fonts/README)
+fonts:
+  version: 1.0.0
+  css:
+    theme:
+      css/fonts.css: {}
