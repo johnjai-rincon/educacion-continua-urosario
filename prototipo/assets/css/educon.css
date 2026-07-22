@@ -186,6 +186,10 @@ a, button, [role="button"], input, select { touch-action: manipulation; }
   display: grid; place-items: center;
   font-weight: 900; font-size: 1.05rem;
 }
+.brand__img { height: 40px; width: auto; }
+@media (max-width: 480px) { .brand__img { height: 32px; } }
+/* En header oscuro: versión negativa (blanca) del logo, como define el kit */
+html:not([data-theme="light"]) .header .brand__img { filter: brightness(0) invert(1); }
 .brand__name { display: flex; flex-direction: column; line-height: 1.15; }
 .brand__name strong { font-size: 0.92rem; letter-spacing: 0.02em; }
 .brand__name span { font-size: 0.68rem; color: var(--ink-2); text-transform: uppercase; letter-spacing: 0.1em; }
