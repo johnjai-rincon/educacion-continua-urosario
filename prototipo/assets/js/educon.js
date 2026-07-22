@@ -133,6 +133,27 @@
     aplicar();
   }
 
+  /* ---------- FAQ: buscador client-side (patrón centro de ayuda del campus) ---------- */
+  var faqInput = document.querySelector("[data-faq-buscar]");
+  if (faqInput) {
+    var faqItems = document.querySelectorAll("[data-faq] details");
+    var faqEmpty = document.querySelector("[data-faq-empty]");
+    var faqCount = document.querySelector("[data-faq-count]");
+    faqInput.addEventListener("input", debounce(function () {
+      var q = faqInput.value.toLowerCase().trim();
+      var visibles = 0;
+      faqItems.forEach(function (d) {
+        var ok = !q || (d.textContent || "").toLowerCase().indexOf(q) !== -1;
+        d.hidden = !ok;
+        if (ok) visibles++;
+        if (q && ok) d.open = true;
+        if (!q) d.open = false;
+      });
+      if (faqEmpty) faqEmpty.hidden = visibles !== 0;
+      if (faqCount) faqCount.textContent = String(visibles);
+    }, 150));
+  }
+
   /* ---------- Subnav: resaltar sección activa ---------- */
   var subnavLinks = document.querySelectorAll(".subnav a[href^='#']");
   if (subnavLinks.length && "IntersectionObserver" in window) {

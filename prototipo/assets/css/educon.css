@@ -505,6 +505,51 @@ a, button, [role="button"], input, select { touch-action: manipulation; }
 }
 .proto-ribbon a { color: #fff; }
 
+/* ---------- Sección "¿Por qué estudiar?" (diferenciales numerados) ---------- */
+.porque { counter-reset: razon; }
+.razon { display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.4rem 0; border-top: 1px solid var(--border); }
+.razon:last-child { border-bottom: 1px solid var(--border); }
+.razon__num {
+  flex: none; width: 44px; height: 44px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--ur-rojo); color: #fff; font-weight: 900; font-size: 1.05rem;
+}
+.razon h3 { font-size: 1.05rem; margin: 0.4rem 0 0.35rem; }
+.razon p { font-size: 0.92rem; color: var(--ink-2); margin: 0; max-width: 62ch; }
+
+/* ---------- Tablas (financiación, devoluciones) ---------- */
+.tabla-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: var(--radius-md); }
+.tabla { width: 100%; border-collapse: collapse; font-size: 0.9rem; background: var(--surface); }
+.tabla th { background: var(--ur-azul); color: var(--crema); text-align: left; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.tabla th, .tabla td { padding: 0.85rem 1rem; border-bottom: 1px solid var(--border); }
+.tabla tr:last-child td { border-bottom: 0; }
+.tabla td strong { font-variant-numeric: tabular-nums; }
+
+/* ---------- Pasos numerados (proceso de devoluciones) ---------- */
+.pasos { list-style: none; margin: 0; padding: 0; counter-reset: paso; display: grid; gap: 0.9rem; }
+.pasos li { counter-increment: paso; display: flex; gap: 1rem; align-items: flex-start; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.1rem 1.2rem; }
+.pasos li::before {
+  content: counter(paso);
+  flex: none; width: 34px; height: 34px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--ur-azul); color: #fff; font-weight: 800; font-size: 0.9rem;
+}
+[data-theme="light"] .pasos li::before { background: var(--ur-azul); }
+
+/* ---------- Kit de marca: swatches y muestras ---------- */
+.swatches { display: grid; gap: 0.9rem; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+.swatch { border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; background: var(--surface); }
+.swatch__color { height: 84px; }
+.swatch figcaption { padding: 0.7rem 0.9rem; }
+.swatch strong { display: block; font-size: 0.82rem; }
+.swatch code { font-size: 0.75rem; color: var(--ink-2); }
+.recurso { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.8rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.1rem 1.3rem; }
+.recurso h3 { margin: 0 0 0.15rem; font-size: 1rem; }
+.recurso p { margin: 0; font-size: 0.83rem; color: var(--ink-2); }
+
+/* ---------- Aviso destacado ---------- */
+.aviso { border-left: 4px solid var(--ur-coral); background: var(--surface); border-radius: 0 var(--radius-md) var(--radius-md) 0; padding: 1rem 1.2rem; font-size: 0.9rem; color: var(--ink-2); }
+
 /* ---------- Animaciones de entrada (patrón animate: scroll-trigger + reduced motion) ---------- */
 [data-animate] { opacity: 0; transform: translateY(18px); }
 .is-visible[data-animate], [data-animate].is-visible {
