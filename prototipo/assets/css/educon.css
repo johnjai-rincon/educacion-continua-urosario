@@ -505,6 +505,52 @@ a, button, [role="button"], input, select { touch-action: manipulation; }
 }
 .proto-ribbon a { color: #fff; }
 
+/* ---------- Detalle de programa: estructura plantilla-1-diseño-educon ---------- */
+/* Hero oscuro (banda institucional) dentro de página light */
+.phero {
+  position: relative; isolation: isolate; overflow: hidden;
+  background: var(--grad-hero);
+  color: var(--crema);
+  padding-block: 3.5rem 6.5rem;
+}
+.phero::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; opacity: 0.08;
+  background-image: radial-gradient(circle at 1px 1px, #fff 1px, transparent 0);
+  background-size: 24px 24px;
+}
+.phero .kicker { color: var(--ur-coral); }
+.phero__eyebrow { font-size: 0.82rem; color: rgba(248, 250, 252, 0.75); letter-spacing: 0.06em; }
+.phero h1 { color: var(--crema); font-weight: 400; font-size: clamp(1.7rem, 3.4vw, 2.6rem); text-transform: none; letter-spacing: -0.01em; }
+.phero h1 strong { display: block; font-weight: 900; }
+.phero .lead { color: rgba(248, 250, 252, 0.8); }
+
+/* Banda de ficha (6 datos) que sobresale del hero */
+.ficha--band {
+  background: #fff; color: var(--tinta);
+  border: 0; box-shadow: var(--shadow-md);
+  margin-top: -4.2rem; position: relative; z-index: 2;
+}
+.ficha--band dt { color: var(--gris-04); }
+.ficha--band dd { color: var(--ur-azul); }
+
+/* Nav sticky con CTA (plantilla) */
+.subnav__inner { display: flex; align-items: center; gap: 1rem; }
+.subnav__inner ul { flex: 1; }
+.subnav__cta { flex: none; min-height: 40px; padding-block: 0.4rem; font-size: 0.82rem; }
+
+/* Checklist de objetivos (plantilla: ítems con check) */
+.checklist { list-style: none; margin: 1.2rem 0 0; padding: 0; display: grid; gap: 0.9rem; }
+.checklist li { display: flex; gap: 0.7rem; align-items: flex-start; }
+.checklist svg { flex: none; margin-top: 3px; color: var(--ur-rojo); }
+
+/* Bloque de asesor (contacto de la plantilla) */
+.asesor { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.7rem; }
+.asesor h3 { font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.06em; margin: 1rem 0 0.3rem; }
+.asesor a { color: var(--ur-azul); font-weight: 600; text-decoration: none; }
+.asesor a:hover { color: var(--ur-coral); }
+[data-theme="light"] .btn--dark { background: var(--ur-azul); color: var(--crema); }
+[data-theme="light"] .btn--dark:hover { background: var(--ur-azul-lt); }
+
 /* ---------- Sección "¿Por qué estudiar?" (diferenciales numerados) ---------- */
 .porque { counter-reset: razon; }
 .razon { display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.4rem 0; border-top: 1px solid var(--border); }
