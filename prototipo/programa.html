@@ -75,35 +75,56 @@
 
 <main id="contenido">
 
-  <!-- HERO (estructura plantilla: eyebrow + título 2 líneas + subtítulo + CTAs) -->
+  <!-- HERO CLARO (estructura plantilla: izquierda texto, derecha grid de 6 tarjetas de datos) -->
   <section class="phero" id="inicio">
-    <div class="container">
-      <p class="phero__eyebrow">Oferta Académica / Diplomado</p>
-      <h1 style="margin-top:0.6rem; max-width:24ch;">Diplomado en Actualización
-        <strong>Derecho Procesal, Civil y Comercial</strong>
-      </h1>
-      <p class="lead" style="margin-top:1rem;">Una oportunidad única para actualizar tus conocimientos con los juristas más prestigiosos del país.</p>
-      <p style="display:flex; flex-wrap:wrap; gap:0.6rem; margin-top:1.8rem;">
-        <a class="btn btn--primary" href="#formulario">Pago online</a>
-        <a class="btn btn--dark" href="#formulario">Descargar Brochure</a>
-      </p>
+    <div class="container phero__grid">
+      <div>
+        <p style="margin:0;"><span class="phero__eyebrow">Oferta Académica / Diplomado</span></p>
+        <h1>Diplomado en Actualización
+          <em>Derecho Procesal, Civil y Comercial</em>
+        </h1>
+        <p class="lead" style="margin-top:1rem;">Una oportunidad única para actualizar tus conocimientos con los juristas más prestigiosos del país.</p>
+        <p style="display:flex; flex-wrap:wrap; gap:0.6rem; margin-top:1.8rem;">
+          <a class="btn btn--primary" href="#formulario">Pago online</a>
+          <a class="btn btn--dark" href="#formulario">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Descargar Brochure
+          </a>
+        </p>
+      </div>
+
+      <!-- Ficha: 6 tarjetas con icono (orden exacto de la plantilla) -->
+      <dl class="ficha-cards">
+        <div class="ficha-card">
+          <span class="ficha-card__icono" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+          <div><dt>Fecha de inicio</dt><dd>03 de marzo de 2026</dd></div>
+        </div>
+        <div class="ficha-card">
+          <span class="ficha-card__icono" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+          <div><dt>Horario</dt><dd>Martes y miércoles<br>6:00 p.&nbsp;m. – 9:00 p.&nbsp;m.</dd></div>
+        </div>
+        <div class="ficha-card">
+          <span class="ficha-card__icono" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <div><dt>Inversión</dt><dd class="tabular">$&nbsp;2.800.000</dd></div>
+        </div>
+        <div class="ficha-card">
+          <span class="ficha-card__icono" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
+          <div><dt>Intensidad</dt><dd>81 horas</dd></div>
+        </div>
+        <div class="ficha-card">
+          <span class="ficha-card__icono" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
+          <div><dt>Modalidad</dt><dd>Remoto</dd></div>
+        </div>
+        <div class="ficha-card">
+          <span class="ficha-card__icono" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/></svg></span>
+          <div><dt>Duración</dt><dd>13 semanas</dd></div>
+        </div>
+      </dl>
     </div>
   </section>
 
-  <!-- FICHA: banda de 6 datos que sobresale del hero (orden exacto de la plantilla) -->
-  <div class="container">
-    <dl class="ficha ficha--band">
-      <div><dt>Fecha de inicio</dt><dd>03 de marzo de 2026</dd></div>
-      <div><dt>Horario</dt><dd>Martes y miércoles<br>6:00 p.&nbsp;m. – 9:00 p.&nbsp;m.</dd></div>
-      <div><dt>Inversión</dt><dd class="tabular">$&nbsp;2.800.000</dd></div>
-      <div><dt>Intensidad</dt><dd>81 horas</dd></div>
-      <div><dt>Modalidad</dt><dd>Remoto</dd></div>
-      <div><dt>Duración</dt><dd>13 semanas</dd></div>
-    </dl>
-  </div>
-
-  <!-- NAV INTERNA STICKY (con CTA "Inscríbete ahora", como la plantilla) -->
-  <nav class="subnav" aria-label="Secciones del programa" style="margin-top:1.5rem;">
+  <!-- NAV INTERNA STICKY (Contacto = WhatsApp verde · Inscríbete ahora a la derecha, como la plantilla) -->
+  <nav class="subnav" aria-label="Secciones del programa">
     <div class="container subnav__inner">
       <ul>
         <li><a href="#descripcion">Descripción</a></li>
@@ -111,7 +132,10 @@
         <li><a href="#dirigido-a">Dirigido a</a></li>
         <li><a href="#modulos">Módulos</a></li>
         <li><a href="#profesores">Profesores</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a class="subnav__wa" href="https://wa.me/573118385505" rel="noopener">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.4 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.3 1.3Z"/></svg>
+          Contacto
+        </a></li>
       </ul>
       <a class="btn btn--primary subnav__cta" href="#formulario">Inscríbete ahora</a>
     </div>
