@@ -556,6 +556,83 @@ a, button, [role="button"], input, select { touch-action: manipulation; }
 .ficha-card dt { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gris-04); margin: 0 0 0.15rem; }
 .ficha-card dd { margin: 0; font-weight: 700; font-size: 0.9rem; color: var(--ur-azul); font-variant-numeric: tabular-nums; }
 
+/* Layout de programa: contenido izquierda + formulario sticky derecha (plantilla) */
+.layout-programa { display: grid; gap: 2.5rem; align-items: start; }
+@media (min-width: 1024px) { .layout-programa { grid-template-columns: 1fr 400px; gap: 3rem; } }
+.form-sidebar { min-width: 0; }
+@media (min-width: 1024px) { .form-sidebar { position: sticky; top: 88px; } }
+.form-sidebar .form-panel { padding: 1.6rem; }
+.form-sidebar h2 { font-size: 1.35rem; font-weight: 800; color: var(--ur-azul); margin-bottom: 0.3rem; text-transform: none; letter-spacing: -0.01em; }
+
+/* Títulos de sección con icono en chip (plantilla) */
+.sec-title { display: flex; align-items: center; gap: 0.8rem; }
+.sec-title__icono {
+  flex: none; width: 42px; height: 42px; border-radius: var(--radius-sm);
+  background: var(--ur-rojo-suave); color: var(--ur-rojo);
+  display: grid; place-items: center;
+}
+.prosa .sec-title h2, .sec-title h2 { margin: 0; }
+
+/* Checklist verde (objetivos de la plantilla) */
+.checklist.checklist--verde li svg { color: #16a34a; }
+
+/* Cuerpo docente: buscador + tarjetas clicables + modal */
+.docentes-buscar { position: relative; max-width: 340px; margin: 1.2rem 0 1.6rem; }
+.docentes-buscar input {
+  width: 100%; min-height: 46px;
+  border: 1px solid var(--border); border-radius: var(--radius-sm);
+  background: var(--surface); color: var(--ink);
+  padding: 0.55rem 0.9rem 0.55rem 2.4rem; font: inherit; font-size: 0.9rem;
+}
+.docentes-buscar svg { position: absolute; left: 0.8rem; top: 50%; transform: translateY(-50%); color: var(--gris-03); pointer-events: none; }
+.docente--btn {
+  width: 100%; background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 1.4rem 1rem; cursor: pointer;
+  transition: transform var(--dur-2) var(--ease-out), border-color var(--dur-2) var(--ease-out), box-shadow var(--dur-2) var(--ease-out);
+}
+.docente--btn:hover { transform: translateY(-3px); border-color: var(--ur-coral); box-shadow: var(--shadow-sm); }
+
+.modal-docente {
+  border: 0; border-radius: var(--radius-lg); padding: 0;
+  width: min(600px, calc(100vw - 2rem));
+  background: var(--surface); color: var(--ink);
+  box-shadow: var(--shadow-lg);
+}
+.modal-docente::backdrop { background: rgba(0, 29, 51, 0.55); backdrop-filter: blur(3px); }
+.modal-docente__inner { padding: 1.8rem; }
+.modal-docente__head { display: flex; gap: 1.2rem; align-items: flex-start; }
+.modal-docente__foto {
+  flex: none; width: 110px; height: 110px; border-radius: var(--radius-md);
+  background: var(--grad-hero); color: var(--crema);
+  display: grid; place-items: center; font-weight: 800; font-size: 1.6rem;
+}
+.modal-docente h3 { font-size: 1.3rem; font-weight: 800; color: var(--ur-azul); margin: 0 0 0.15rem; }
+.modal-docente__cargo { color: var(--ink-2); font-size: 0.9rem; margin: 0 0 0.6rem; }
+.modal-docente__bio { font-size: 0.9rem; color: var(--ink-2); margin: 0; }
+.modal-docente hr { border: 0; border-top: 1px solid var(--border); margin: 1.4rem 0; }
+.modal-docente h4 { display: flex; align-items: center; gap: 0.5rem; font-size: 0.92rem; color: var(--ur-azul); margin: 1.1rem 0 0.5rem; }
+.modal-docente h4 svg { color: var(--ur-rojo); }
+.modal-docente ul { margin: 0; padding-left: 1.15rem; font-size: 0.88rem; color: var(--ink-2); display: grid; gap: 0.3rem; }
+.modal-docente__cerrar {
+  position: absolute; top: 0.9rem; right: 0.9rem;
+  width: 36px; height: 36px; border-radius: var(--radius-sm);
+  border: 1px solid var(--border); background: var(--surface); color: var(--ink-2);
+  display: grid; place-items: center; cursor: pointer;
+}
+.modal-docente__cerrar:hover { color: var(--ur-coral); border-color: var(--ur-coral); }
+
+/* Banda de contacto (plantilla): fondo institucional oscuro, centrado */
+.contacto-banda { background: var(--grad-hero); color: var(--crema); text-align: center; padding-block: 3.5rem; }
+.contacto-banda p { margin: 0.3rem 0; }
+.contacto-banda__pregunta { font-size: 0.95rem; color: rgba(248, 250, 252, 0.8); }
+.contacto-banda__programa { font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; font-size: clamp(1rem, 2vw, 1.35rem); }
+.contacto-banda__asesor { font-weight: 800; text-transform: uppercase; letter-spacing: 0.14em; font-size: 1.15rem; margin-top: 1.6rem !important; }
+.contacto-banda__canales { display: flex; flex-wrap: wrap; gap: 0.6rem 2rem; justify-content: center; margin-top: 0.9rem !important; }
+.contacto-banda__canales a { display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; font-weight: 600; min-height: 44px; }
+.contacto-banda__canales a:hover { text-decoration: underline; }
+.contacto-banda__wa { color: #4ade80; }
+.contacto-banda__mail { color: var(--ur-coral); }
+
 /* Nav sticky con CTA (plantilla): Contacto = pill verde WhatsApp + Inscríbete a la derecha */
 .subnav__inner { display: flex; align-items: center; gap: 1rem; }
 .subnav__inner ul { flex: 1; }

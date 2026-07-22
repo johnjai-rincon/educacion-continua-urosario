@@ -133,6 +133,33 @@
     aplicar();
   }
 
+  /* ---------- Cuerpo docente: buscador + modal (patrón plantilla) ---------- */
+  var docBuscar = document.querySelector("[data-docente-buscar]");
+  if (docBuscar) {
+    var docCards = document.querySelectorAll("[data-docente-card]");
+    docBuscar.addEventListener("input", debounce(function () {
+      var q = docBuscar.value.toLowerCase().trim();
+      docCards.forEach(function (c) {
+        c.hidden = !!q && (c.textContent || "").toLowerCase().indexOf(q) === -1;
+      });
+    }, 150));
+  }
+  document.querySelectorAll("[data-docente-card][data-modal]").forEach(function (card) {
+    card.addEventListener("click", function () {
+      var dlg = document.getElementById(card.getAttribute("data-modal"));
+      if (dlg && typeof dlg.showModal === "function") dlg.showModal();
+    });
+  });
+  document.querySelectorAll(".modal-docente").forEach(function (dlg) {
+    var btn = dlg.querySelector(".modal-docente__cerrar");
+    if (btn) btn.addEventListener("click", function () { dlg.close(); });
+    // clic en el fondo cierra
+    dlg.addEventListener("click", function (e) {
+      var r = dlg.getBoundingClientRect();
+      if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) dlg.close();
+    });
+  });
+
   /* ---------- FAQ: buscador client-side (patrón centro de ayuda del campus) ---------- */
   var faqInput = document.querySelector("[data-faq-buscar]");
   if (faqInput) {
