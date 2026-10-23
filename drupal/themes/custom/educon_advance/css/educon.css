@@ -209,6 +209,40 @@ html:not([data-theme="light"]) .header .brand__img { filter: brightness(0) inver
 .header__cta { display: none; }
 @media (min-width: 768px) { .header__cta { display: inline-flex; min-height: 42px; padding-block: 0.45rem; } }
 
+/* Desplegable de Facultades en el menú (A7) */
+.nav-item-drop { position: relative; display: none; }
+@media (min-width: 1024px) { .nav-item-drop { display: block; } }
+.nav-drop-btn {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  padding: 0.55rem 0.85rem; border-radius: var(--radius-sm);
+  font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+  background: none; border: 0; cursor: pointer; color: var(--ink-2);
+  transition: color var(--dur-1) var(--ease-out), background-color var(--dur-1) var(--ease-out);
+}
+.nav-drop-btn::after { content: "▾"; font-size: 0.7em; }
+.nav-item-drop:hover .nav-drop-btn, .nav-item-drop:focus-within .nav-drop-btn { color: var(--ink); background: var(--surface-2); }
+.nav-dropdown {
+  position: absolute; top: calc(100% + 6px); left: 0; z-index: 130;
+  min-width: 330px; padding: 0.5rem;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-md); box-shadow: var(--shadow-lg);
+  display: none;
+}
+.nav-item-drop:hover .nav-dropdown, .nav-item-drop:focus-within .nav-dropdown { display: block; }
+.nav .nav-dropdown a, .nav-dropdown a {
+  display: block; padding: 0.6rem 0.8rem; border-radius: var(--radius-sm);
+  font-size: 0.86rem; font-weight: 600; letter-spacing: 0; text-transform: none;
+  color: var(--ink-2); text-decoration: none;
+}
+.nav-dropdown a:hover, .nav-dropdown a[aria-current="page"] { color: var(--ink); background: var(--surface-2); box-shadow: none; }
+/* Grupo de facultades en el menú móvil */
+.mobile-nav__grupo {
+  display: block; padding: 0.9rem 1.25rem 0.4rem;
+  font-size: 0.68rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-2); border-bottom: 1px solid var(--border);
+}
+.mobile-nav a.mobile-nav__sub { padding-left: 2rem; font-weight: 500; font-size: 0.92rem; }
+
 /* Menú móvil */
 .nav-toggle {
   display: grid; place-items: center;
