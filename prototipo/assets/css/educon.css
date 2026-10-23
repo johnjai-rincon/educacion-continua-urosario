@@ -210,13 +210,28 @@ html:not([data-theme="light"]) .header .brand__img { filter: brightness(0) inver
 }
 .header__cta { display: none; }
 @media (min-width: 768px) { .header__cta { display: inline-flex; min-height: 42px; padding-block: 0.45rem; } }
-/* Menú con más ítems: compactar entre 1024 y 1479px para que todo quepa en UNA fila */
-@media (min-width: 1140px) and (max-width: 1479px) {
+/* Menú con más ítems: tamaños FLUIDOS desde 1140px. El contenedor del header
+   tiene un máximo de ~1280px, así que los topes de cada clamp() están calculados
+   para que logo + menú + 2 botones quepan SIEMPRE en una sola fila. */
+@media (min-width: 1140px) {
+  .header__inner { flex-wrap: nowrap; }
+  .header { overflow-x: clip; }
   .nav { gap: 0; }
-  .nav a, .nav-drop-btn { font-size: 0.72rem; padding: 0.5rem 0.45rem; letter-spacing: 0; }
-  .brand__img { height: 28px; }
-  .header__cta { font-size: 0.78rem; padding-inline: 0.85rem; min-height: 38px; }
-  .header__inner { gap: 0.55rem; padding-inline: 1.1rem; }
+  .nav a, .nav .nav-drop-btn {
+    font-size: clamp(0.72rem, 0.4333vw + 0.4113rem, 0.78rem);
+    padding: 0.5rem clamp(0.45rem, 1.3333vw - 0.5rem, 0.6rem);
+    letter-spacing: 0;
+  }
+  .brand__img { height: clamp(28px, 2.5vw - 0.5px, 34px); }
+  .header .header__cta {
+    font-size: clamp(0.78rem, 0.5667vw + 0.376rem, 0.875rem);
+    padding-inline: clamp(0.85rem, 2.1667vw - 0.694rem, 1.1rem);
+    min-height: clamp(38px, 0.8333vw + 28.5px, 41px);
+  }
+  .header__inner {
+    gap: clamp(0.55rem, 3.1667vw - 1.706rem, 1rem);
+    padding-inline: clamp(1.1rem, 3vw - 1.0375rem, 1.5rem);
+  }
 }
 
 /* Desplegable de Facultades en el menú (A7) */
