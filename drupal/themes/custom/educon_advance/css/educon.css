@@ -716,13 +716,13 @@ html:not([data-theme="light"]) .header .brand__img { filter: brightness(0) inver
    data-animate="right"    → fadeInRight(contrapunto en grids de 2)
    data-animate="zoom"     → zoomIn     (cards / paneles)
    El stagger por hermanos lo aplica el observer de educon.js */
-[data-animate] { opacity: 0; transform: translateY(18px); }
-[data-animate="left"]  { transform: translateX(-26px); }
-[data-animate="right"] { transform: translateX(26px); }
-[data-animate="zoom"]  { transform: scale(0.94); }
+[data-animate] { opacity: 0; transform: translateY(30px); }
+[data-animate="left"]  { transform: translateX(-40px); }
+[data-animate="right"] { transform: translateX(40px); }
+[data-animate="zoom"]  { transform: scale(0.88); }
 .is-visible[data-animate], [data-animate].is-visible {
   opacity: 1; transform: none;
-  transition: opacity 420ms var(--ease-out), transform 420ms var(--ease-out);
+  transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out);
   transition-delay: var(--stagger, 0ms);
 }
 /* Atención (pulse) para CTA primario del hero, una sola vez al entrar */
@@ -768,6 +768,44 @@ html:not([data-theme="light"]) .header .brand__img { filter: brightness(0) inver
   transition: filter var(--dur-2) var(--ease-out), opacity var(--dur-2) var(--ease-out);
 }
 .logos__row img:hover { filter: none; opacity: 1; }
+
+/* ---------- Centro de Simulación: galería, cifras y CTA B2B (B2/B3) ---------- */
+.galeria { display: grid; gap: 0.9rem; grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 900px) { .galeria { grid-template-columns: repeat(3, 1fr); } }
+.galeria__item {
+  position: relative; aspect-ratio: 16 / 10; overflow: hidden;
+  border: 1px solid var(--border); border-radius: var(--radius-md);
+  background: var(--grad-hero);
+}
+.galeria__item::before {
+  content: ""; position: absolute; inset: 0; opacity: 0.07;
+  background-image: radial-gradient(circle at 1px 1px, #fff 1px, transparent 0);
+  background-size: 20px 20px;
+}
+.galeria__item span {
+  position: absolute; inset: auto 0 0 0; padding: 2.2rem 0.9rem 0.8rem;
+  background: linear-gradient(to top, var(--ur-azul-dk) 0%, transparent 100%);
+  color: var(--crema); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em;
+}
+.galeria__item--video::after {
+  content: "▶"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -55%);
+  width: 54px; height: 54px; border-radius: 50%;
+  background: var(--ur-rojo); color: #fff;
+  display: grid; place-items: center; font-size: 1.1rem; padding-left: 4px;
+}
+/* Barra CTA fija inferior (móvil) — solo página del Centro */
+.cta-bar-movil {
+  position: fixed; inset: auto 0 0 0; z-index: 95;
+  display: flex; padding: 0.6rem 0.9rem calc(0.6rem + env(safe-area-inset-bottom));
+  background: color-mix(in srgb, var(--ur-azul-dk) 92%, transparent);
+  backdrop-filter: blur(10px); border-top: 1px solid var(--border);
+}
+.cta-bar-movil .btn { flex: 1; }
+@media (min-width: 900px) { .cta-bar-movil { display: none; } }
+body.con-cta-movil { padding-bottom: 76px; }
+@media (min-width: 900px) { body.con-cta-movil { padding-bottom: 0; } }
+body.con-cta-movil .whatsapp { display: none; }
+@media (min-width: 900px) { body.con-cta-movil .whatsapp { display: grid; } }
 
 /* ---------- Página de docentes: tarjeta estilo speaker (A1) ---------- */
 .speaker {

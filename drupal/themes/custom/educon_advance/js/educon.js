@@ -32,7 +32,7 @@
     animated.forEach(function (el) {
       var siblings = el.parentElement ? el.parentElement.querySelectorAll(":scope > [data-animate]") : [];
       var idx = Array.prototype.indexOf.call(siblings, el);
-      if (idx > 0) el.style.setProperty("--stagger", Math.min(idx * 45, 360) + "ms");
+      if (idx > 0) el.style.setProperty("--stagger", Math.min(idx * 90, 540) + "ms");
     });
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
