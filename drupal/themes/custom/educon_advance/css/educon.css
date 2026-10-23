@@ -803,6 +803,53 @@ html:not([data-theme="light"]) .header .brand__img { filter: brightness(0) inver
 }
 .logos__row img:hover { filter: none; opacity: 1; }
 
+/* ---------- Tendencias (A8): tiles de áreas temáticas ---------- */
+.tendencia {
+  display: flex; align-items: center; gap: 0.9rem;
+  border: 1px solid var(--border); border-radius: var(--radius-md);
+  background: var(--surface); padding: 1rem 1.1rem;
+  text-decoration: none;
+  transition: transform var(--dur-2) var(--ease-out), border-color var(--dur-2) var(--ease-out);
+}
+.tendencia:hover { transform: translateY(-3px); border-color: var(--ur-coral); }
+.tendencia__icono {
+  flex: none; width: 44px; height: 44px; border-radius: var(--radius-sm);
+  background: rgba(218, 9, 33, 0.12); color: var(--ur-coral);
+  display: grid; place-items: center;
+}
+.tendencia strong { display: block; font-size: 0.92rem; line-height: 1.25; }
+.tendencia span { font-size: 0.75rem; color: var(--ink-2); }
+
+/* ---------- Eventos (A10/A12): tarjeta con fecha en bloque ---------- */
+.evento-card {
+  position: relative; display: flex; gap: 1.1rem;
+  border: 1px solid var(--border); border-radius: var(--radius-lg);
+  background: var(--surface); padding: 1.3rem;
+  transition: transform var(--dur-2) var(--ease-out), border-color var(--dur-2) var(--ease-out);
+}
+.evento-card:hover { transform: translateY(-3px); border-color: var(--ur-coral); }
+.evento-fecha {
+  flex: none; width: 76px; text-align: center;
+  border: 1px solid var(--border); border-radius: var(--radius-md);
+  background: var(--bg); padding: 0.7rem 0.4rem; height: fit-content;
+}
+.evento-fecha strong { display: block; font-size: 1.7rem; font-weight: 900; line-height: 1; font-variant-numeric: tabular-nums; }
+.evento-fecha span { display: block; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ur-coral); margin-top: 0.2rem; }
+.evento-card__tipo { font-size: 0.66rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ur-coral); }
+.evento-card h3 { font-size: 1.05rem; font-weight: 800; margin: 0.35rem 0 0.3rem; }
+.evento-card h3 a { text-decoration: none; }
+.evento-card h3 a::after { content: ""; position: absolute; inset: 0; }
+.evento-card__meta { font-size: 0.8rem; color: var(--ink-2); margin: 0; display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; }
+.evento-card__cupo { margin-top: 0.6rem; font-size: 0.8rem; font-weight: 700; color: var(--ink); }
+.evento-card--finalizado { opacity: 0.65; }
+.evento-card--finalizado:hover { transform: none; border-color: var(--border); }
+.evento-card__badge-fin {
+  position: absolute; top: 12px; right: 12px;
+  background: var(--gris-04); color: var(--crema);
+  font-size: 0.62rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 0.3rem 0.7rem; border-radius: var(--radius-pill);
+}
+
 /* ---------- Centro de Simulación: galería, cifras y CTA B2B (B2/B3) ---------- */
 .galeria { display: grid; gap: 0.9rem; grid-template-columns: repeat(2, 1fr); }
 @media (min-width: 900px) { .galeria { grid-template-columns: repeat(3, 1fr); } }

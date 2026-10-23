@@ -95,7 +95,12 @@
 
     function aplicar() {
       var texto = (buscador && buscador.value ? buscador.value : "").toLowerCase().trim();
-      var grupos = ["area", "tipo", "modalidad", "nivel"];
+      // Grupos derivados de los fieldsets presentes (sirve para catálogo y eventos)
+      var grupos = [];
+      document.querySelectorAll("[data-filtro]").forEach(function (g) {
+        var n = g.getAttribute("data-filtro");
+        if (grupos.indexOf(n) === -1) grupos.push(n);
+      });
       var visibles = 0;
       cards.forEach(function (card) {
         var ok = grupos.every(function (g) {

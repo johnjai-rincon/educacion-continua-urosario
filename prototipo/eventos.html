@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eventos y agenda | Educación Continua – Universidad del Rosario</title>
+<meta name="description" content="Congresos, webinars y masterclasses de Educación Continua de la Universidad del Rosario. Filtra por tipo, modalidad y mes.">
+<meta name="theme-color" content="#001d33">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Lora:ital,wght@1,500&display=swap">
+<link rel="stylesheet" href="assets/css/educon.css">
+</head>
+<body>
+<div class="proto-ribbon">Prototipo de nueva interfaz — los eventos son de demostración.</div>
+<a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html">
+      <img class="brand__img" src="assets/img/logo-educon-urosario.webp" alt="Advance, Educación Continua — Universidad del Rosario" width="600" height="106">
+    </a>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="buscar.html">Oferta</a>
+      <div class="nav-item-drop">
+        <button class="nav-drop-btn" type="button" aria-haspopup="true" aria-expanded="false">Facultades</button>
+        <div class="nav-dropdown">
+          <a href="facultad-economia-negocios.html">Escuela de Economía y Negocios</a>
+          <a href="facultad-jurisprudencia.html">Facultad de Jurisprudencia</a>
+          <a href="facultad-ciencias-ingenieria.html">Escuela de Ciencias e Ingeniería</a>
+          <a href="facultad-creacion.html">Facultad de Creación</a>
+          <a href="area-salud.html">Escuela de Medicina y Ciencias de la Salud</a>
+          <a href="https://gsb.urosario.edu.co/executive-education" target="_blank" rel="noopener">GSB – Executive Education</a>
+          <a href="facultad-estudios-sociales.html">Escuela de Estudios Sociales, Políticos e Internacionales</a>
+        </div>
+      </div>
+      <a href="empresas.html">Empresas</a>
+      <a href="centro-simulacion.html">Simulación</a>
+    </nav>
+    <a class="btn btn--ghost header__cta" href="https://mentoria.jerrejerre.com/demourosario" target="_blank" rel="noopener">Ruta de aprendizaje</a>
+    <a class="btn btn--primary header__cta" href="https://wa.me/573118385505" rel="noopener">Inscríbete</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="menu-movil" aria-label="Abrir menú">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <nav id="menu-movil" class="mobile-nav" hidden aria-label="Menú móvil">
+    <a href="index.html">Inicio</a>
+    <a href="buscar.html">Oferta académica</a>
+    <span class="mobile-nav__grupo">Facultades</span>
+    <a class="mobile-nav__sub" href="facultad-economia-negocios.html">Escuela de Economía y Negocios</a>
+    <a class="mobile-nav__sub" href="facultad-jurisprudencia.html">Facultad de Jurisprudencia</a>
+    <a class="mobile-nav__sub" href="facultad-ciencias-ingenieria.html">Escuela de Ciencias e Ingeniería</a>
+    <a class="mobile-nav__sub" href="facultad-creacion.html">Facultad de Creación</a>
+    <a class="mobile-nav__sub" href="area-salud.html">Escuela de Medicina y Ciencias de la Salud</a>
+    <a class="mobile-nav__sub" href="https://gsb.urosario.edu.co/executive-education" target="_blank" rel="noopener">GSB – Executive Education</a>
+    <a class="mobile-nav__sub" href="facultad-estudios-sociales.html">Escuela de Estudios Sociales, Políticos e Internacionales</a>
+    <a href="empresas.html">Empresas</a>
+    <a href="centro-simulacion.html">Centro de Simulación</a>
+    <a class="btn btn--primary" href="https://wa.me/573118385505" rel="noopener">Inscríbete</a>
+  </nav>
+</header>
+
+<main id="contenido">
+  <section class="hero" style="padding-block:3rem 2.5rem;">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Miga de pan" style="margin-bottom:1.4rem;">
+        <ol><li><a href="index.html">Educación Continua</a></li><li aria-current="page">Eventos</li></ol>
+      </nav>
+      <p class="kicker" data-animate="left">Agenda</p>
+      <h1 class="display display--lg" data-animate="left" style="margin-bottom:0.4rem;">Congresos, webinars y <em>masterclasses</em></h1>
+      <p class="lead" data-animate>Todo lo que pasa más allá de los programas: espacios abiertos para aprender, conectar y debatir.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block:2.5rem;">
+    <div class="container catalogo">
+      <aside class="filtros" aria-label="Filtros de eventos">
+        <fieldset class="filtro" data-filtro="tipo">
+          <legend>Tipo</legend>
+          <label><input type="checkbox" value="congreso"> Congreso</label>
+          <label><input type="checkbox" value="webinar"> Webinar</label>
+          <label><input type="checkbox" value="masterclass"> Masterclass</label>
+        </fieldset>
+        <fieldset class="filtro" data-filtro="modalidad">
+          <legend>Modalidad</legend>
+          <label><input type="checkbox" value="presencial"> Presencial</label>
+          <label><input type="checkbox" value="virtual"> Virtual</label>
+          <label><input type="checkbox" value="hibrido"> Presencial + streaming</label>
+        </fieldset>
+        <fieldset class="filtro" data-filtro="mes">
+          <legend>Mes</legend>
+          <label><input type="checkbox" value="noviembre"> Noviembre</label>
+          <label><input type="checkbox" value="diciembre"> Diciembre</label>
+          <label><input type="checkbox" value="finalizados"> Finalizados</label>
+        </fieldset>
+        <button class="filtros__reset" type="button" data-reset>Limpiar filtros</button>
+      </aside>
+
+      <div>
+        <div class="catalogo__toolbar">
+          <p class="catalogo__count" style="margin:0;" aria-live="polite"><strong data-count>4</strong> eventos</p>
+        </div>
+        <div style="display:grid; gap:1rem;" data-catalogo>
+          <article class="evento-card" data-card data-tipo="congreso" data-modalidad="hibrido" data-mes="diciembre" data-fecha="2026-12-03" data-titulo="Congreso Internacional de Innovación en Educación en Salud">
+            <div class="evento-fecha" aria-hidden="true"><strong>03</strong><span>Dic</span></div>
+            <div>
+              <span class="evento-card__tipo">Congreso · Presencial + streaming</span>
+              <h3><a href="evento.html">Congreso Internacional de Innovación en Educación en Salud</a></h3>
+              <p class="evento-card__meta"><span>3 y 4 de diciembre de 2026</span><span>Claustro · Bogotá · $890.000</span></p>
+              <p class="evento-card__cupo">Inscripciones abiertas →</p>
+            </div>
+          </article>
+          <article class="evento-card" data-card data-tipo="webinar" data-modalidad="virtual" data-mes="noviembre" data-fecha="2026-11-18" data-titulo="IA aplicada a la gestión pública: casos reales">
+            <div class="evento-fecha" aria-hidden="true"><strong>18</strong><span>Nov</span></div>
+            <div>
+              <span class="evento-card__tipo">Webinar · Virtual</span>
+              <h3><a href="evento.html">IA aplicada a la gestión pública: casos reales</a></h3>
+              <p class="evento-card__meta"><span>18 de noviembre · 5:00 p. m.</span><span>Gratuito con registro</span></p>
+              <p class="evento-card__cupo">Reservar cupo →</p>
+            </div>
+          </article>
+          <article class="evento-card" data-card data-tipo="masterclass" data-modalidad="presencial" data-mes="noviembre" data-fecha="2026-11-26" data-titulo="Liderazgo en tiempos de incertidumbre">
+            <div class="evento-fecha" aria-hidden="true"><strong>26</strong><span>Nov</span></div>
+            <div>
+              <span class="evento-card__tipo">Masterclass · Presencial</span>
+              <h3><a href="evento.html">Liderazgo en tiempos de incertidumbre</a></h3>
+              <p class="evento-card__meta"><span>26 de noviembre · 6:30 p. m.</span><span>Claustro · Entrada libre</span></p>
+              <p class="evento-card__cupo">Registrarme →</p>
+            </div>
+          </article>
+          <article class="evento-card evento-card--finalizado" data-card data-tipo="congreso" data-modalidad="presencial" data-mes="finalizados" data-fecha="2026-09-30" data-titulo="II Congreso Iberoamericano de Terapia Diamagnética y Medicina Regenerativa">
+            <span class="evento-card__badge-fin">Finalizado</span><div class="evento-fecha" aria-hidden="true"><strong>30</strong><span>Sep</span></div>
+            <div>
+              <span class="evento-card__tipo">Congreso · Presencial</span>
+              <h3>II Congreso Iberoamericano de Terapia Diamagnética y Medicina Regenerativa</h3>
+              <p class="evento-card__meta"><span>30 de septiembre al 3 de octubre de 2026</span><span>Bogotá</span></p>
+              
+            </div>
+          </article>
+        </div>
+        <p data-empty hidden style="text-align:center; padding:3rem 1rem; color:var(--ink-2);">
+          No hay eventos con esos filtros. <button class="filtros__reset" type="button" data-reset>Limpiar filtros</button>
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:1rem;">
+          <span class="brand__logo" aria-hidden="true">UR</span>
+          <span class="brand__name"><strong style="color:var(--crema)">Educación Continua</strong><span>Universidad del Rosario</span></span>
+        </a>
+        <p style="max-width:38ch;">Educación continua con el rigor, la red y el respaldo de 370 años de tradición rosarista.</p>
+        <div class="footer__badges">
+          <span>Acreditación CNA</span><span>QS Stars</span><span>ISO 9001</span>
+        </div>
+      </div>
+      <nav aria-label="Aprender">
+        <h4>Aprender</h4>
+        <ul>
+          <li><a href="buscar.html">Catálogo de programas</a></li>
+          <li><a href="area-salud.html">Áreas de conocimiento</a></li>
+          <li><a href="docentes.html">Nuestros docentes</a></li>
+          <li><a href="eventos.html">Eventos</a></li>
+          <li><a href="programa.html">Programas premium</a></li>
+          <li><a href="https://programas-virtuales-educon-urosario.vercel.app/" rel="noopener">Campus virtual</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Audiencias">
+        <h4>Audiencias</h4>
+        <ul>
+          <li><a href="buscar.html">Profesionales</a></li>
+          <li><a href="empresas.html">Empresas</a></li>
+          <li><a href="ur-senior.html">UR Senior</a></li>
+          <li><a href="centro-simulacion.html">Centro de Simulación</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Recursos">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="financiacion.html">Financiación</a></li>
+          <li><a href="devoluciones.html">Devoluciones</a></li>
+          <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+          <li><a href="contactenos.html">Contáctenos</a></li>
+          <li><a href="kit-de-marca.html">Kit de marca</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Servicios académicos">
+        <h4>Servicios académicos</h4>
+        <ul>
+          <li><a href="https://pasaporte.urosario.edu.co" rel="noopener">Pasaporte virtual</a></li>
+          <li><a href="https://e-aulas.urosario.edu.co" rel="noopener">E-Aulas</a></li>
+          <li><a href="https://urosario.edu.co/financiacion" rel="noopener">Becas, descuentos y apoyo financiero</a></li>
+          <li><a href="https://urosario.edu.co/registro-y-control" rel="noopener">Registro y control</a></li>
+          <li><a href="https://urosario.edu.co/servicios-virtuales" rel="noopener">Servicios en línea</a></li>
+          <li><a href="https://urosario.edu.co/consultorio-juridico" rel="noopener">Consultorio jurídico</a></li>
+          <li><a href="https://urosario.edu.co/recorrido-virtual" rel="noopener">Recorrido virtual</a></li>
+          <li><a href="https://urosario.edu.co/felicitaciones-quejas-y-reclamos" rel="noopener">Felicitaciones, quejas y reclamos</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__legal">
+      <span>© 2026 Universidad del Rosario · Educación Continua y Consultoría</span>
+      <span><a href="https://urosario.edu.co/aviso-de-privacidad" rel="noopener">Aviso de privacidad</a> · <a href="https://urosario.edu.co/terminos-y-condiciones/" rel="noopener">Términos de uso</a> · Línea: (+57)&nbsp;601&nbsp;297&nbsp;0200 op.&nbsp;4</span>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/573118385505" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.4 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.3 1.3Z"/></svg>
+</a>
+
+<script src="assets/js/educon.js" defer></script>
+</body>
+</html>
