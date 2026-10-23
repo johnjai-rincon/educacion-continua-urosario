@@ -115,7 +115,7 @@ a, button, [role="button"], input, select { touch-action: manipulation; }
 @media (min-width: 768px) { .section { padding-block: 6rem; } }
 .section--alt { background: color-mix(in srgb, var(--surface) 55%, var(--bg)); border-block: 1px solid var(--border); }
 .grid { display: grid; gap: 1.25rem; }
-@media (min-width: 700px) { .grid--2 { grid-template-columns: repeat(2, 1fr); } .grid--3 { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 700px) { .grid--2 { grid-template-columns: repeat(2, 1fr); } .grid--3 { grid-template-columns: repeat(3, 1fr); } .grid--4 { grid-template-columns: repeat(2, 1fr); } }
 @media (min-width: 1024px) { .grid--3 { grid-template-columns: repeat(3, 1fr); } .grid--4 { grid-template-columns: repeat(4, 1fr); } }
 .tabular { font-variant-numeric: tabular-nums; }
 .visually-hidden {
@@ -709,16 +709,98 @@ html:not([data-theme="light"]) .header .brand__img { filter: brightness(0) inver
 /* ---------- Aviso destacado ---------- */
 .aviso { border-left: 4px solid var(--ur-coral); background: var(--surface); border-radius: 0 var(--radius-md) var(--radius-md) 0; padding: 1rem 1.2rem; font-size: 0.9rem; color: var(--ink-2); }
 
-/* ---------- Animaciones de entrada (patrón animate: scroll-trigger + reduced motion) ---------- */
+/* ---------- Animaciones de entrada (skill animate: scroll-trigger + reduced motion) ----------
+   Variantes según la guía Animate.css v4.1.1 (extracto adaptado a tokens propios):
+   data-animate            → fadeInUp   (texto, secciones)
+   data-animate="left"     → fadeInLeft (headings H2-H4, listas)
+   data-animate="right"    → fadeInRight(contrapunto en grids de 2)
+   data-animate="zoom"     → zoomIn     (cards / paneles)
+   El stagger por hermanos lo aplica el observer de educon.js */
 [data-animate] { opacity: 0; transform: translateY(18px); }
+[data-animate="left"]  { transform: translateX(-26px); }
+[data-animate="right"] { transform: translateX(26px); }
+[data-animate="zoom"]  { transform: scale(0.94); }
 .is-visible[data-animate], [data-animate].is-visible {
   opacity: 1; transform: none;
   transition: opacity 420ms var(--ease-out), transform 420ms var(--ease-out);
   transition-delay: var(--stagger, 0ms);
 }
+/* Atención (pulse) para CTA primario del hero, una sola vez al entrar */
+@keyframes educon-pulse { from { transform: scale3d(1,1,1); } 50% { transform: scale3d(1.04,1.04,1.04); } to { transform: scale3d(1,1,1); } }
+.pulse-once.is-visible { animation: educon-pulse 900ms var(--ease-out) 600ms 1; }
 @media (prefers-reduced-motion: reduce) {
   [data-animate] { opacity: 1; transform: none; transition: none; }
+  .pulse-once.is-visible { animation: none; }
   .card:hover, .camino:hover, .whatsapp:hover { transform: none; }
 }
 /* Sin JS todo es visible */
 .no-js [data-animate] { opacity: 1; transform: none; }
+
+/* ---------- Estilos PalanteU: scrims editoriales (degradés sobre imagen/sección) ---------- */
+/* Fundido hacia arriba: para medias con texto encima (cards, heros con foto) */
+.scrim-top { position: relative; isolation: isolate; }
+.scrim-top::after {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: linear-gradient(to top,
+    var(--ur-azul-dk) 0%,
+    color-mix(in srgb, var(--ur-azul-dk) 70%, transparent) 45%,
+    color-mix(in srgb, var(--ur-azul-dk) 25%, transparent) 75%,
+    transparent 100%);
+}
+/* Fundido hacia la derecha: para bandas con contenido a la izquierda */
+.scrim-right { position: relative; isolation: isolate; }
+.scrim-right::after {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: linear-gradient(to right,
+    color-mix(in srgb, var(--ur-azul-dk) 92%, transparent) 0%,
+    color-mix(in srgb, var(--ur-azul-dk) 45%, transparent) 55%,
+    transparent 100%);
+}
+.scrim-top > *, .scrim-right > * { position: relative; z-index: 1; }
+/* Banda con gradiente institucional (secciones destacadas) */
+.section--gradiente { background: var(--grad-hero); color: var(--crema); border-block: 1px solid var(--border); }
+.section--gradiente .cifra__label { color: var(--gris-03); }
+
+/* ---------- Franja de logos con imágenes (A2) ---------- */
+.logos__row img {
+  height: 34px; width: auto;
+  filter: grayscale(1); opacity: 0.72;
+  transition: filter var(--dur-2) var(--ease-out), opacity var(--dur-2) var(--ease-out);
+}
+.logos__row img:hover { filter: none; opacity: 1; }
+
+/* ---------- Página de docentes: tarjeta estilo speaker (A1) ---------- */
+.speaker {
+  position: relative; display: block; width: 100%;
+  aspect-ratio: 4 / 5; overflow: hidden;
+  border: 1px solid var(--border); border-radius: var(--radius-lg);
+  background: var(--grad-hero); cursor: pointer; padding: 0; text-align: left;
+  transition: transform var(--dur-2) var(--ease-out), border-color var(--dur-2) var(--ease-out), box-shadow var(--dur-2) var(--ease-out);
+}
+.speaker:hover { transform: translateY(-5px); border-color: var(--ur-coral); box-shadow: var(--shadow-md); }
+.speaker__inicial {
+  position: absolute; inset: 0;
+  display: grid; place-items: center;
+  font-weight: 900; font-size: clamp(3rem, 7vw, 4.5rem);
+  color: rgba(248, 250, 252, 0.18); letter-spacing: -0.03em;
+}
+.speaker__overlay {
+  position: absolute; inset: auto 0 0 0; padding: 3.4rem 1.2rem 1.2rem;
+  background: linear-gradient(to top, var(--ur-azul-dk) 0%, color-mix(in srgb, var(--ur-azul-dk) 65%, transparent) 55%, transparent 100%);
+}
+.speaker__overlay h3 { color: var(--crema); font-size: 1.05rem; margin: 0 0 0.2rem; }
+.speaker__overlay p { color: var(--gris-03); font-size: 0.8rem; margin: 0; }
+.speaker__facultad {
+  position: absolute; top: 12px; left: 12px;
+  background: rgba(0, 29, 51, 0.72); color: var(--crema); backdrop-filter: blur(4px);
+  font-size: 0.62rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 0.3rem 0.7rem; border-radius: var(--radius-pill);
+}
+.speaker__ver {
+  position: absolute; top: 12px; right: 12px; opacity: 0;
+  background: var(--ur-rojo); color: #fff;
+  font-size: 0.68rem; font-weight: 700; padding: 0.3rem 0.8rem; border-radius: var(--radius-pill);
+  transition: opacity var(--dur-1) var(--ease-out);
+}
+.speaker:hover .speaker__ver, .speaker:focus-visible .speaker__ver { opacity: 1; }
+@media (prefers-reduced-motion: reduce) { .speaker:hover { transform: none; } .speaker__ver { opacity: 1; } }

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nuestros docentes | Educación Continua – Universidad del Rosario</title>
+<meta name="description" content="Conoce a los docentes de Educación Continua de la Universidad del Rosario: magistrados, investigadores y expertos del sector real. Busca por nombre o facultad.">
+<meta name="theme-color" content="#001d33">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Lora:ital,wght@1,500&display=swap">
+<link rel="stylesheet" href="assets/css/educon.css">
+</head>
+<body>
+<div class="proto-ribbon">Prototipo de nueva interfaz — los perfiles de docentes son de demostración.</div>
+<a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html">
+      <img class="brand__img" src="assets/img/logo-educon-urosario.webp" alt="Advance, Educación Continua — Universidad del Rosario" width="600" height="106">
+    </a>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="buscar.html">Oferta</a>
+      <a href="area-salud.html">Áreas</a>
+      <a href="empresas.html">Empresas</a>
+      <a href="centro-simulacion.html">Simulación</a>
+    </nav>
+    <a class="btn btn--ghost header__cta" href="https://mentoria.jerrejerre.com/demourosario" rel="noopener">Ruta de aprendizaje</a>
+    <a class="btn btn--primary header__cta" href="buscar.html">Inscríbete</a>
+    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="menu-movil" aria-label="Abrir menú">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <nav id="menu-movil" class="mobile-nav" hidden aria-label="Menú móvil">
+    <a href="index.html">Inicio</a>
+    <a href="buscar.html">Oferta académica</a>
+    <a href="docentes.html" aria-current="page">Nuestros docentes</a>
+    <a href="empresas.html">Empresas</a>
+    <a href="centro-simulacion.html">Centro de Simulación</a>
+    <a class="btn btn--primary" href="buscar.html">Inscríbete</a>
+  </nav>
+</header>
+
+<main id="contenido">
+  <section class="hero" style="padding-block:3.5rem 3rem;">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Miga de pan" style="margin-bottom:1.4rem;">
+        <ol><li><a href="index.html">Educación Continua</a></li><li aria-current="page">Nuestros docentes</li></ol>
+      </nav>
+      <p class="kicker" data-animate="left">Cuerpo docente</p>
+      <h1 class="display display--xl" data-animate="left" style="max-width:15ch;">Aprende de quienes <em>ejercen</em></h1>
+      <p class="lead" data-animate>Magistrados, investigadores y expertos del sector real. Busca por nombre o explora por facultad y conoce su trayectoria.</p>
+
+      <div class="docentes-buscar" data-animate style="max-width:420px;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <label class="visually-hidden" for="buscar-docente">Buscar docente por nombre o facultad</label>
+        <input id="buscar-docente" type="search" data-docente-buscar placeholder="Buscar por nombre o facultad…" autocomplete="off">
+      </div>
+      <div class="chips" aria-label="Filtrar por facultad" data-animate>
+        <button class="chip" type="button" data-chip-buscar="Jurisprudencia" aria-pressed="false">Jurisprudencia</button>
+        <button class="chip" type="button" data-chip-buscar="Economía y Negocios" aria-pressed="false">Economía y Negocios</button>
+        <button class="chip" type="button" data-chip-buscar="Medicina" aria-pressed="false">Medicina y Cs. de la Salud</button>
+        <button class="chip" type="button" data-chip-buscar="Ciencias e Ingeniería" aria-pressed="false">Ciencias e Ingeniería</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-block:3rem;">
+    <div class="container">
+      <div class="grid grid--3">
+        <button class="speaker" type="button" data-docente-card data-modal="modal-jaramillo" data-animate="zoom">
+          <span class="speaker__inicial" aria-hidden="true">CJ</span>
+          <span class="speaker__facultad">Jurisprudencia</span>
+          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
+          <span class="speaker__overlay"><h3>Dr. Carlos Ignacio Jaramillo</h3><p>Ex-Magistrado Corte Suprema de Justicia</p></span>
+        </button>
+        <button class="speaker" type="button" data-docente-card data-modal="modal-alvarez" data-animate="zoom">
+          <span class="speaker__inicial" aria-hidden="true">MA</span>
+          <span class="speaker__facultad">Jurisprudencia</span>
+          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
+          <span class="speaker__overlay"><h3>Dr. Marco Antonio Álvarez</h3><p>Experto en Derecho Procesal</p></span>
+        </button>
+        <button class="speaker" type="button" data-docente-card data-modal="modal-tejeiro" data-animate="zoom">
+          <span class="speaker__inicial" aria-hidden="true">OT</span>
+          <span class="speaker__facultad">Jurisprudencia</span>
+          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
+          <span class="speaker__overlay"><h3>Dr. Octavio Augusto Tejeiro</h3><p>Magistrado Corte Suprema de Justicia</p></span>
+        </button>
+        <button class="speaker" type="button" data-docente-card data-modal="modal-canosa" data-animate="zoom">
+          <span class="speaker__inicial" aria-hidden="true">UC</span>
+          <span class="speaker__facultad">Jurisprudencia</span>
+          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
+          <span class="speaker__overlay"><h3>Dr. Ulises Canosa</h3><p>Experto en Responsabilidad Civil</p></span>
+        </button>
+        <button class="speaker" type="button" data-docente-card data-modal="modal-gonzalez" data-animate="zoom">
+          <span class="speaker__inicial" aria-hidden="true">HG</span>
+          <span class="speaker__facultad">Economía y Negocios</span>
+          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
+          <span class="speaker__overlay"><h3>Dra. Hilda González</h3><p>Especialista en Derecho Societario</p></span>
+        </button>
+        <button class="speaker" type="button" data-docente-card data-modal="modal-villamil" data-animate="zoom">
+          <span class="speaker__inicial" aria-hidden="true">EV</span>
+          <span class="speaker__facultad">Jurisprudencia</span>
+          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
+          <span class="speaker__overlay"><h3>Dr. Edgardo Villamil</h3><p>Ex-Magistrado y experto en Títulos Valores</p></span>
+        </button>
+      </div>
+      <p class="aviso" style="margin-top:2rem;" data-animate>Perfiles de demostración. En el sitio final, esta página se alimenta del content type <strong>Docente</strong> (foto, credencial, hoja de vida) y cada programa enlaza los suyos.</p>
+    </div>
+  </section>
+
+  <section class="section cta-final">
+    <div class="container">
+      <h2 class="display display--lg" data-animate>Aprende con <em>ellos</em> en tu próximo programa</h2>
+      <div data-animate>
+        <a class="btn btn--primary" href="buscar.html">Explorar programas</a>
+        <a class="btn btn--ghost" href="https://wa.me/573118385505" rel="noopener">Hablar con un asesor</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODALES DE HOJA DE VIDA -->
+<dialog class="modal-docente" id="modal-jaramillo" aria-labelledby="mj-nombre">
+    <div class="modal-docente__inner">
+      <button class="modal-docente__cerrar" type="button" aria-label="Cerrar">✕</button>
+      <div class="modal-docente__head">
+        <span class="modal-docente__foto" aria-hidden="true">CJ</span>
+        <div>
+          <h3 id="mj-nombre">Dr. Carlos Ignacio Jaramillo</h3>
+          <p class="modal-docente__cargo">Ex-Magistrado Corte Suprema de Justicia</p>
+          <p class="modal-docente__bio">Reconocido jurista con una vasta trayectoria en la Rama Judicial. Experto en Derecho Civil y Comercial, autor de numerosas publicaciones y referente académico a nivel nacional.</p>
+        </div>
+      </div>
+      <hr>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Formación Académica</h4>
+      <ul>
+        <li>Abogado, Universidad del Rosario</li>
+        <li>Doctor en Derecho, Universidad de Salamanca</li>
+      </ul>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Experiencia Profesional</h4>
+      <ul>
+        <li>Magistrado de la Sala de Casación Civil de la Corte Suprema de Justicia (2002-2010)</li>
+        <li>Conjuez de la Corte Constitucional</li>
+        <li>Árbitro en disputas comerciales nacionales e internacionales</li>
+      </ul>
+    </div>
+  </dialog>
+<dialog class="modal-docente" id="modal-alvarez" aria-labelledby="ma-nombre">
+    <div class="modal-docente__inner">
+      <button class="modal-docente__cerrar" type="button" aria-label="Cerrar">✕</button>
+      <div class="modal-docente__head">
+        <span class="modal-docente__foto" aria-hidden="true">MA</span>
+        <div>
+          <h3 id="ma-nombre">Dr. Marco Antonio Álvarez</h3>
+          <p class="modal-docente__cargo">Experto en Derecho Procesal</p>
+          <p class="modal-docente__bio">Procesalista con amplia experiencia en litigio de alta complejidad y docencia universitaria. Conferencista habitual en congresos de derecho procesal. (Perfil de demostración.)</p>
+        </div>
+      </div>
+      <hr>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Formación Académica</h4>
+      <ul><li>Abogado, Universidad del Rosario</li><li>Magíster en Derecho Procesal</li></ul>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Experiencia Profesional</h4>
+      <ul><li>Litigante en procesos civiles y comerciales de alta complejidad</li><li>Profesor de posgrado en derecho procesal</li></ul>
+    </div>
+  </dialog>
+<dialog class="modal-docente" id="modal-tejeiro" aria-labelledby="ot-nombre">
+    <div class="modal-docente__inner">
+      <button class="modal-docente__cerrar" type="button" aria-label="Cerrar">✕</button>
+      <div class="modal-docente__head">
+        <span class="modal-docente__foto" aria-hidden="true">OT</span>
+        <div>
+          <h3 id="ot-nombre">Dr. Octavio Augusto Tejeiro</h3>
+          <p class="modal-docente__cargo">Magistrado Corte Suprema de Justicia</p>
+          <p class="modal-docente__bio">Magistrado de la Sala de Casación Civil, con destacada trayectoria en la jurisdicción ordinaria y la academia. (Perfil de demostración.)</p>
+        </div>
+      </div>
+      <hr>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Formación Académica</h4>
+      <ul><li>Abogado</li><li>Especialista en Derecho Procesal Civil</li></ul>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Experiencia Profesional</h4>
+      <ul><li>Magistrado de la Sala de Casación Civil</li><li>Juez y magistrado de tribunal en la jurisdicción ordinaria</li></ul>
+    </div>
+  </dialog>
+<dialog class="modal-docente" id="modal-canosa" aria-labelledby="uc-nombre">
+    <div class="modal-docente__inner">
+      <button class="modal-docente__cerrar" type="button" aria-label="Cerrar">✕</button>
+      <div class="modal-docente__head">
+        <span class="modal-docente__foto" aria-hidden="true">UC</span>
+        <div>
+          <h3 id="uc-nombre">Dr. Ulises Canosa</h3>
+          <p class="modal-docente__cargo">Experto en Responsabilidad Civil</p>
+          <p class="modal-docente__bio">Referente en responsabilidad civil y derecho de seguros, con amplia trayectoria gremial y académica. (Perfil de demostración.)</p>
+        </div>
+      </div>
+      <hr>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Formación Académica</h4>
+      <ul><li>Abogado, Universidad del Rosario</li><li>Especialista en Derecho Comercial</li></ul>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Experiencia Profesional</h4>
+      <ul><li>Directivo gremial del sector asegurador</li><li>Profesor de responsabilidad civil y contratos</li></ul>
+    </div>
+  </dialog>
+<dialog class="modal-docente" id="modal-gonzalez" aria-labelledby="hg-nombre">
+    <div class="modal-docente__inner">
+      <button class="modal-docente__cerrar" type="button" aria-label="Cerrar">✕</button>
+      <div class="modal-docente__head">
+        <span class="modal-docente__foto" aria-hidden="true">HG</span>
+        <div>
+          <h3 id="hg-nombre">Dra. Hilda González</h3>
+          <p class="modal-docente__cargo">Especialista en Derecho Societario</p>
+          <p class="modal-docente__bio">Asesora de juntas directivas y experta en gobierno corporativo y derecho de sociedades. (Perfil de demostración.)</p>
+        </div>
+      </div>
+      <hr>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Formación Académica</h4>
+      <ul><li>Abogada</li><li>Magíster en Derecho Comercial</li></ul>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Experiencia Profesional</h4>
+      <ul><li>Consultora en estructuración societaria</li><li>Miembro de juntas directivas</li></ul>
+    </div>
+  </dialog>
+<dialog class="modal-docente" id="modal-villamil" aria-labelledby="ev-nombre">
+    <div class="modal-docente__inner">
+      <button class="modal-docente__cerrar" type="button" aria-label="Cerrar">✕</button>
+      <div class="modal-docente__head">
+        <span class="modal-docente__foto" aria-hidden="true">EV</span>
+        <div>
+          <h3 id="ev-nombre">Dr. Edgardo Villamil</h3>
+          <p class="modal-docente__cargo">Ex-Magistrado y experto en Títulos Valores</p>
+          <p class="modal-docente__bio">Ex-magistrado con reconocida trayectoria en derecho comercial y títulos valores. (Perfil de demostración.)</p>
+        </div>
+      </div>
+      <hr>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Formación Académica</h4>
+      <ul><li>Abogado</li><li>Especialista en Derecho Comercial y Financiero</li></ul>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Experiencia Profesional</h4>
+      <ul><li>Magistrado de la Corte Suprema de Justicia</li><li>Autor y conferencista en títulos valores</li></ul>
+    </div>
+  </dialog>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:1rem;">
+          <span class="brand__logo" aria-hidden="true">UR</span>
+          <span class="brand__name"><strong style="color:var(--crema)">Educación Continua</strong><span>Universidad del Rosario</span></span>
+        </a>
+        <p style="max-width:38ch;">Educación continua con el rigor, la red y el respaldo de 370 años de tradición rosarista.</p>
+        <div class="footer__badges">
+          <span>Acreditación CNA</span><span>QS Stars</span><span>ISO 9001</span>
+        </div>
+      </div>
+      <nav aria-label="Aprender">
+        <h4>Aprender</h4>
+        <ul>
+          <li><a href="buscar.html">Catálogo de programas</a></li>
+          <li><a href="area-salud.html">Áreas de conocimiento</a></li>
+          <li><a href="docentes.html">Nuestros docentes</a></li>
+          <li><a href="programa.html">Programas premium</a></li>
+          <li><a href="https://programas-virtuales-educon-urosario.vercel.app/" rel="noopener">Campus virtual</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Audiencias">
+        <h4>Audiencias</h4>
+        <ul>
+          <li><a href="buscar.html">Profesionales</a></li>
+          <li><a href="empresas.html">Empresas</a></li>
+          <li><a href="ur-senior.html">UR Senior</a></li>
+          <li><a href="centro-simulacion.html">Centro de Simulación</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Recursos">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="financiacion.html">Financiación</a></li>
+          <li><a href="devoluciones.html">Devoluciones</a></li>
+          <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+          <li><a href="contactenos.html">Contáctenos</a></li>
+          <li><a href="kit-de-marca.html">Kit de marca</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Servicios académicos">
+        <h4>Servicios académicos</h4>
+        <ul>
+          <li><a href="https://pasaporte.urosario.edu.co" rel="noopener">Pasaporte virtual</a></li>
+          <li><a href="https://e-aulas.urosario.edu.co" rel="noopener">E-Aulas</a></li>
+          <li><a href="https://urosario.edu.co/financiacion" rel="noopener">Becas, descuentos y apoyo financiero</a></li>
+          <li><a href="https://urosario.edu.co/registro-y-control" rel="noopener">Registro y control</a></li>
+          <li><a href="https://urosario.edu.co/servicios-virtuales" rel="noopener">Servicios en línea</a></li>
+          <li><a href="https://urosario.edu.co/consultorio-juridico" rel="noopener">Consultorio jurídico</a></li>
+          <li><a href="https://urosario.edu.co/recorrido-virtual" rel="noopener">Recorrido virtual</a></li>
+          <li><a href="https://urosario.edu.co/felicitaciones-quejas-y-reclamos" rel="noopener">Felicitaciones, quejas y reclamos</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer__legal">
+      <span>© 2026 Universidad del Rosario · Educación Continua y Consultoría</span>
+      <span><a href="https://urosario.edu.co/aviso-de-privacidad" rel="noopener">Aviso de privacidad</a> · <a href="https://urosario.edu.co/terminos-y-condiciones/" rel="noopener">Términos de uso</a> · Línea: (+57)&nbsp;601&nbsp;297&nbsp;0200 op.&nbsp;4</span>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/573118385505" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.4 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.3 1.3Z"/></svg>
+</a>
+
+<script src="assets/js/educon.js" defer></script>
+</body>
+</html>

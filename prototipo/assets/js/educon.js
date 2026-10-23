@@ -144,6 +144,20 @@
       });
     }, 150));
   }
+  // Chips que alimentan el buscador de docentes (página de docentes)
+  document.querySelectorAll("[data-chip-buscar]").forEach(function (chip) {
+    chip.addEventListener("click", function () {
+      var inp = document.querySelector("[data-docente-buscar]");
+      if (!inp) return;
+      var val = chip.getAttribute("data-chip-buscar");
+      var activo = chip.getAttribute("aria-pressed") === "true";
+      document.querySelectorAll("[data-chip-buscar]").forEach(function (c) { c.setAttribute("aria-pressed", "false"); });
+      chip.setAttribute("aria-pressed", String(!activo));
+      inp.value = activo ? "" : val;
+      inp.dispatchEvent(new Event("input", { bubbles: true }));
+    });
+  });
+
   document.querySelectorAll("[data-docente-card][data-modal]").forEach(function (card) {
     card.addEventListener("click", function () {
       var dlg = document.getElementById(card.getAttribute("data-modal"));
