@@ -208,6 +208,14 @@ html:not([data-theme="light"]) .header .brand__img { filter: brightness(0) inver
 }
 .header__cta { display: none; }
 @media (min-width: 768px) { .header__cta { display: inline-flex; min-height: 42px; padding-block: 0.45rem; } }
+/* Menú con más ítems: compactar entre 1024 y 1479px para que no desborde */
+@media (min-width: 1024px) and (max-width: 1479px) {
+  .nav { gap: 0.1rem; }
+  .nav a, .nav-drop-btn { font-size: 0.74rem; padding: 0.5rem 0.55rem; letter-spacing: 0.02em; }
+  .brand__img { height: 32px; }
+  .header__cta { font-size: 0.82rem; padding-inline: 1rem; }
+  .header__inner { gap: 0.9rem; }
+}
 
 /* Desplegable de Facultades en el menú (A7) */
 .nav-item-drop { position: relative; display: none; }
@@ -338,6 +346,17 @@ html:not([data-theme="light"]) .header .brand__img { filter: brightness(0) inver
   font-size: 0.62rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
   padding: 0.3rem 0.7rem; border-radius: var(--radius-pill);
 }
+/* Sello de certificación (A5) */
+.card__sello {
+  position: absolute; bottom: 12px; left: 12px; z-index: 1;
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  background: rgba(140, 29, 50, 0.92); color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  font-size: 0.62rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 0.3rem 0.7rem; border-radius: var(--radius-pill);
+  backdrop-filter: blur(4px);
+}
+.card__sello svg { flex: none; }
 .card__estado {
   position: absolute; top: 12px; right: 12px; z-index: 1;
   background: rgba(0, 29, 51, 0.75); color: var(--crema); backdrop-filter: blur(4px);
