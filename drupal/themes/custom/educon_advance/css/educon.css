@@ -963,6 +963,7 @@ body.con-cta-movil .whatsapp { display: none; }
 @media (prefers-reduced-motion: reduce) { .speaker:hover { transform: none; } .speaker__ver { opacity: 1; } }
 /* Speakers con foto real (estilo agencia de conferencistas) */
 .grid--speakers { display: grid; grid-template-columns: repeat(auto-fill, minmax(215px, 1fr)); gap: 1.2rem; }
+a.speaker { text-decoration: none; }
 .speaker__img {
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover; object-position: center top;
