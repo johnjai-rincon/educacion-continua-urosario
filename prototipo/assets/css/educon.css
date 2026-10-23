@@ -683,6 +683,8 @@ html:not([data-theme="light"]) .header .brand__img { filter: brightness(0) inver
   display: grid; place-items: center; font-weight: 800; font-size: 1.6rem;
 }
 .modal-docente h3 { font-size: 1.3rem; font-weight: 800; color: var(--ur-azul); margin: 0 0 0.15rem; }
+html:not([data-theme="light"]) .modal-docente h3,
+html:not([data-theme="light"]) .modal-docente h4 { color: var(--crema); }
 .modal-docente__cargo { color: var(--ink-2); font-size: 0.9rem; margin: 0 0 0.6rem; }
 .modal-docente__bio { font-size: 0.9rem; color: var(--ink-2); margin: 0; }
 .modal-docente hr { border: 0; border-top: 1px solid var(--border); margin: 1.4rem 0; }
@@ -959,3 +961,14 @@ body.con-cta-movil .whatsapp { display: none; }
 }
 .speaker:hover .speaker__ver, .speaker:focus-visible .speaker__ver { opacity: 1; }
 @media (prefers-reduced-motion: reduce) { .speaker:hover { transform: none; } .speaker__ver { opacity: 1; } }
+/* Speakers con foto real (estilo agencia de conferencistas) */
+.grid--speakers { display: grid; grid-template-columns: repeat(auto-fill, minmax(215px, 1fr)); gap: 1.2rem; }
+.speaker__img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+  transition: transform var(--dur-2) var(--ease-out);
+}
+.speaker:hover .speaker__img { transform: scale(1.045); }
+@media (prefers-reduced-motion: reduce) { .speaker:hover .speaker__img { transform: none; } }
+.modal-docente__foto--img { overflow: hidden; padding: 0; }
+.modal-docente__foto--img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }

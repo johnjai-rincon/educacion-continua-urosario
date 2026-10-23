@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="assets/css/educon.css">
 </head>
 <body>
-<div class="proto-ribbon">Prototipo de nueva interfaz — los perfiles de docentes son de demostración.</div>
+<div class="proto-ribbon">Prototipo de nueva interfaz — perfiles tomados del sitio actual de Educación Continua.</div>
 <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
 <header class="header">
@@ -79,56 +79,82 @@
         <label class="visually-hidden" for="buscar-docente">Buscar docente por nombre o facultad</label>
         <input id="buscar-docente" type="search" data-docente-buscar placeholder="Buscar por nombre o facultad…" autocomplete="off">
       </div>
-      <div class="chips" aria-label="Filtrar por facultad" data-animate>
+      <div class="chips" aria-label="Filtrar por área" data-animate>
         <button class="chip" type="button" data-chip-buscar="Jurisprudencia" aria-pressed="false">Jurisprudencia</button>
         <button class="chip" type="button" data-chip-buscar="Economía y Negocios" aria-pressed="false">Economía y Negocios</button>
-        <button class="chip" type="button" data-chip-buscar="Medicina" aria-pressed="false">Medicina y Cs. de la Salud</button>
+        <button class="chip" type="button" data-chip-buscar="Salud" aria-pressed="false">Salud</button>
         <button class="chip" type="button" data-chip-buscar="Ciencias e Ingeniería" aria-pressed="false">Ciencias e Ingeniería</button>
+        <button class="chip" type="button" data-chip-buscar="Creación" aria-pressed="false">Creación</button>
+        <button class="chip" type="button" data-chip-buscar="Bienestar" aria-pressed="false">Bienestar</button>
       </div>
     </div>
   </section>
 
   <section class="section" style="padding-block:3rem;">
     <div class="container">
-      <div class="grid grid--3">
-        <button class="speaker" type="button" data-docente-card data-modal="modal-jaramillo" data-animate="zoom">
-          <span class="speaker__inicial" aria-hidden="true">CJ</span>
-          <span class="speaker__facultad">Jurisprudencia</span>
-          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
-          <span class="speaker__overlay"><h3>Dr. Carlos Ignacio Jaramillo</h3><p>Ex-Magistrado Corte Suprema de Justicia</p></span>
-        </button>
-        <button class="speaker" type="button" data-docente-card data-modal="modal-alvarez" data-animate="zoom">
-          <span class="speaker__inicial" aria-hidden="true">MA</span>
-          <span class="speaker__facultad">Jurisprudencia</span>
-          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
-          <span class="speaker__overlay"><h3>Dr. Marco Antonio Álvarez</h3><p>Experto en Derecho Procesal</p></span>
-        </button>
-        <button class="speaker" type="button" data-docente-card data-modal="modal-tejeiro" data-animate="zoom">
-          <span class="speaker__inicial" aria-hidden="true">OT</span>
-          <span class="speaker__facultad">Jurisprudencia</span>
-          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
-          <span class="speaker__overlay"><h3>Dr. Octavio Augusto Tejeiro</h3><p>Magistrado Corte Suprema de Justicia</p></span>
-        </button>
-        <button class="speaker" type="button" data-docente-card data-modal="modal-canosa" data-animate="zoom">
-          <span class="speaker__inicial" aria-hidden="true">UC</span>
-          <span class="speaker__facultad">Jurisprudencia</span>
-          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
-          <span class="speaker__overlay"><h3>Dr. Ulises Canosa</h3><p>Experto en Responsabilidad Civil</p></span>
-        </button>
-        <button class="speaker" type="button" data-docente-card data-modal="modal-gonzalez" data-animate="zoom">
-          <span class="speaker__inicial" aria-hidden="true">HG</span>
+      <div class="grid grid--speakers">
+        <button class="speaker" type="button" data-docente-card data-modal="modal-echeverri" data-animate="zoom">
+          <img class="speaker__img" src="assets/img/docentes/lina-echeverri.jpg" alt="" loading="lazy">
           <span class="speaker__facultad">Economía y Negocios</span>
           <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
-          <span class="speaker__overlay"><h3>Dra. Hilda González</h3><p>Especialista en Derecho Societario</p></span>
+          <span class="speaker__overlay"><h3>Lina María Echeverri Cañas</h3><p>PhD · Top Voice LATAM en marketing y branding</p></span>
         </button>
-        <button class="speaker" type="button" data-docente-card data-modal="modal-villamil" data-animate="zoom">
-          <span class="speaker__inicial" aria-hidden="true">EV</span>
+        <button class="speaker" type="button" data-docente-card data-modal="modal-rincon" data-animate="zoom">
+          <img class="speaker__img" src="assets/img/docentes/erick-rincon.jpg" alt="" loading="lazy">
           <span class="speaker__facultad">Jurisprudencia</span>
           <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
-          <span class="speaker__overlay"><h3>Dr. Edgardo Villamil</h3><p>Ex-Magistrado y experto en Títulos Valores</p></span>
+          <span class="speaker__overlay"><h3>Erick Rincón Cárdenas</h3><p>Doctor en Derecho · Experto en Fintech y Legaltech</p></span>
+        </button>
+        <button class="speaker" type="button" data-docente-card data-modal="modal-galvis" data-animate="zoom">
+          <img class="speaker__img" src="assets/img/docentes/gladys-galvis.jpg" alt="" loading="lazy">
+          <span class="speaker__facultad">Salud</span>
+          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
+          <span class="speaker__overlay"><h3>Dra. Gladys Galvis López</h3><p>Doctora en Educación · Medicina alternativa</p></span>
+        </button>
+        <button class="speaker" type="button" data-docente-card data-modal="modal-pulgarin" data-animate="zoom">
+          <img class="speaker__img" src="assets/img/docentes/sergio-pulgarin.jpg" alt="" loading="lazy">
+          <span class="speaker__facultad">Economía y Negocios</span>
+          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
+          <span class="speaker__overlay"><h3>Sergio Andrés Pulgarín Molina</h3><p>Doctor en Ciencias de la Dirección</p></span>
+        </button>
+        <button class="speaker" type="button" data-docente-card data-modal="modal-rodriguez" data-animate="zoom">
+          <img class="speaker__img" src="assets/img/docentes/gloria-amparo-rodriguez.jpg" alt="" loading="lazy">
+          <span class="speaker__facultad">Jurisprudencia</span>
+          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
+          <span class="speaker__overlay"><h3>Gloria Amparo Rodríguez</h3><p>Magistrada JEP · Doctora en Sociología Jurídica</p></span>
+        </button>
+        <button class="speaker" type="button" data-docente-card data-modal="modal-castro" data-animate="zoom">
+          <img class="speaker__img" src="assets/img/docentes/jose-castro.jpg" alt="" loading="lazy">
+          <span class="speaker__facultad">Ciencias e Ingeniería</span>
+          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
+          <span class="speaker__overlay"><h3>José Hernán Castro Leguízamo</h3><p>Analítica y visualización de datos · Power BI</p></span>
+        </button>
+        <button class="speaker" type="button" data-docente-card data-modal="modal-paez" data-animate="zoom">
+          <img class="speaker__img" src="assets/img/docentes/diana-paez.jpg" alt="" loading="lazy">
+          <span class="speaker__facultad">Salud</span>
+          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
+          <span class="speaker__overlay"><h3>Diana Carolina Páez Rubiano</h3><p>Mg. en Salud Pública · Coach de salud y bienestar</p></span>
+        </button>
+        <button class="speaker" type="button" data-docente-card data-modal="modal-roa" data-animate="zoom">
+          <img class="speaker__img" src="assets/img/docentes/andres-roa.jpg" alt="" loading="lazy">
+          <span class="speaker__facultad">Ciencias e Ingeniería</span>
+          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
+          <span class="speaker__overlay"><h3>Andrés Roa</h3><p>Mg. en Gerencia de la Información · Consultor SAP</p></span>
+        </button>
+        <button class="speaker" type="button" data-docente-card data-modal="modal-tovar" data-animate="zoom">
+          <img class="speaker__img" src="assets/img/docentes/daniel-tovar.jpg" alt="" loading="lazy">
+          <span class="speaker__facultad">Creación</span>
+          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
+          <span class="speaker__overlay"><h3>Héctor Daniel Tovar Lasso</h3><p>Artista integral de Teatro Musical UR–MISI</p></span>
+        </button>
+        <button class="speaker" type="button" data-docente-card data-modal="modal-bisquerra" data-animate="zoom">
+          <img class="speaker__img" src="assets/img/docentes/rafael-bisquerra.jpg" alt="" loading="lazy">
+          <span class="speaker__facultad">Bienestar</span>
+          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
+          <span class="speaker__overlay"><h3>Rafael Bisquerra Alzina</h3><p>Catedrático emérito U. de Barcelona · Educación emocional</p></span>
         </button>
       </div>
-      <p class="aviso" style="margin-top:2rem;" data-animate>Perfiles de demostración. En el sitio final, esta página se alimenta del content type <strong>Docente</strong> (foto, credencial, hoja de vida) y cada programa enlaza los suyos.</p>
+      <p class="aviso" style="margin-top:2rem;" data-animate>Fotos y hojas de vida tomadas de las fichas publicadas hoy en educacioncontinua.urosario.edu.co. En el sitio final, esta página se alimenta del content type <strong>Docente</strong> (foto, credencial, hoja de vida) y cada programa enlaza los suyos.</p>
     </div>
   </section>
 
@@ -143,119 +169,174 @@
   </section>
 
   <!-- MODALES DE HOJA DE VIDA -->
-<dialog class="modal-docente" id="modal-jaramillo" aria-labelledby="mj-nombre">
+<dialog class="modal-docente" id="modal-echeverri" aria-labelledby="md-echeverri-nombre">
     <div class="modal-docente__inner">
       <button class="modal-docente__cerrar" type="button" aria-label="Cerrar">✕</button>
       <div class="modal-docente__head">
-        <span class="modal-docente__foto" aria-hidden="true">CJ</span>
+        <span class="modal-docente__foto modal-docente__foto--img"><img src="assets/img/docentes/lina-echeverri.jpg" alt="Foto de Lina María Echeverri Cañas"></span>
         <div>
-          <h3 id="mj-nombre">Dr. Carlos Ignacio Jaramillo</h3>
-          <p class="modal-docente__cargo">Ex-Magistrado Corte Suprema de Justicia</p>
-          <p class="modal-docente__bio">Reconocido jurista con una vasta trayectoria en la Rama Judicial. Experto en Derecho Civil y Comercial, autor de numerosas publicaciones y referente académico a nivel nacional.</p>
+          <h3 id="md-echeverri-nombre">Lina María Echeverri Cañas</h3>
+          <p class="modal-docente__cargo">PhD · Top Voice LATAM en marketing y branding · Economía y Negocios</p>
         </div>
       </div>
       <hr>
-      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Formación Académica</h4>
-      <ul>
-        <li>Abogado, Universidad del Rosario</li>
-        <li>Doctor en Derecho, Universidad de Salamanca</li>
-      </ul>
-      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Experiencia Profesional</h4>
-      <ul>
-        <li>Magistrado de la Sala de Casación Civil de la Corte Suprema de Justicia (2002-2010)</li>
-        <li>Conjuez de la Corte Constitucional</li>
-        <li>Árbitro en disputas comerciales nacionales e internacionales</li>
-      </ul>
+      <p class="modal-docente__bio">Estratega, speaker y profesora reconocida en América Latina por transformar el marketing y el branding en experiencias humanas de impacto real. PhD en Integración y Desarrollo Económico y Territorial (Universidad de León) y MBA del Tecnológico de Monterrey, con más de 27 años de trayectoria como líder académica y consultora. Ha recibido más de 25 premios nacionales e internacionales, entre ellos el Premio Portafolio a Mejor Profesora Universitaria en Colombia y el reconocimiento de LinkedIn como una de las 10 voces más influyentes de América Latina (Top Voice LATAM).</p>
+      <h4 style="margin-top:1.3rem;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Dicta actualmente</h4>
+      <p style="margin:0 0 0.4rem; font-size:0.9rem; color:var(--ink-2);">Marketing para empresas de servicios de salud — GSB Learning Hub</p>
+      <p style="margin:0.9rem 0 0;"><a class="btn btn--primary" href="https://educacioncontinua.urosario.edu.co/gsb-learning-hub/curso/marketing-para-empresas-servicios-salud" target="_blank" rel="noopener">Ver programa en el sitio actual</a></p>
     </div>
   </dialog>
-<dialog class="modal-docente" id="modal-alvarez" aria-labelledby="ma-nombre">
+<dialog class="modal-docente" id="modal-rincon" aria-labelledby="md-rincon-nombre">
     <div class="modal-docente__inner">
       <button class="modal-docente__cerrar" type="button" aria-label="Cerrar">✕</button>
       <div class="modal-docente__head">
-        <span class="modal-docente__foto" aria-hidden="true">MA</span>
+        <span class="modal-docente__foto modal-docente__foto--img"><img src="assets/img/docentes/erick-rincon.jpg" alt="Foto de Erick Rincón Cárdenas"></span>
         <div>
-          <h3 id="ma-nombre">Dr. Marco Antonio Álvarez</h3>
-          <p class="modal-docente__cargo">Experto en Derecho Procesal</p>
-          <p class="modal-docente__bio">Procesalista con amplia experiencia en litigio de alta complejidad y docencia universitaria. Conferencista habitual en congresos de derecho procesal. (Perfil de demostración.)</p>
+          <h3 id="md-rincon-nombre">Erick Rincón Cárdenas</h3>
+          <p class="modal-docente__cargo">Doctor en Derecho · Experto en Fintech y Legaltech · Jurisprudencia</p>
         </div>
       </div>
       <hr>
-      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Formación Académica</h4>
-      <ul><li>Abogado, Universidad del Rosario</li><li>Magíster en Derecho Procesal</li></ul>
-      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Experiencia Profesional</h4>
-      <ul><li>Litigante en procesos civiles y comerciales de alta complejidad</li><li>Profesor de posgrado en derecho procesal</li></ul>
+      <p class="modal-docente__bio">Experto en Fintech, derecho financiero, comercio electrónico y legaltech. Abogado de la Universidad del Rosario, con posgrados en Derecho Financiero y Derecho Contractual, y Doctor en Derecho de la Universidad Europea de Madrid. Es Director de la Maestría en Negocios y Derecho del GSB de la Universidad del Rosario, Director del TicTank de la misma Universidad y Profesor Asociado.</p>
+      <h4 style="margin-top:1.3rem;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Dicta actualmente</h4>
+      <p style="margin:0 0 0.4rem; font-size:0.9rem; color:var(--ink-2);">Seminario Legal Project Management — Jurisprudencia</p>
+      <p style="margin:0.9rem 0 0;"><a class="btn btn--primary" href="https://educacioncontinua.urosario.edu.co/jurisprudencia/seminario/legal-project-management" target="_blank" rel="noopener">Ver programa en el sitio actual</a></p>
     </div>
   </dialog>
-<dialog class="modal-docente" id="modal-tejeiro" aria-labelledby="ot-nombre">
+<dialog class="modal-docente" id="modal-galvis" aria-labelledby="md-galvis-nombre">
     <div class="modal-docente__inner">
       <button class="modal-docente__cerrar" type="button" aria-label="Cerrar">✕</button>
       <div class="modal-docente__head">
-        <span class="modal-docente__foto" aria-hidden="true">OT</span>
+        <span class="modal-docente__foto modal-docente__foto--img"><img src="assets/img/docentes/gladys-galvis.jpg" alt="Foto de Dra. Gladys Galvis López"></span>
         <div>
-          <h3 id="ot-nombre">Dr. Octavio Augusto Tejeiro</h3>
-          <p class="modal-docente__cargo">Magistrado Corte Suprema de Justicia</p>
-          <p class="modal-docente__bio">Magistrado de la Sala de Casación Civil, con destacada trayectoria en la jurisdicción ordinaria y la academia. (Perfil de demostración.)</p>
+          <h3 id="md-galvis-nombre">Dra. Gladys Galvis López</h3>
+          <p class="modal-docente__cargo">Doctora en Educación · Medicina alternativa · Salud</p>
         </div>
       </div>
       <hr>
-      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Formación Académica</h4>
-      <ul><li>Abogado</li><li>Especialista en Derecho Procesal Civil</li></ul>
-      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Experiencia Profesional</h4>
-      <ul><li>Magistrado de la Sala de Casación Civil</li><li>Juez y magistrado de tribunal en la jurisdicción ordinaria</li></ul>
+      <p class="modal-docente__bio">Investigadora y Doctora en Educación (Universidad La Salle de Costa Rica), Magíster en Educación, en Psicología Holista y en Coaching Personal. Terapeuta Ocupacional de la Universidad Nacional de Colombia, con especialización en Neurorrehabilitación Multifactorial Intensiva (CIREN, La Habana) y certificaciones en Medicina Tradicional China y Terapia Floral. Coordina la academia de educación continua en Medicina Alternativa de la Universidad del Rosario.</p>
+      <h4 style="margin-top:1.3rem;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Dicta actualmente</h4>
+      <p style="margin:0 0 0.4rem; font-size:0.9rem; color:var(--ink-2);">Terapia neural y odontología neurofocal — Escuela de Medicina y Cs. de la Salud</p>
+      <p style="margin:0.9rem 0 0;"><a class="btn btn--primary" href="https://educacioncontinua.urosario.edu.co/escuela-medicina-ciencias-salud/curso/terapia-neural-odontologia-neurofocal-una-vision-holista-ser-humano" target="_blank" rel="noopener">Ver programa en el sitio actual</a></p>
     </div>
   </dialog>
-<dialog class="modal-docente" id="modal-canosa" aria-labelledby="uc-nombre">
+<dialog class="modal-docente" id="modal-pulgarin" aria-labelledby="md-pulgarin-nombre">
     <div class="modal-docente__inner">
       <button class="modal-docente__cerrar" type="button" aria-label="Cerrar">✕</button>
       <div class="modal-docente__head">
-        <span class="modal-docente__foto" aria-hidden="true">UC</span>
+        <span class="modal-docente__foto modal-docente__foto--img"><img src="assets/img/docentes/sergio-pulgarin.jpg" alt="Foto de Sergio Andrés Pulgarín Molina"></span>
         <div>
-          <h3 id="uc-nombre">Dr. Ulises Canosa</h3>
-          <p class="modal-docente__cargo">Experto en Responsabilidad Civil</p>
-          <p class="modal-docente__bio">Referente en responsabilidad civil y derecho de seguros, con amplia trayectoria gremial y académica. (Perfil de demostración.)</p>
+          <h3 id="md-pulgarin-nombre">Sergio Andrés Pulgarín Molina</h3>
+          <p class="modal-docente__cargo">Doctor en Ciencias de la Dirección · Economía y Negocios</p>
         </div>
       </div>
       <hr>
-      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Formación Académica</h4>
-      <ul><li>Abogado, Universidad del Rosario</li><li>Especialista en Derecho Comercial</li></ul>
-      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Experiencia Profesional</h4>
-      <ul><li>Directivo gremial del sector asegurador</li><li>Profesor de responsabilidad civil y contratos</li></ul>
+      <p class="modal-docente__bio">Doctor en Ciencias de la Dirección y Magíster en Dirección y Gerencia de Empresas de la Universidad del Rosario. Profesor distinguido de la Universidad e International Visiting Professor del SEPT Program de la Universidad de Leipzig (Alemania). Como Director de Planeación y Efectividad Institucional lideró la construcción y despliegue del Plan Integral de Desarrollo de la Universidad en el marco de la Ruta 2025.</p>
+      <h4 style="margin-top:1.3rem;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Dicta actualmente</h4>
+      <p style="margin:0 0 0.4rem; font-size:0.9rem; color:var(--ink-2);">MasterURclass — Dirección de Educación Digital</p>
+      <p style="margin:0.9rem 0 0;"><a class="btn btn--primary" href="https://educacioncontinua.urosario.edu.co/direccion-educacion-digital/seminario/masterurclass" target="_blank" rel="noopener">Ver programa en el sitio actual</a></p>
     </div>
   </dialog>
-<dialog class="modal-docente" id="modal-gonzalez" aria-labelledby="hg-nombre">
+<dialog class="modal-docente" id="modal-rodriguez" aria-labelledby="md-rodriguez-nombre">
     <div class="modal-docente__inner">
       <button class="modal-docente__cerrar" type="button" aria-label="Cerrar">✕</button>
       <div class="modal-docente__head">
-        <span class="modal-docente__foto" aria-hidden="true">HG</span>
+        <span class="modal-docente__foto modal-docente__foto--img"><img src="assets/img/docentes/gloria-amparo-rodriguez.jpg" alt="Foto de Gloria Amparo Rodríguez"></span>
         <div>
-          <h3 id="hg-nombre">Dra. Hilda González</h3>
-          <p class="modal-docente__cargo">Especialista en Derecho Societario</p>
-          <p class="modal-docente__bio">Asesora de juntas directivas y experta en gobierno corporativo y derecho de sociedades. (Perfil de demostración.)</p>
+          <h3 id="md-rodriguez-nombre">Gloria Amparo Rodríguez</h3>
+          <p class="modal-docente__cargo">Magistrada JEP · Doctora en Sociología Jurídica · Jurisprudencia</p>
         </div>
       </div>
       <hr>
-      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Formación Académica</h4>
-      <ul><li>Abogada</li><li>Magíster en Derecho Comercial</li></ul>
-      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Experiencia Profesional</h4>
-      <ul><li>Consultora en estructuración societaria</li><li>Miembro de juntas directivas</li></ul>
+      <p class="modal-docente__bio">Profesora titular e investigadora de la Facultad de Jurisprudencia. Abogada y Doctora (Ph.D.) en Sociología Jurídica e Instituciones Políticas (Universidad Externado), Magíster en Medio Ambiente y Desarrollo (Universidad Nacional). Ha sido conjuez de la Corte Constitucional y actualmente es magistrada de la Jurisdicción Especial para la Paz. Ganadora del premio internacional «Environmental Peacebuilding in Practice» por su trabajo en derecho ambiental, consulta previa y derechos étnicos.</p>
+      <h4 style="margin-top:1.3rem;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Dicta actualmente</h4>
+      <p style="margin:0 0 0.4rem; font-size:0.9rem; color:var(--ink-2);">MasterURclass — Dirección de Educación Digital</p>
+      <p style="margin:0.9rem 0 0;"><a class="btn btn--primary" href="https://educacioncontinua.urosario.edu.co/direccion-educacion-digital/seminario/masterurclass" target="_blank" rel="noopener">Ver programa en el sitio actual</a></p>
     </div>
   </dialog>
-<dialog class="modal-docente" id="modal-villamil" aria-labelledby="ev-nombre">
+<dialog class="modal-docente" id="modal-castro" aria-labelledby="md-castro-nombre">
     <div class="modal-docente__inner">
       <button class="modal-docente__cerrar" type="button" aria-label="Cerrar">✕</button>
       <div class="modal-docente__head">
-        <span class="modal-docente__foto" aria-hidden="true">EV</span>
+        <span class="modal-docente__foto modal-docente__foto--img"><img src="assets/img/docentes/jose-castro.jpg" alt="Foto de José Hernán Castro Leguízamo"></span>
         <div>
-          <h3 id="ev-nombre">Dr. Edgardo Villamil</h3>
-          <p class="modal-docente__cargo">Ex-Magistrado y experto en Títulos Valores</p>
-          <p class="modal-docente__bio">Ex-magistrado con reconocida trayectoria en derecho comercial y títulos valores. (Perfil de demostración.)</p>
+          <h3 id="md-castro-nombre">José Hernán Castro Leguízamo</h3>
+          <p class="modal-docente__cargo">Analítica y visualización de datos · Power BI · Ciencias e Ingeniería</p>
         </div>
       </div>
       <hr>
-      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Formación Académica</h4>
-      <ul><li>Abogado</li><li>Especialista en Derecho Comercial y Financiero</li></ul>
-      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Experiencia Profesional</h4>
-      <ul><li>Magistrado de la Corte Suprema de Justicia</li><li>Autor y conferencista en títulos valores</li></ul>
+      <p class="modal-docente__bio">Administrador de Empresas, Especialista en Pedagogía y Docencia y Auditor Interno en ISO 42001:2023, con trayectoria en los campos financiero, administrativo, académico y de consultoría. Experiencia como Asistente de Auditoría en Ernst & Young (EY) con enfoque en el sector financiero, y sólida práctica en talento humano, formación para el trabajo, emprendimiento, innovación social y estrategias de transformación digital.</p>
+      <h4 style="margin-top:1.3rem;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Dicta actualmente</h4>
+      <p style="margin:0 0 0.4rem; font-size:0.9rem; color:var(--ink-2);">Análisis y visualización de datos con Power BI — Escuela de Ingeniería, Ciencia y Tecnología</p>
+      <p style="margin:0.9rem 0 0;"><a class="btn btn--primary" href="https://educacioncontinua.urosario.edu.co/escuela-ingenieria-ciencias-tecnologia/curso/analisis-visualizacion-datos-con-power-bi-informacion-decision" target="_blank" rel="noopener">Ver programa en el sitio actual</a></p>
+    </div>
+  </dialog>
+<dialog class="modal-docente" id="modal-paez" aria-labelledby="md-paez-nombre">
+    <div class="modal-docente__inner">
+      <button class="modal-docente__cerrar" type="button" aria-label="Cerrar">✕</button>
+      <div class="modal-docente__head">
+        <span class="modal-docente__foto modal-docente__foto--img"><img src="assets/img/docentes/diana-paez.jpg" alt="Foto de Diana Carolina Páez Rubiano"></span>
+        <div>
+          <h3 id="md-paez-nombre">Diana Carolina Páez Rubiano</h3>
+          <p class="modal-docente__cargo">Mg. en Salud Pública · Coach de salud y bienestar · Salud</p>
+        </div>
+      </div>
+      <hr>
+      <p class="modal-docente__bio">Fisioterapeuta especialista en ejercicio físico para la salud de la Universidad del Rosario y Magíster en Salud Pública de la Universidad de Washington en St. Louis (EE. UU.). Coach Ontológico y de Salud y Bienestar certificada por la Federación Internacional de Coaching. Profesora de cátedra de la Universidad del Rosario, apasionada por integrar la evidencia científica a la práctica a través de la investigación.</p>
+      <h4 style="margin-top:1.3rem;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Dicta actualmente</h4>
+      <p style="margin:0 0 0.4rem; font-size:0.9rem; color:var(--ink-2);">Seminario Coaching y liderazgo colaborativo — Escuela de Medicina y Cs. de la Salud</p>
+      <p style="margin:0.9rem 0 0;"><a class="btn btn--primary" href="https://educacioncontinua.urosario.edu.co/escuela-medicina-ciencias-salud/seminario/coaching-liderazgo-colaborativo" target="_blank" rel="noopener">Ver programa en el sitio actual</a></p>
+    </div>
+  </dialog>
+<dialog class="modal-docente" id="modal-roa" aria-labelledby="md-roa-nombre">
+    <div class="modal-docente__inner">
+      <button class="modal-docente__cerrar" type="button" aria-label="Cerrar">✕</button>
+      <div class="modal-docente__head">
+        <span class="modal-docente__foto modal-docente__foto--img"><img src="assets/img/docentes/andres-roa.jpg" alt="Foto de Andrés Roa"></span>
+        <div>
+          <h3 id="md-roa-nombre">Andrés Roa</h3>
+          <p class="modal-docente__cargo">Mg. en Gerencia de la Información · Consultor SAP · Ciencias e Ingeniería</p>
+        </div>
+      </div>
+      <hr>
+      <p class="modal-docente__bio">Cofundador del primer Centro de Innovación SAP Next Gen Chapter Lab de la región. Magíster en Gerencia de la Información e Innovación, Administrador de Empresas y docente de la Universidad del Rosario en Transformación Digital e Industria 4.0. Consultor e instructor certificado internacionalmente por SAP SE, con más de 13 años de experiencia académica en la enseñanza de soluciones SAP.</p>
+      <h4 style="margin-top:1.3rem;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Dicta actualmente</h4>
+      <p style="margin:0 0 0.4rem; font-size:0.9rem; color:var(--ink-2);">Gestión ágil de proyectos — Escuela de Ciencias e Ingeniería</p>
+      <p style="margin:0.9rem 0 0;"><a class="btn btn--primary" href="https://educacioncontinua.urosario.edu.co/escuela-ciencias-e-ingenieria/curso/gestion-agil-proyectos" target="_blank" rel="noopener">Ver programa en el sitio actual</a></p>
+    </div>
+  </dialog>
+<dialog class="modal-docente" id="modal-tovar" aria-labelledby="md-tovar-nombre">
+    <div class="modal-docente__inner">
+      <button class="modal-docente__cerrar" type="button" aria-label="Cerrar">✕</button>
+      <div class="modal-docente__head">
+        <span class="modal-docente__foto modal-docente__foto--img"><img src="assets/img/docentes/daniel-tovar.jpg" alt="Foto de Héctor Daniel Tovar Lasso"></span>
+        <div>
+          <h3 id="md-tovar-nombre">Héctor Daniel Tovar Lasso</h3>
+          <p class="modal-docente__cargo">Artista integral de Teatro Musical UR–MISI · Creación</p>
+        </div>
+      </div>
+      <hr>
+      <p class="modal-docente__bio">Artista integral del Teatro Musical, egresado del pregrado de la Universidad del Rosario en convenio con MISI, con énfasis en danza (ballet, jazz, tap) y canto. Becario del «Broadway Boot Camp» del Institute for American Musical Theatre (Nueva York). Ha trabajado con la compañía profesional de MISI Producciones como bailarín, cantante y actor en musicales como «Annie», «Godspell» y «La Bella y la Bestia» de Disney.</p>
+      <h4 style="margin-top:1.3rem;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Dicta actualmente</h4>
+      <p style="margin:0 0 0.4rem; font-size:0.9rem; color:var(--ink-2);">Tap infantil — Facultad de Creación · MISI</p>
+      <p style="margin:0.9rem 0 0;"><a class="btn btn--primary" href="https://educacioncontinua.urosario.edu.co/facultad-creacion/misi/curso/tap-infantil" target="_blank" rel="noopener">Ver programa en el sitio actual</a></p>
+    </div>
+  </dialog>
+<dialog class="modal-docente" id="modal-bisquerra" aria-labelledby="md-bisquerra-nombre">
+    <div class="modal-docente__inner">
+      <button class="modal-docente__cerrar" type="button" aria-label="Cerrar">✕</button>
+      <div class="modal-docente__head">
+        <span class="modal-docente__foto modal-docente__foto--img"><img src="assets/img/docentes/rafael-bisquerra.jpg" alt="Foto de Rafael Bisquerra Alzina"></span>
+        <div>
+          <h3 id="md-bisquerra-nombre">Rafael Bisquerra Alzina</h3>
+          <p class="modal-docente__cargo">Catedrático emérito U. de Barcelona · Educación emocional · Bienestar</p>
+        </div>
+      </div>
+      <hr>
+      <p class="modal-docente__bio">Presidente de la RIEEB (Red Internacional de Educación Emocional y Bienestar), catedrático emérito de la Universidad de Barcelona y Doctor Honoris Causa por el CELEI de Chile. Doctor en Ciencias de la Educación, fundó y dirigió el GROP, grupo de investigación en orientación psicopedagógica con el que se ha posicionado como uno de los mayores expertos internacionales en educación emocional.</p>
+      <h4 style="margin-top:1.3rem;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Dicta actualmente</h4>
+      <p style="margin:0 0 0.4rem; font-size:0.9rem; color:var(--ink-2);">Competencias emocionales en las organizaciones — Decanatura del Medio Universitario</p>
+      <p style="margin:0.9rem 0 0;"><a class="btn btn--primary" href="https://educacioncontinua.urosario.edu.co/decanatura-medio-universitario/curso/competencias-emocionales-organizaciones" target="_blank" rel="noopener">Ver programa en el sitio actual</a></p>
     </div>
   </dialog>
 </main>
