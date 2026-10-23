@@ -155,6 +155,7 @@ a, button, [role="button"], input, select { touch-action: manipulation; }
 /* ---------- Botones ---------- */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  white-space: nowrap;
   min-height: 48px; padding: 0.7rem 1.5rem;
   border-radius: var(--radius-pill);
   border: 1px solid transparent;
@@ -178,7 +179,7 @@ a, button, [role="button"], input, select { touch-action: manipulation; }
   border-bottom: 1px solid var(--border);
 }
 [data-theme="light"] .header { background: color-mix(in srgb, #ffffff 90%, transparent); }
-.header__inner { display: flex; align-items: center; gap: 1.5rem; min-height: 68px; }
+.header__inner { display: flex; align-items: center; flex-wrap: wrap; gap: 0.4rem 1.5rem; min-height: 68px; padding-block: 0.5rem; }
 .brand { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; margin-right: auto; }
 .brand__logo {
   width: 38px; height: 38px; border-radius: var(--radius-sm);
@@ -198,6 +199,7 @@ html:not([data-theme="light"]) .header .brand__img { filter: brightness(0) inver
 @media (min-width: 1024px) {
   .nav { display: flex; gap: 0.25rem; }
   .nav a {
+    white-space: nowrap;
     padding: 0.55rem 0.85rem; border-radius: var(--radius-sm);
     font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
     text-decoration: none; color: var(--ink-2);
@@ -221,7 +223,7 @@ html:not([data-theme="light"]) .header .brand__img { filter: brightness(0) inver
 .nav-item-drop { position: relative; display: none; }
 @media (min-width: 1024px) { .nav-item-drop { display: block; } }
 .nav-drop-btn {
-  display: inline-flex; align-items: center; gap: 0.35rem;
+  display: inline-flex; align-items: center; gap: 0.35rem; white-space: nowrap;
   padding: 0.55rem 0.85rem; border-radius: var(--radius-sm);
   font-size: 0.85rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
   background: none; border: 0; cursor: pointer; color: var(--ink-2);
