@@ -196,7 +196,7 @@ html:not([data-theme="light"]) .header .brand__img { filter: brightness(0) inver
 .brand__name span { font-size: 0.68rem; color: var(--ink-2); text-transform: uppercase; letter-spacing: 0.1em; }
 
 .nav { display: none; }
-@media (min-width: 1024px) {
+@media (min-width: 1140px) {
   .nav { display: flex; gap: 0.25rem; }
   .nav a {
     white-space: nowrap;
@@ -210,18 +210,18 @@ html:not([data-theme="light"]) .header .brand__img { filter: brightness(0) inver
 }
 .header__cta { display: none; }
 @media (min-width: 768px) { .header__cta { display: inline-flex; min-height: 42px; padding-block: 0.45rem; } }
-/* Menú con más ítems: compactar entre 1024 y 1479px para que no desborde */
-@media (min-width: 1024px) and (max-width: 1479px) {
-  .nav { gap: 0.1rem; }
-  .nav a, .nav-drop-btn { font-size: 0.74rem; padding: 0.5rem 0.55rem; letter-spacing: 0.02em; }
-  .brand__img { height: 32px; }
-  .header__cta { font-size: 0.82rem; padding-inline: 1rem; }
-  .header__inner { gap: 0.9rem; }
+/* Menú con más ítems: compactar entre 1024 y 1479px para que todo quepa en UNA fila */
+@media (min-width: 1140px) and (max-width: 1479px) {
+  .nav { gap: 0; }
+  .nav a, .nav-drop-btn { font-size: 0.72rem; padding: 0.5rem 0.45rem; letter-spacing: 0; }
+  .brand__img { height: 28px; }
+  .header__cta { font-size: 0.78rem; padding-inline: 0.85rem; min-height: 38px; }
+  .header__inner { gap: 0.55rem; padding-inline: 1.1rem; }
 }
 
 /* Desplegable de Facultades en el menú (A7) */
 .nav-item-drop { position: relative; display: none; }
-@media (min-width: 1024px) { .nav-item-drop { display: block; } }
+@media (min-width: 1140px) { .nav-item-drop { display: block; } }
 .nav-drop-btn {
   display: inline-flex; align-items: center; gap: 0.35rem; white-space: nowrap;
   padding: 0.55rem 0.85rem; border-radius: var(--radius-sm);
@@ -260,7 +260,7 @@ html:not([data-theme="light"]) .header .brand__img { filter: brightness(0) inver
   background: transparent; border: 1px solid var(--border);
   border-radius: var(--radius-sm); color: var(--ink); cursor: pointer;
 }
-@media (min-width: 1024px) { .nav-toggle { display: none; } }
+@media (min-width: 1140px) { .nav-toggle { display: none; } }
 .mobile-nav { border-top: 1px solid var(--border); background: var(--bg); }
 .mobile-nav[hidden] { display: none; }
 .mobile-nav a {
