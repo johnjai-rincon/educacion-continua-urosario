@@ -349,17 +349,43 @@ html:not([data-theme="light"]) .header .brand__img { filter: brightness(0) inver
 /* ---------- Caminos por audiencia ---------- */
 .caminos { counter-reset: camino; }
 .camino {
-  position: relative; display: block;
+  --cam: var(--ur-coral);
+  position: relative; display: block; overflow: hidden;
   border: 1px solid var(--border); border-radius: var(--radius-lg);
   background: var(--surface); padding: 1.6rem;
   text-decoration: none;
-  transition: transform var(--dur-2) var(--ease-out), border-color var(--dur-2) var(--ease-out);
+  border-color: color-mix(in srgb, var(--cam) 28%, var(--border));
+  transition: transform var(--dur-2) var(--ease-out), border-color var(--dur-2) var(--ease-out), box-shadow var(--dur-2) var(--ease-out);
 }
-.camino:hover { transform: translateY(-4px); border-color: var(--ur-coral); }
-.camino__num { font-size: 0.8rem; font-weight: 800; color: var(--ur-coral); letter-spacing: 0.1em; }
+/* formas en relieve: brillo radial + anillo decorativo en el color temático */
+.camino::before {
+  content: ""; position: absolute; top: -52px; right: -52px;
+  width: 170px; height: 170px; border-radius: 50%;
+  background: radial-gradient(circle, var(--cam) 0%, transparent 70%);
+  opacity: 0.16; pointer-events: none;
+  transition: opacity var(--dur-2) var(--ease-out), transform var(--dur-2) var(--ease-out);
+}
+.camino::after {
+  content: ""; position: absolute; bottom: -46px; right: -30px;
+  width: 130px; height: 130px; border-radius: 50%;
+  border: 1.5px solid var(--cam); opacity: 0.18; pointer-events: none;
+  transition: opacity var(--dur-2) var(--ease-out);
+}
+.camino:hover { transform: translateY(-4px); border-color: var(--cam); box-shadow: 0 14px 34px -14px color-mix(in srgb, var(--cam) 55%, transparent); }
+.camino:hover::before { opacity: 0.28; transform: scale(1.12); }
+.camino:hover::after { opacity: 0.32; }
+.camino__num { font-size: 0.8rem; font-weight: 800; color: var(--cam); letter-spacing: 0.1em; }
 .camino h3 { font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.02em; margin: 0.5rem 0 0.4rem; }
-.camino p { font-size: 0.9rem; color: var(--ink-2); margin: 0 0 1rem; }
-.camino__link { font-size: 0.85rem; font-weight: 700; color: var(--ur-coral); }
+.camino p { font-size: 0.9rem; color: var(--ink-2); margin: 0 0 1rem; position: relative; }
+.camino__link { font-size: 0.85rem; font-weight: 700; color: var(--cam); }
+/* Colores temáticos por camino (paleta de categorías Rosario Advance) */
+.camino--academia { --cam: #ea4a54; }   /* oferta académica · rojo UR */
+.camino--empresas { --cam: #4c9eeb; }   /* empresas · azul corporativo */
+.camino--salud { --cam: #34c77b; }      /* simulación clínica · verde salud */
+.camino--kids { --cam: #ff9838; }       /* kids & teens · naranja */
+.camino--senior { --cam: #e5b54a; }     /* senior · dorado */
+.camino--executive { --cam: #8a7cff; }  /* executive · índigo claro */
+.camino--hub { --cam: #35c8d8; }        /* learning hub · cian */
 
 /* ---------- Tarjeta de programa (100% clicable) ---------- */
 .card {
