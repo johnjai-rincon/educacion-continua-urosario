@@ -464,26 +464,64 @@ html:not([data-theme="light"]) .header .brand__img { filter: brightness(0) inver
 
 /* ---------- Testimonios ---------- */
 .testimonio {
+  --tst: var(--ur-coral);
+  position: relative; overflow: hidden;
   display: flex; flex-direction: column; gap: 1.2rem;
   border: 1px solid var(--border); border-radius: var(--radius-lg);
   background: var(--surface); padding: 1.7rem;
+  border-color: color-mix(in srgb, var(--tst) 26%, var(--border));
+  transition: transform var(--dur-2) var(--ease-out), border-color var(--dur-2) var(--ease-out), box-shadow var(--dur-2) var(--ease-out);
 }
-.testimonio blockquote { margin: 0; font-family: var(--font-serif); font-style: italic; font-size: 1.02rem; line-height: 1.55; }
-.testimonio blockquote::before { content: "“"; display: block; font-size: 2.6rem; line-height: 0.6; color: var(--ur-coral); margin-bottom: 0.6rem; }
+/* forma en relieve: anillo decorativo en el color temático */
+.testimonio::after {
+  content: ""; position: absolute; top: -44px; right: -44px;
+  width: 130px; height: 130px; border-radius: 50%;
+  border: 1.5px solid var(--tst); opacity: 0.18; pointer-events: none;
+}
+.testimonio:hover { transform: translateY(-3px); border-color: var(--tst); box-shadow: 0 12px 28px -14px color-mix(in srgb, var(--tst) 50%, transparent); }
+.testimonio blockquote { position: relative; margin: 0; font-family: var(--font-serif); font-style: italic; font-size: 1.02rem; line-height: 1.55; }
+.testimonio blockquote::before { content: "“"; display: block; font-size: 2.6rem; line-height: 0.6; color: var(--tst); margin-bottom: 0.6rem; }
 .testimonio figcaption { margin-top: auto; display: flex; align-items: center; gap: 0.8rem; }
-.testimonio__avatar {
+.testimonio span.testimonio__avatar {
   width: 44px; height: 44px; flex: none; border-radius: 50%;
-  background: var(--surface-2); color: var(--ink);
+  background: color-mix(in srgb, var(--tst) 18%, transparent); color: var(--tst);
   display: grid; place-items: center; font-weight: 800; font-size: 0.9rem;
 }
 .testimonio figcaption strong { display: block; font-size: 0.9rem; }
 .testimonio figcaption span { font-size: 0.78rem; color: var(--ink-2); }
+/* Colores temáticos por testimonio */
+.testimonio--indigo { --tst: #8a7cff; }
+.testimonio--rojo { --tst: #ea4a54; }
+.testimonio--azul { --tst: #4c9eeb; }
 
 /* ---------- Cifras de impacto (valor server-side, animación progresiva) ---------- */
 .cifras { text-align: center; }
-.cifra__num { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 900; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
-.cifra__num sup { font-size: 0.5em; color: var(--ur-coral); }
-.cifra__label { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); }
+.cifras__intro { max-width: 680px; margin-inline: auto; }
+.cifras .grid { margin-top: 2.4rem; }
+.cifra {
+  --cif: var(--ur-coral);
+  position: relative; overflow: hidden;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid color-mix(in srgb, var(--cif) 32%, rgba(255, 255, 255, 0.14));
+  border-radius: var(--radius-lg); padding: 1.7rem 1rem 1.4rem;
+  transition: transform var(--dur-2) var(--ease-out), border-color var(--dur-2) var(--ease-out);
+}
+/* forma en relieve: brillo radial superior en el color temático */
+.cifra::before {
+  content: ""; position: absolute; top: -56px; left: 50%; transform: translateX(-50%);
+  width: 170px; height: 130px; border-radius: 50%;
+  background: radial-gradient(circle, var(--cif) 0%, transparent 70%);
+  opacity: 0.18; pointer-events: none;
+}
+.cifra:hover { transform: translateY(-3px); border-color: var(--cif); }
+.cifra__num { position: relative; margin: 0 0 0.3rem; font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 900; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+.cifra__num sup { font-size: 0.5em; color: var(--cif); }
+.cifra__label { position: relative; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); margin: 0; }
+/* Colores temáticos por cifra */
+.cifra--cian { --cif: #35c8d8; }
+.cifra--naranja { --cif: #ff9838; }
+.cifra--verde { --cif: #34c77b; }
+.cifra--azul { --cif: #4c9eeb; }
 
 /* ---------- CTA final ---------- */
 .cta-final { text-align: center; background: var(--grad-hero); border-top: 1px solid var(--border); }
@@ -941,20 +979,33 @@ html:not([data-theme="light"]) .modal-docente h4 { color: var(--crema); }
 
 /* ---------- Eventos (A10/A12): tarjeta con fecha en bloque ---------- */
 .evento-card {
-  position: relative; display: flex; gap: 1.1rem;
+  --ev: var(--ur-coral);
+  position: relative; display: flex; gap: 1.1rem; overflow: hidden;
   border: 1px solid var(--border); border-radius: var(--radius-lg);
   background: var(--surface); padding: 1.3rem;
-  transition: transform var(--dur-2) var(--ease-out), border-color var(--dur-2) var(--ease-out);
+  border-color: color-mix(in srgb, var(--ev) 26%, var(--border));
+  transition: transform var(--dur-2) var(--ease-out), border-color var(--dur-2) var(--ease-out), box-shadow var(--dur-2) var(--ease-out);
 }
-.evento-card:hover { transform: translateY(-3px); border-color: var(--ur-coral); }
+/* forma en relieve: brillo radial detrás de la fecha */
+.evento-card::before {
+  content: ""; position: absolute; top: -30px; left: -30px;
+  width: 130px; height: 130px; border-radius: 50%;
+  background: radial-gradient(circle, var(--ev) 0%, transparent 70%);
+  opacity: 0.12; pointer-events: none;
+}
+.evento-card:hover { transform: translateY(-3px); border-color: var(--ev); box-shadow: 0 12px 28px -14px color-mix(in srgb, var(--ev) 50%, transparent); }
 .evento-fecha {
-  flex: none; width: 76px; text-align: center;
-  border: 1px solid var(--border); border-radius: var(--radius-md);
-  background: var(--bg); padding: 0.7rem 0.4rem; height: fit-content;
+  position: relative; flex: none; width: 76px; text-align: center;
+  border: 1px solid color-mix(in srgb, var(--ev) 32%, var(--border)); border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--ev) 10%, var(--bg)); padding: 0.7rem 0.4rem; height: fit-content;
 }
 .evento-fecha strong { display: block; font-size: 1.7rem; font-weight: 900; line-height: 1; font-variant-numeric: tabular-nums; }
-.evento-fecha span { display: block; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ur-coral); margin-top: 0.2rem; }
-.evento-card__tipo { font-size: 0.66rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ur-coral); }
+.evento-fecha span { display: block; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ev); margin-top: 0.2rem; }
+.evento-card__tipo { font-size: 0.66rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ev); }
+/* Colores temáticos por evento */
+.evento-card--verde { --ev: #34c77b; }
+.evento-card--cian { --ev: #35c8d8; }
+.evento-card--dorado { --ev: #e5b54a; }
 .evento-card h3 { font-size: 1.05rem; font-weight: 800; margin: 0.35rem 0 0.3rem; }
 .evento-card h3 a { text-decoration: none; }
 .evento-card h3 a::after { content: ""; position: absolute; inset: 0; }

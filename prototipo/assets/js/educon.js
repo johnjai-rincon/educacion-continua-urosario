@@ -51,7 +51,7 @@
      El valor REAL está en el HTML (server-side) — la animación es solo
      mejora progresiva. Sin JS o con reduced-motion, el número ya se ve. */
   var counters = document.querySelectorAll("[data-countup]");
-  if (counters.length && "IntersectionObserver" in window && !reducedMotion) {
+  if (counters.length && "IntersectionObserver" in window) {
     var cio = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
@@ -60,7 +60,8 @@
         var target = parseInt(el.getAttribute("data-countup"), 10);
         if (isNaN(target)) return;
         var start = null;
-        var dur = 1200;
+        /* el conteo numérico no es animación espacial; con reduced-motion solo se acorta */
+        var dur = reducedMotion ? 700 : 1600;
         function step(ts) {
           if (!start) start = ts;
           var p = Math.min((ts - start) / dur, 1);
