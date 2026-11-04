@@ -649,6 +649,22 @@ html:not([data-theme="light"]) .header .brand__img { filter: brightness(0) inver
 .ficha-card dt { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gris-03); margin: 0 0 0.15rem; }
 .ficha-card dd { margin: 0; font-weight: 700; font-size: 0.9rem; color: var(--crema); font-variant-numeric: tabular-nums; }
 
+/* Programas en tonos CLAROS (preferencia aprobada): variantes light del hero y fichas,
+   con la nueva paleta (tinta #0B0B14, Rojo UR #D81125, Índigo #323084) */
+[data-theme="light"] .phero { background: linear-gradient(180deg, #ffffff 0%, var(--gris-01) 100%); color: var(--tinta); }
+[data-theme="light"] .phero::before { background-image: radial-gradient(circle at 1px 1px, var(--ur-azul) 1px, transparent 0); opacity: 0.05; }
+[data-theme="light"] .phero__eyebrow { background: #fff; border-color: var(--gris-02); color: var(--ur-azul); }
+[data-theme="light"] .phero h1 { color: var(--tinta); }
+[data-theme="light"] .phero .lead { color: var(--gris-04); }
+[data-theme="light"] .ficha-card { background: #fff; border-color: var(--gris-02); backdrop-filter: none; }
+[data-theme="light"] .ficha-card__icono { background: var(--ur-rojo-suave); color: var(--ur-rojo); }
+[data-theme="light"] .ficha-card dt { color: var(--gris-04); }
+[data-theme="light"] .ficha-card dd { color: var(--tinta); }
+[data-theme="light"] .sec-title__icono { background: var(--ur-rojo-suave); color: var(--ur-rojo); }
+[data-theme="light"] .searchbar { background: #fff; border-color: var(--gris-02); }
+[data-theme="light"] .searchbar input { color: var(--tinta); }
+[data-theme="light"] .searchbar input::placeholder { color: var(--gris-04); }
+
 /* Layout de programa: contenido izquierda + formulario sticky derecha (plantilla) */
 .layout-programa { display: grid; gap: 2.5rem; align-items: start; }
 @media (min-width: 1024px) { .layout-programa { grid-template-columns: 1fr 400px; gap: 3rem; } }
