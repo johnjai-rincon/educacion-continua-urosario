@@ -19,6 +19,16 @@
   --ur-vinotinto: #8c1d32;   /* color del logo UR */
   --ur-azul-logo: #323084;
 
+  /* Paleta institucional por escuela/facultad (Pantone UR), aclarada para fondo oscuro */
+  --acc-rojo: #ea4a54;       /* Rojo UR — acento general */
+  --acc-economia: #ed7d1f;   /* Eco. y Negocios · 3588C (#e26e0e) */
+  --acc-sociales: #c3b521;   /* Est. Sociales · 384C (#776f04) */
+  --acc-ingenieria: #3d86ea; /* Ciencias e Ing. · 2925C (#0957c3) */
+  --acc-derecho: #4a90c9;    /* Jurisprudencia · 7692C (#002042) */
+  --acc-salud: #26a68c;      /* Medicina y Salud · 4164C (#00382f) */
+  --acc-creacion: #8578d6;   /* Creación · 2103C (#31215e) */
+  --acc-salud-2: #5bc4ae;    /* Medicina · tinte claro */
+
   /* Neutros */
   --gris-01: #f4f6f8;
   --gris-02: #e2e8ed;
@@ -378,14 +388,14 @@ html:not([data-theme="light"]) .header .brand__img { filter: brightness(0) inver
 .camino h3 { font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.02em; margin: 0.5rem 0 0.4rem; }
 .camino p { font-size: 0.9rem; color: var(--ink-2); margin: 0 0 1rem; position: relative; }
 .camino__link { font-size: 0.85rem; font-weight: 700; color: var(--cam); }
-/* Colores temáticos por camino (paleta de categorías Rosario Advance) */
-.camino--academia { --cam: #ea4a54; }   /* oferta académica · rojo UR */
-.camino--empresas { --cam: #4c9eeb; }   /* empresas · azul corporativo */
-.camino--salud { --cam: #34c77b; }      /* simulación clínica · verde salud */
-.camino--kids { --cam: #ff9838; }       /* kids & teens · naranja */
-.camino--senior { --cam: #e5b54a; }     /* senior · dorado */
-.camino--executive { --cam: #8a7cff; }  /* executive · índigo claro */
-.camino--hub { --cam: #35c8d8; }        /* learning hub · cian */
+/* Colores temáticos por camino (paleta institucional UR por escuela/facultad) */
+.camino--academia { --cam: var(--acc-rojo); }        /* oferta académica · Rojo UR */
+.camino--empresas { --cam: var(--acc-economia); }    /* empresas · Economía y Negocios */
+.camino--salud { --cam: var(--acc-salud); }          /* simulación clínica · Medicina y Salud */
+.camino--kids { --cam: var(--acc-creacion); }        /* kids & teens · Creación */
+.camino--senior { --cam: var(--acc-sociales); }      /* senior · Estudios Sociales */
+.camino--executive { --cam: var(--acc-derecho); }    /* executive · Jurisprudencia */
+.camino--hub { --cam: var(--acc-ingenieria); }       /* learning hub · Ciencias e Ingeniería */
 
 /* ---------- Tarjeta de programa (100% clicable) ---------- */
 .card {
@@ -489,10 +499,10 @@ html:not([data-theme="light"]) .header .brand__img { filter: brightness(0) inver
 }
 .testimonio figcaption strong { display: block; font-size: 0.9rem; }
 .testimonio figcaption span { font-size: 0.78rem; color: var(--ink-2); }
-/* Colores temáticos por testimonio */
-.testimonio--indigo { --tst: #8a7cff; }
-.testimonio--rojo { --tst: #ea4a54; }
-.testimonio--azul { --tst: #4c9eeb; }
+/* Colores temáticos por testimonio (paleta institucional UR) */
+.testimonio--indigo { --tst: var(--acc-creacion); }
+.testimonio--rojo { --tst: var(--acc-rojo); }
+.testimonio--azul { --tst: var(--acc-ingenieria); }
 
 /* ---------- Cifras de impacto (valor server-side, animación progresiva) ---------- */
 .cifras { text-align: center; }
@@ -517,11 +527,11 @@ html:not([data-theme="light"]) .header .brand__img { filter: brightness(0) inver
 .cifra__num { position: relative; margin: 0 0 0.3rem; font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 900; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
 .cifra__num sup { font-size: 0.5em; color: var(--cif); }
 .cifra__label { position: relative; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); margin: 0; }
-/* Colores temáticos por cifra */
-.cifra--cian { --cif: #35c8d8; }
-.cifra--naranja { --cif: #ff9838; }
-.cifra--verde { --cif: #34c77b; }
-.cifra--azul { --cif: #4c9eeb; }
+/* Colores temáticos por cifra (paleta institucional UR) */
+.cifra--cian { --cif: var(--acc-derecho); }
+.cifra--naranja { --cif: var(--acc-economia); }
+.cifra--verde { --cif: var(--acc-salud); }
+.cifra--azul { --cif: var(--acc-ingenieria); }
 
 /* ---------- CTA final ---------- */
 .cta-final { text-align: center; background: var(--grad-hero); border-top: 1px solid var(--border); }
@@ -967,15 +977,15 @@ html:not([data-theme="light"]) .modal-docente h4 { color: var(--crema); }
 .tendencia span { font-size: 0.75rem; color: var(--ink-2); }
 .tendencia span.tendencia__icono { color: var(--ten); }
 .tendencia > span:last-child { position: relative; }
-/* Colores temáticos por área (paleta de categorías Rosario Advance) */
-.tendencia--salud { --ten: #34c77b; }        /* salud · verde */
-.tendencia--negocios { --ten: #4c9eeb; }     /* negocios · azul corporativo */
-.tendencia--derecho { --ten: #ea4a54; }      /* derecho · rojo UR */
-.tendencia--tecnologia { --ten: #35c8d8; }   /* tecnología · cian */
-.tendencia--humanidades { --ten: #8a7cff; }  /* humanidades · índigo claro */
-.tendencia--educacion { --ten: #ff9838; }    /* educación · naranja */
-.tendencia--innovacion { --ten: #e5b54a; }   /* innovación · dorado */
-.tendencia--bienestar { --ten: #ef6a9e; }    /* bienestar · rosa */
+/* Colores temáticos por área (paleta institucional UR por escuela/facultad) */
+.tendencia--salud { --ten: var(--acc-salud); }            /* salud · Medicina y Salud */
+.tendencia--negocios { --ten: var(--acc-economia); }      /* negocios · Economía y Negocios */
+.tendencia--derecho { --ten: var(--acc-derecho); }        /* derecho · Jurisprudencia */
+.tendencia--tecnologia { --ten: var(--acc-ingenieria); }  /* tecnología · Ciencias e Ingeniería */
+.tendencia--humanidades { --ten: var(--acc-creacion); }   /* humanidades · Creación */
+.tendencia--educacion { --ten: var(--acc-sociales); }     /* educación · Estudios Sociales */
+.tendencia--innovacion { --ten: var(--acc-rojo); }        /* innovación · Rojo UR */
+.tendencia--bienestar { --ten: var(--acc-salud-2); }      /* bienestar · Medicina tinte claro */
 
 /* ---------- Eventos (A10/A12): tarjeta con fecha en bloque ---------- */
 .evento-card {
@@ -1002,10 +1012,10 @@ html:not([data-theme="light"]) .modal-docente h4 { color: var(--crema); }
 .evento-fecha strong { display: block; font-size: 1.7rem; font-weight: 900; line-height: 1; font-variant-numeric: tabular-nums; }
 .evento-fecha span { display: block; font-size: 0.66rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ev); margin-top: 0.2rem; }
 .evento-card__tipo { font-size: 0.66rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ev); }
-/* Colores temáticos por evento */
-.evento-card--verde { --ev: #34c77b; }
-.evento-card--cian { --ev: #35c8d8; }
-.evento-card--dorado { --ev: #e5b54a; }
+/* Colores temáticos por evento (paleta institucional UR) */
+.evento-card--verde { --ev: var(--acc-salud); }
+.evento-card--cian { --ev: var(--acc-ingenieria); }
+.evento-card--dorado { --ev: var(--acc-sociales); }
 .evento-card h3 { font-size: 1.05rem; font-weight: 800; margin: 0.35rem 0 0.3rem; }
 .evento-card h3 a { text-decoration: none; }
 .evento-card h3 a::after { content: ""; position: absolute; inset: 0; }
