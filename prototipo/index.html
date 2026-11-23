@@ -1,553 +1,642 @@
-<!DOCTYPE html>
-<html lang="es" class="no-js">
+<!doctype html>
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Diplomados, Cursos y Seminarios | Educación Continua – Universidad del Rosario</title>
-<meta name="description" content="Diplomados, cursos y seminarios con certificación de la Universidad del Rosario, presenciales y virtuales. 370 años de tradición con agilidad EdTech.">
-<meta name="theme-color" content="#01030c">
-<meta property="og:title" content="Diplomados, Cursos y Seminarios | Educación Continua – Universidad del Rosario">
-<meta property="og:description" content="Formación continua con el respaldo de 370 años de tradición rosarista.">
-<meta property="og:locale" content="es_CO">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Serif+Display:ital@1&family=Inter:wght@400;500;600;700;800;900&display=swap">
-<link rel="stylesheet" href="assets/css/educon.css">
+<title>Prototipo sitio ADVANCE</title>
+
+
+<link rel="stylesheet" href="assets/css/advance.css">
 </head>
 <body>
-<div class="proto-ribbon">Prototipo de nueva interfaz — los datos de programas, precios y testimonios son de demostración.</div>
-<a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+<div class="demo"><div class="wrap">Prototipo de estructura. Programas, precios, fechas y servicios de consultoría son de demostración.</div></div>
 
-<header class="header">
-  <div class="container header__inner">
-    <a class="brand" href="index.html">
-      <img class="brand__img" src="assets/img/logo-educon-urosario.webp" alt="Advance, Educación Continua — Universidad del Rosario" width="600" height="106">
-    </a>
-    <nav class="nav" aria-label="Navegación principal">
-      <a href="index.html" aria-current="page">Inicio</a>
-      <a href="buscar.html">Oferta</a>
-      <div class="nav-item-drop">
-        <button class="nav-drop-btn" type="button" aria-haspopup="true" aria-expanded="false">Facultades</button>
-        <div class="nav-dropdown">
-          <a href="facultad-economia-negocios.html">Escuela de Economía y Negocios</a>
-          <a href="facultad-jurisprudencia.html">Facultad de Jurisprudencia</a>
-          <a href="facultad-ciencias-ingenieria.html">Escuela de Ciencias e Ingeniería</a>
-          <a href="facultad-creacion.html">Facultad de Creación</a>
-          <a href="area-salud.html">Escuela de Medicina y Ciencias de la Salud</a>
-          <a href="https://gsb.urosario.edu.co/executive-education" target="_blank" rel="noopener">GSB – Executive Education</a>
-          <a href="facultad-estudios-sociales.html">Escuela de Estudios Sociales, Políticos e Internacionales</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" data-go="inicio" aria-label="Universidad del Rosario | ADVANCE Educación Continua, ir al inicio"><img class="logo" src="advance-img/ui-65115494.png" alt=""></a>
+    <nav class="nav" id="nav-main" aria-label="Principal">
+      <a href="#inicio" data-go="inicio">Inicio</a>
+      <a href="#cursos" data-go="cursos">Programas</a>
+      <div class="dd" data-dd="empresas">
+        <button type="button" aria-expanded="false" aria-haspopup="true">Formación a la medida <span class="car" aria-hidden="true">▾</span></button>
+        <div class="menu">
+          <a href="#empresas" data-go="empresas">Programas para empresas</a>
+          <a href="#empresas" data-go="empresas" data-to="emp-docentes" data-rev="emp-docentes">Conferencistas para tu equipo</a>
         </div>
       </div>
-      <a href="empresas.html">Empresas</a>
-      <a href="centro-simulacion.html">Centro de Simulación</a>
-      <a href="eventos.html">Eventos</a>
+      <div class="dd" data-dd="consultoria">
+        <button type="button" aria-expanded="false" aria-haspopup="true">Consultoría <span class="car" aria-hidden="true">▾</span></button>
+        <div class="menu">
+          <a href="#consultoria" data-go="consultoria" data-to="servicios">Servicios de consultoría</a>
+          <a href="#consultoria" data-go="consultoria" data-to="con-consultores" data-rev="con-perfiles">Conoce a nuestros consultores</a>
+        </div>
+      </div>
+      <a href="#docentes" data-go="docentes">Conferencistas</a>
+      <a href="#simulacion" data-go="simulacion">Centro de simulación</a>
+      <a href="#informacion" data-go="informacion">Información</a>
+      <a class="mob-only" href="https://mentoria.jerrejerre.com/demourosario">✦ Camino de aprendizaje</a>
     </nav>
-    <a class="btn btn--ghost header__cta" href="https://mentoria.jerrejerre.com/demourosario" target="_blank" rel="noopener">Ruta de aprendizaje</a>
-    <a class="btn btn--primary header__cta" href="https://wa.me/573219295847" rel="noopener">Habla con un asesor</a>
-    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="menu-movil" aria-label="Abrir menú">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-    </button>
+    <div class="acts">
+      <button class="lupa" type="button" data-buscar aria-label="Buscar programas" title="Buscar (Ctrl+K)"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+      <a class="btn navb ruta desk-only" href="https://mentoria.jerrejerre.com/demourosario"><span aria-hidden="true">✦</span>Camino de aprendizaje</a>
+      <a class="btn red navb" href="https://wa.me/573219295847">Habla con un asesor</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="nav-main" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    </div>
   </div>
-  <nav id="menu-movil" class="mobile-nav" hidden aria-label="Menú móvil">
-    <a href="index.html" aria-current="page">Inicio</a>
-    <a href="buscar.html">Oferta académica</a>
-    <span class="mobile-nav__grupo">Facultades</span>
-    <a class="mobile-nav__sub" href="facultad-economia-negocios.html">Escuela de Economía y Negocios</a>
-    <a class="mobile-nav__sub" href="facultad-jurisprudencia.html">Facultad de Jurisprudencia</a>
-    <a class="mobile-nav__sub" href="facultad-ciencias-ingenieria.html">Escuela de Ciencias e Ingeniería</a>
-    <a class="mobile-nav__sub" href="facultad-creacion.html">Facultad de Creación</a>
-    <a class="mobile-nav__sub" href="area-salud.html">Escuela de Medicina y Ciencias de la Salud</a>
-    <a class="mobile-nav__sub" href="https://gsb.urosario.edu.co/executive-education" target="_blank" rel="noopener">GSB – Executive Education</a>
-    <a class="mobile-nav__sub" href="facultad-estudios-sociales.html">Escuela de Estudios Sociales, Políticos e Internacionales</a>
-    <a href="empresas.html">Empresas</a>
-    <a href="https://mentoria.jerrejerre.com/demourosario" target="_blank" rel="noopener">Ruta de aprendizaje</a>
-    <a href="centro-simulacion.html">Centro de Simulación</a>
-    <a href="eventos.html">Eventos</a>
-    <a class="btn btn--primary" href="https://wa.me/573219295847" rel="noopener">Habla con un asesor</a>
-  </nav>
 </header>
+<button class="lupa flota" type="button" data-buscar aria-label="Buscar programas"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></button>
+<div class="bsc" id="bsc" role="dialog" aria-modal="true" aria-label="Buscar programas"><div class="caja"><form class="campo" id="bsc-f" role="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="bsc-q" type="search" placeholder="Busca un diplomado, curso o tema…" autocomplete="off" aria-label="Buscar programas"><kbd>Esc</kbd></form><div class="areas" id="bsc-a"></div><ul id="bsc-l"></ul></div></div>
 
-<main id="contenido">
-
-  <!-- HERO -->
+<main>
+<!-- ============ INICIO (estructura Jerre) ============ -->
+<div class="view" id="v-inicio">
   <section class="hero">
-    <div class="container">
-      <p class="kicker" data-animate>Educación continua · Universidad del Rosario</p>
-      <h1 class="display display--xl" data-animate style="max-width: 14ch;">Aprender es <em>avanzar</em></h1>
-      <p class="lead" data-animate>Diplomados, cursos y seminarios con certificación universitaria: la agilidad de una EdTech con el respaldo de 370&nbsp;años de tradición rosarista.</p>
-
-      <form class="searchbar" action="buscar.html" role="search" data-animate>
-        <label class="visually-hidden" for="q">Buscar programas</label>
-        <input id="q" name="q" type="search" placeholder="¿Qué quieres aprender hoy?" autocomplete="off">
-        <button class="btn btn--primary" type="submit">Buscar</button>
+    <img class="hbg" src="advance-img/ui-d7f4e72a.jpg" alt="">
+    <div class="hfl" aria-hidden="true"><span>A</span><span>C</span><span>E</span></div>
+    <div class="wrap">
+      <h1>Aprender<br>es <em>avanzar</em></h1>
+      <p class="lead">Diplomados, cursos y seminarios con certificación universitaria: la agilidad de una EdTech con el respaldo de 370 años de tradición rosarista.</p>
+      <form class="search" id="hero-search" role="search">
+        <input id="hero-q" type="search" placeholder="¿Qué quieres aprender hoy?" aria-label="Buscar programas">
+        <button class="btn red" type="submit">Buscar</button>
       </form>
-      <nav class="chips" aria-label="Áreas de conocimiento" data-animate>
-        <a class="chip" href="area-salud.html">Salud</a>
-        <a class="chip" href="buscar.html">Negocios y Liderazgo</a>
-        <a class="chip" href="buscar.html">Derecho y Gestión Pública</a>
-        <a class="chip" href="buscar.html">Tecnología, Datos e IA</a>
-        <a class="chip" href="buscar.html">Ver todas las áreas</a>
-      </nav>
-
-      <ul class="hero__badges" data-animate>
-        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Acreditación institucional de alta calidad</li>
-        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Certificación ISO&nbsp;9001</li>
-        <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>+180.000 egresados rosaristas</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- LOGOS (muestras — reemplazar por logos reales autorizados) -->
-  <section class="logos" aria-label="Aliados y empresas">
-    <div class="container">
-      <p class="logos__title">Empresas y aliados que confían en nosotros</p>
-      <div class="logos__row" data-animate>
-        <img src="assets/img/logos/bancandes.svg" alt="BancAndes (logo de muestra)" width="160" height="38">
-        <img src="assets/img/logos/saludvital.svg" alt="SaludVital (logo de muestra)" width="160" height="38">
-        <img src="assets/img/logos/energicol.svg" alt="EnergiCol (logo de muestra)" width="160" height="38">
-        <img src="assets/img/logos/constructora-delta.svg" alt="Constructora Delta (logo de muestra)" width="160" height="38">
-        <img src="assets/img/logos/technova.svg" alt="TechNova (logo de muestra)" width="160" height="38">
-        <img src="assets/img/logos/agrocampo.svg" alt="AgroCampo (logo de muestra)" width="160" height="38">
-        <img src="assets/img/logos/logistika.svg" alt="Logistika (logo de muestra)" width="160" height="38">
-        <img src="assets/img/logos/aseguraplus.svg" alt="AseguraPlus (logo de muestra)" width="160" height="38">
+      <div class="chips">
+        <button class="chip" data-area="Salud">Salud</button>
+        <button class="chip" data-area="Negocios">Negocios y Liderazgo</button>
+        <button class="chip" data-area="Derecho">Derecho y Gestión Pública</button>
+        <button class="chip" data-area="Tecnología">Tecnología, Datos e IA</button>
+        <button class="chip" data-area="">Ver todas las áreas</button>
       </div>
+      <ul class="seals"><li>Acreditación institucional de alta calidad</li><li>Certificación ISO 9001</li><li>+180.000 egresados rosaristas</li></ul>
     </div>
   </section>
 
-  <!-- CAMINOS POR AUDIENCIA · PORTAFOLIO DE FORMACIÓN (contenido de /formacion-abierta) -->
-  <section class="section">
-    <div class="container">
-      <p class="kicker" data-animate="left">Nuestro portafolio de formación</p>
-      <h2 class="display display--lg" data-animate="left">Caminos para <em>cada</em> momento</h2>
-      <div class="grid grid--4 caminos" style="margin-top:2.2rem;">
-        <a class="camino camino--academia" href="buscar.html" data-animate="zoom">
-          <span class="camino__num" aria-hidden="true">01</span>
-          <h3>Oferta académica</h3>
-          <p>Diplomados, cursos, seminarios y talleres avalados por nuestras facultades.</p>
-          <span class="camino__link">Ver la oferta →</span>
-        </a>
-        <a class="camino camino--empresas" href="empresas.html" data-animate="zoom">
-          <span class="camino__num" aria-hidden="true">02</span>
-          <h3>Empresas</h3>
-          <p>Formación corporativa a la medida con reporte de impacto y respaldo institucional.</p>
-          <span class="camino__link">Soluciones B2B →</span>
-        </a>
-        <a class="camino camino--salud" href="centro-simulacion.html" data-animate="zoom">
-          <span class="camino__num" aria-hidden="true">03</span>
-          <h3>Centro Avanzado de Simulación</h3>
-          <p>Entrenamiento clínico con simuladores de alta fidelidad y cursos certificados AHA.</p>
-          <span class="camino__link">Conócelo →</span>
-        </a>
-        <a class="camino camino--kids" href="buscar.html" data-animate="zoom">
-          <span class="camino__num" aria-hidden="true">04</span>
-          <h3>UR Kids &amp; Teens</h3>
-          <p>Experiencias universitarias que despiertan la curiosidad de niños y adolescentes.</p>
-          <span class="camino__link">Programas →</span>
-        </a>
-        <a class="camino camino--senior" href="ur-senior.html" data-animate="zoom">
-          <span class="camino__num" aria-hidden="true">05</span>
-          <h3>UR Senior</h3>
-          <p>Formación para mayores de 60 años: aprendizaje continuo y participación activa.</p>
-          <span class="camino__link">Conócelo →</span>
-        </a>
-        <a class="camino camino--executive" href="https://gsb.urosario.edu.co/executive-education" target="_blank" rel="noopener" data-animate="zoom">
-          <span class="camino__num" aria-hidden="true">06</span>
-          <h3>Executive Education</h3>
-          <p>Programas ejecutivos de la GSB para la alta dirección.</p>
-          <span class="camino__link">Explorar →</span>
-        </a>
-        <a class="camino camino--hub" href="buscar.html" data-animate="zoom">
-          <span class="camino__num" aria-hidden="true">07</span>
-          <h3>Learning Hub</h3>
-          <p>Rutas ágiles de actualización en negocios con metodologías activas.</p>
-          <span class="camino__link">Explorar →</span>
-        </a>
-      </div>
+  <section class="band tight">
+    <div class="wrap">
+      <div class="head"><h2>Programas en <em>tendencia</em></h2></div>
+    </div>
+    <div class="tr10">
+      <button class="fl izq" type="button" aria-label="Anterior">‹</button>
+      <div class="pista" id="trends"></div>
+      <button class="fl der" type="button" aria-label="Siguiente">›</button>
     </div>
   </section>
 
-  <!-- TENDENCIAS (A8): áreas temáticas como categorías -->
-  <section class="section section--alt">
-    <div class="container">
-      <p class="kicker" data-animate="left">Tendencias</p>
-      <h2 class="display display--lg" data-animate="left">Programas en <em>tendencia</em></h2>
-      <div class="grid grid--4" style="margin-top:2.2rem;">
-        <a class="tendencia tendencia--salud" href="area-salud.html" data-animate="zoom">
-          <span class="tendencia__icono" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7z"/></svg></span>
-          <span><strong>Salud y Ciencias de la Vida</strong><span>32 programas</span></span>
-        </a>
-        <a class="tendencia tendencia--negocios" href="facultad-economia-negocios.html" data-animate="zoom">
-          <span class="tendencia__icono" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-6 4 3 5-7"/></svg></span>
-          <span><strong>Negocios, Liderazgo y Finanzas</strong><span>41 programas</span></span>
-        </a>
-        <a class="tendencia tendencia--derecho" href="facultad-jurisprudencia.html" data-animate="zoom">
-          <span class="tendencia__icono" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-8 4v2h16V7zM5 11v6M9.5 11v6M14.5 11v6M19 11v6M3 21h18"/></svg></span>
-          <span><strong>Derecho y Gestión Pública</strong><span>28 programas</span></span>
-        </a>
-        <a class="tendencia tendencia--tecnologia" href="facultad-ciencias-ingenieria.html" data-animate="zoom">
-          <span class="tendencia__icono" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9zM4 12h-2M22 12h-2M12 4V2M12 22v-2"/></svg></span>
-          <span><strong>Tecnología, Datos e IA</strong><span>24 programas</span></span>
-        </a>
-        <a class="tendencia tendencia--humanidades" href="facultad-creacion.html" data-animate="zoom">
-          <span class="tendencia__icono" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.9 0 1.8-.7 1.8-1.8 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-1 .8-1.8 1.8-1.8H17c2.8 0 5-2.2 5-5 0-4.9-4.5-9-10-9z"/></svg></span>
-          <span><strong>Humanidades, Arte y Cultura</strong><span>18 programas</span></span>
-        </a>
-        <a class="tendencia tendencia--educacion" href="buscar.html" data-animate="zoom">
-          <span class="tendencia__icono" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
-          <span><strong>Educación y Familia</strong><span>15 programas</span></span>
-        </a>
-        <a class="tendencia tendencia--innovacion" href="buscar.html" data-animate="zoom">
-          <span class="tendencia__icono" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v8M4.9 4.9l5.7 5.7M2 12h8M4.9 19.1l5.7-5.7M12 22v-8M19.1 19.1l-5.7-5.7M22 12h-8M19.1 4.9l-5.7 5.7"/></svg></span>
-          <span><strong>Innovación y Emprendimiento</strong><span>21 programas</span></span>
-        </a>
-        <a class="tendencia tendencia--bienestar" href="buscar.html" data-animate="zoom">
-          <span class="tendencia__icono" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></span>
-          <span><strong>Bienestar y Desarrollo Personal</strong><span>19 programas</span></span>
-        </a>
-      </div>
+  <section class="band tight alt">
+    <div class="wrap">
+      <div class="head"><h2>Encuentra el programa para tu <em>siguiente paso</em></h2></div>
+      <div class="grid paths-mini" id="paths"></div>
     </div>
   </section>
 
-  <!-- PROGRAMAS PRÓXIMOS -->
-  <section class="section">
-    <div class="container">
-      <p class="kicker" data-animate>Catálogo</p>
-      <h2 class="display display--lg" data-animate>Próximos a <em>iniciar</em></h2>
-      <div class="grid grid--3" style="margin-top:2.2rem;">
+  <section class="band">
+    <div class="wrap">
+      <div class="head row"><div><h2>Cursos destacados</h2><p class="lead">Avalados por nuestras Escuelas y Facultades.</p></div><a class="btn ghost" href="#cursos" data-go="cursos">Ver catálogo completo →</a></div>
+      <div class="grid g3" id="featured"></div>
+    </div>
+  </section>
 
-        <article class="card" data-area="derecho" data-animate>
-          <div class="card__media"><span class="card__sello"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5.25 3.75 8.25 8 11 4.25-2.75 8-5.75 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg>Certificado UR</span><span class="card__estado">Inscripciones abiertas</span></div>
-          <div class="card__body">
-            <span class="card__meta">Curso · Derecho y Gestión Pública</span>
-            <span class="card__aval">Avalado por la Facultad de Economía</span>
-            <h3><a href="programa.html">Gestión Presupuestal Pública</a></h3>
-            <p class="card__desc">Domina la programación, ejecución y seguimiento del presupuesto público colombiano.</p>
-            <ul class="card__datos">
-              <li>Remoto</li><li>Inicia 16 de junio</li><li>10 semanas · 38&nbsp;h</li>
-            </ul>
-            <div class="card__footer">
-              <span class="card__precio tabular">$&nbsp;1.250.000<small>COP</small></span>
-              <span class="card__nivel">Intermedio</span>
+  <section class="band premium" id="ruta">
+    <div class="wrap">
+      <div class="rutagrid">
+        <div class="copy" data-rv>
+          <h2>Potencia tu <em>perfil profesional</em></h2>
+          <p class="lead">Identifica tus fortalezas, descubre nuevas oportunidades y encuentra el camino para desarrollar tu talento.</p>
+          <div class="btns"><a class="btn ruta" href="https://mentoria.jerrejerre.com/demourosario">ANALIZAR MI PERFIL →</a></div>
+        </div>
+        <div data-rv>
+          <div class="mentor">
+            <div class="mbar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span>Advance · Educación Continua</span></div>
+            <p class="mtitle">Impulsa tu carrera profesional</p>
+            <label class="hb" for="habeas"><input id="habeas" type="checkbox"><span>Autorizo el tratamiento de mis datos personales según la <a href="https://repository.urosario.edu.co/server/api/core/bitstreams/79f9bc01-3363-455a-bd5c-11da864f2fc3/content" target="_blank" rel="noopener">política de tratamiento de datos personales (Habeas Data)</a> de la Universidad del Rosario.</span></label>
+            <div class="mopts">
+              <a class="mopt" href="https://mentoria.jerrejerre.com/demourosario"><span class="plico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M5 20c0-3.8 3.1-6 7-6s7 2.2 7 6z"/></svg></span><b>Analizar mi CV</b><span class="md">Carga tu hoja de vida para una extracción automática de competencias.</span></a>
+              <a class="mopt" href="https://mentoria.jerrejerre.com/demourosario"><span class="plico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6c-2-1.5-5-2-8-1.5v13c3-.5 6 0 8 1.5 2-1.5 5-2 8-1.5v-13c-3-.5-6 0-8 1.5zM12 6v13"/></svg></span><b>Diagnóstico rápido</b><span class="md">Responde 5 preguntas clave para identificar tus intereses y metas.</span></a>
             </div>
+            <div class="mchat"><div><b>¿Tienes dudas específicas?</b><span>Consulta con nuestro asesor virtual sobre requisitos y procesos.</span></div><a class="btn red sm" href="https://mentoria.jerrejerre.com/demourosario">Chatear ahora</a></div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="head"><h2>Aprende de quienes <em>ejercen</em></h2><p class="lead">Magistrados, investigadores y expertos del sector real dictan nuestros programas. Estos son algunos de ellos.</p></div>
+      <div class="grid g5" id="people-home"></div>
+      <a class="btn red plain" href="#docentes" data-go="docentes">Conoce a todos los conferencistas</a>
+    </div>
+  </section>
+
+  <section class="band alt">
+    <div class="wrap">
+      <div class="head"><p class="eyebrow">Historias rosaristas</p><h2>Carreras transformadas, no solo <em>certificados</em></h2></div>
+      <div class="grid g3" id="quotes"></div>
+    </div>
+  </section>
+
+  <section class="band impact">
+    <div class="wrap">
+      <div class="head center"><p class="eyebrow">Nuestro impacto</p><h2>Resultados que <em>hablan</em> por nosotros</h2><p class="lead">Una comunidad que crece con cada programa: personas y organizaciones que se transforman con el respaldo de la Universidad del Rosario.</p></div>
+      <div class="grid g4" id="stats">
+        <div class="stat" style="--acc:#54bae2"><b><span class="num" data-to="97">97</span><sup>%</sup></b><span class="lbl">Cubrimiento nacional</span></div>
+        <div class="stat" style="--acc:#ff9944"><b><span class="num" data-to="600">600</span><sup>+</sup></b><span class="lbl">Eventos realizados</span></div>
+        <div class="stat" style="--acc:#209b89"><b><span class="num" data-to="19000">19.000</span><sup>+</sup></b><span class="lbl">Participantes en el país</span></div>
+        <div class="stat" style="--acc:#3a8cef"><b><span class="num" data-to="350">350</span><sup>+</sup></b><span class="lbl">Empresas certificadas</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt">
+    <div class="wrap">
+      <div class="head"><h2>¿Por qué estudiar en Educación Continua?</h2></div>
+      <div class="grid g3">
+        <div class="why"><h3>Liderazgo en rankings</h3><p>Entre las mejores universidades de Colombia y Latinoamérica por docencia, innovación y proyección internacional.</p></div>
+        <div class="why"><h3>Acreditación de alta calidad</h3><p>La máxima certificación del Ministerio de Educación Nacional respalda cada facultad.</p></div>
+        <div class="why"><h3>Investigación e impacto social</h3><p>Semilleros de investigación en paz, posconflicto y salud comunitaria que transforman territorios.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band cta">
+    <div class="wrap"><h2>Comienza hoy con el respaldo de <em>370 años</em></h2><p>Inscríbete a tu primer programa o agenda una conversación con nuestro equipo.</p>
+      <div class="btns"><a class="btn red" href="#cursos" data-go="cursos">Explorar programas</a><a class="btn ghost" href="https://wa.me/573219295847">Hablar con un asesor</a></div></div>
+  </section>
+</div>
+
+<!-- ============ CURSOS (Lovable) ============ -->
+<div class="view" id="v-cursos" hidden>
+  <section class="lhero">
+    <div class="wrap">
+      <span class="pill">Catálogo</span>
+      <h1>Cursos y <em>programas</em></h1>
+      <p class="lead">Encuentra el programa adecuado para tu siguiente paso profesional.</p>
+      <input class="lsearch" id="cat-q" type="search" placeholder="Buscar por título, facultad u objetivo..." aria-label="Buscar en el catálogo">
+    </div>
+  </section>
+  <section class="band tight">
+    <div class="wrap">
+      <div class="head"><p class="eyebrow">Inscripciones abiertas</p><h2>Próximos a <em>iniciar</em></h2></div>
+      <div class="grid g3" id="next-cursos"></div>
+    </div>
+  </section>
+  <section class="band tight alt">
+    <div class="wrap">
+      <div class="head"><p class="eyebrow">Oferta académica</p><h2>Todo el <em>catálogo</em></h2></div>
+      <div class="catalog">
+        <aside class="filters" aria-label="Filtros" id="filters"></aside>
+        <div>
+          <p class="count" id="count" aria-live="polite"></p>
+          <div class="grid g2" id="cat"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ EMPRESAS (Lovable) ============ -->
+<div class="view" id="v-empresas" hidden>
+  <section class="lhero split">
+    <div class="wrap">
+      <div class="copy">
+        <span class="pill">Advance · Empresas</span>
+        <h1>Equipos que <em>rinden más</em>, con formación diseñada para tu empresa</h1>
+        <p class="lead">Diseñamos rutas a la medida para tus equipos, con docentes-investigadores del Rosario, métricas de impacto y aliados internacionales.</p>
+        <div class="btns"><button class="btn red" data-focus="emp-nombre">Solicitar demo →</button><button class="btn ghost" data-msg="emp-msg">Descargar brochure</button><button class="btn ghost" type="button" data-reveal="emp-docentes">Conoce a los conferencistas →</button></div>
+        <p class="muted" id="emp-msg" hidden>En el sitio final este botón descarga el brochure corporativo.</p>
+      </div>
+      <form class="form" id="emp-form">
+        <h2>Hablemos de tu equipo</h2>
+        <p class="muted">Te contactamos en menos de 24 horas hábiles.</p>
+        <input id="emp-nombre" placeholder="Nombre completo" aria-label="Nombre completo" required>
+        <input id="emp-correo" type="email" placeholder="Correo corporativo" aria-label="Correo corporativo" required>
+        <input id="emp-empresa" placeholder="Empresa" aria-label="Empresa">
+        <input id="emp-colab" inputmode="numeric" placeholder="Número de colaboradores a formar" aria-label="Número de colaboradores a formar">
+        <textarea id="emp-nec" placeholder="Cuéntanos qué necesidad quieres resolver" aria-label="Necesidad"></textarea>
+        <button class="btn red" type="submit">Quiero hablar con un asesor</button>
+        <p class="ok" hidden>Formulario de demostración. En el sitio final esta solicitud llega al equipo comercial.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="band" id="emp-docentes" hidden>
+    <div class="wrap">
+      <div class="head"><p class="eyebrow">Conferencistas</p><h2>Aprende de quienes <em>ejercen</em></h2><p class="lead">Los magistrados, investigadores y expertos del sector real que dictan nuestros programas forman a tu equipo. Haz clic en cada perfil para conocerlo.</p></div>
+      <div class="grid g5" id="people-emp"></div>
+      <button class="btn red plain" type="button" id="emp-more" aria-expanded="false" hidden></button>
+    </div>
+  </section>
+  <section class="band">
+    <div class="wrap">
+      <div class="head center"><h2>Lo que tu empresa gana desde el <em>primer módulo</em></h2></div>
+      <div class="grid g4" id="emp-cards"></div>
+    </div>
+  </section>
+
+  <section class="band deep" id="emp-impacto">
+    <div class="wrap">
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="figPerson" viewBox="0 0 12 16"><circle cx="6" cy="3.6" r="3.1"/><path d="M0.6 16c0-3.5 2.4-5.6 5.4-5.6s5.4 2.1 5.4 5.6z"/></symbol></defs></svg>
+      <div class="head" data-rv><p class="eyebrow">Cifras de impacto</p><h2 class="wide">Más de 50.000 profesionales capacitados y <em>resultados medibles.</em></h2></div>
+      <div class="feat" data-rv>
+        <div class="feat-l">
+          <span class="ic-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.6 2.7-5.8 6-5.8s6 2.2 6 5.8"/><path d="M16.2 5.3a3 3 0 0 1 0 5.4M21 20c0-2.6-1.1-4.6-2.9-5.5"/></svg></span>
+          <div><p class="bign"><span data-count="50000" data-prefix="+">+50.000</span></p><p class="flbl">Participantes formados</p><p class="fsub">Inscritos y matriculados con pago (base activa).</p></div>
+        </div>
+        <div class="picto"><div class="picto-grid" id="picto" aria-hidden="true"></div><p class="picto-cap">Cada figura representa <b>≈ 1.000 participantes</b></p></div>
+      </div>
+      <div class="kpis" data-rv="stagger">
+        <article class="kpi"><span class="idx" aria-hidden="true">02</span><span class="kic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18M4 4v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4M10 20h4M12 16v4"/><path d="M8 11l3-3 2 2 3-4"/></svg></span><p class="kn" data-count="2156">2.156</p><p class="kt">Eventos y cursos</p><p class="kd">Programas ejecutados en el período de análisis.</p></article>
+        <article class="kpi"><span class="idx" aria-hidden="true">03</span><span class="kic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18M11 12v2h2v-2"/></svg></span><p class="kn" data-count="1313">1.313</p><p class="kt">Proyectos corporativos</p><p class="kd">Contratos con empresas e instituciones.</p></article>
+        <article class="kpi"><span class="idx" aria-hidden="true">04</span><span class="kic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V5l8-2v18M12 21V9l8 2v10M2 21h20M7 8h1M7 12h1M16 13h1M16 16h1"/></svg></span><p class="kn" data-count="269">269</p><p class="kt">Clientes estratégicos</p><p class="kd">Empresas, entidades públicas y sector cooperativo.</p></article>
+        <article class="kpi"><span class="idx" aria-hidden="true">05</span><span class="kic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M10.5 9l1.3 1.3 2.4-2.6M9 14l-1.5 7 4.5-2.6L16.5 21 15 14"/></svg></span><p class="kn" data-count="359">359</p><p class="kt">Insignias digitales</p><p class="kd">Cursos certificados con Open Badge digital.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt" id="emp-aliados">
+    <div class="wrap">
+      <div class="head" data-rv><p class="eyebrow">Aliados nacionales e internacionales</p><h2 class="wide">Nuestros aliados no son clientes, son <em style="white-space:nowrap">co-constructores</em> de un país mejor.</h2></div>
+      <div id="allies"></div>
+    </div>
+  </section>
+
+  <section class="band deep" id="emp-porque">
+    <div class="wrap">
+      <div class="head" data-rv><p class="eyebrow">¿Por qué ADVANCE + Universidad del Rosario?</p><h2 class="wide">No contrate formación genérica. <em>Invierta en transformación real.</em></h2></div>
+      <div class="diffs" id="diffs" data-rv="stagger"></div>
+      <div class="closer" data-rv><p>Invierta en transformación real con el respaldo de <b>370 años de excelencia.</b></p></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ CONSULTORÍA (nueva, línea visual de Empresas) ============ -->
+<div class="view" id="v-consultoria" hidden>
+  <section class="lhero split">
+    <div class="wrap">
+      <div class="copy">
+        <span class="pill">Advance · Consultoría</span>
+        <h1>El conocimiento del Rosario al servicio de tu <em>organización</em>.</h1>
+        <p class="lead">Trabajamos con entidades del Estado, cooperación internacional bilateral y multilateral, empresas y ONG para convertir investigación en soluciones frente a las problemáticas que más importan.</p>
+        <div class="btns"><button class="btn red" data-focus="con-nombre">Agendar diagnóstico →</button><button class="btn ghost" data-scroll="servicios">Ver servicios</button><button class="btn ghost" type="button" data-reveal="con-perfiles" data-to="con-consultores">Conoce a los consultores →</button></div>
+      </div>
+      <form class="form" id="con-form">
+        <h2>Hablemos de tu reto</h2>
+        <p class="muted">Un consultor te contacta en menos de 24 horas hábiles.</p>
+        <input id="con-nombre" placeholder="Nombre completo" aria-label="Nombre completo" required>
+        <input id="con-correo" type="email" placeholder="Correo corporativo" aria-label="Correo corporativo" required>
+        <input id="con-org" placeholder="Organización" aria-label="Organización">
+        <select id="con-sector" aria-label="Sector">
+          <option value="">Sector</option><option>Privado</option><option>Público</option><option>Cooperación internacional</option><option>Tercer sector</option>
+        </select>
+        <textarea id="con-reto" placeholder="Cuéntanos qué reto quieres resolver" aria-label="Reto"></textarea>
+        <button class="btn red" type="submit">Quiero hablar con un consultor</button>
+        <p class="ok" hidden>Formulario de demostración. En el sitio final esta solicitud llega al equipo de consultoría.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="band alt" id="con-perfiles" hidden>
+    <div class="wrap">
+      <div class="head" id="con-consultores"><p class="eyebrow">Perfiles</p><h2>Nuestros <em>consultores</em></h2><p class="lead">Investigadores y profesores de la Universidad del Rosario que lideran cada proyecto, por línea del portafolio.</p></div>
+      <div class="consplit">
+        <div class="conside"><label class="sr" for="cons-sel">Línea del portafolio</label><select id="cons-sel" class="linesel"></select><div class="linelist" id="cons-lines" role="group" aria-label="Filtrar consultores por línea"></div></div>
+        <div class="conmain"><div id="cons-desc"></div><div class="consgrid" id="consultants"></div><button class="btn red plain" type="button" id="cons-more" aria-expanded="false" hidden></button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band deep" id="con-cifras">
+    <div class="wrap">
+      <div class="head center" data-rv><p class="eyebrow">Consultoría en cifras</p><h2>Experiencia que se puede <em>medir</em></h2></div>
+      <div class="grid g4" data-rv="stagger">
+        <div class="stat sm" style="--acc:#54bae2"><b><span data-count="495">495</span></b><span class="lbl">Contratos de extensión</span></div>
+        <div class="stat sm" style="--acc:#ff9944"><b><sup class="pre">COP</sup><span data-count="165800" data-prefix="$">$165.800</span></b><span class="lbl">Millones en relacionamiento</span></div>
+        <div class="stat sm" style="--acc:#209b89"><b><span data-count="301">301</span></b><span class="lbl">Organizaciones aliadas</span></div>
+        <div class="stat sm" style="--acc:#9897d3"><b><span data-count="40">40</span><sup>años</sup></b><span class="lbl">De trayectoria continua</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="servicios">
+    <div class="wrap">
+      <div class="head center" data-rv><p class="eyebrow">Consultoría especializada · Portafolio</p><h2>Convertimos ciencia en soluciones con <em>impacto</em></h2><p class="lead">Acompañamos a entidades del Estado, cooperación internacional y empresas privadas en la formulación, ejecución y evaluación de sus proyectos, con un enfoque interdisciplinario y basado en evidencia.</p></div>
+      <div class="catbar center" id="port-secs" role="group" aria-label="Filtrar por sector"></div>
+      <div class="grid g3" id="port" data-rv="stagger"></div>
+    </div>
+  </section>
+
+
+
+  <section class="band" id="con-aliados">
+    <div class="wrap">
+      <div class="head center" data-rv><p class="eyebrow">Confían en nosotros</p><h2>Nuestros aliados <em>estratégicos</em></h2></div>
+    </div>
+    <div class="marq" id="con-marq"><div class="track"></div></div>
+  </section>
+
+  <section class="band cta">
+    <div class="wrap"><h2>Llevemos tu reto a un <em>plan</em></h2><p>Cuéntanos qué necesitas y armamos el equipo consultor.</p>
+      <div class="btns"><button class="btn red" data-focus="con-nombre">Agendar diagnóstico</button><a class="btn ghost" href="#empresas" data-go="empresas">Formación para equipos</a></div></div>
+  </section>
+</div>
+<!-- ============ CENTRO DE SIMULACIÓN (contenido del sitio actual + formación a la medida) ============ -->
+<div class="view" id="v-simulacion" hidden>
+  <section class="lhero split simhero">
+    <div class="wrap">
+      <div class="copy">
+        <span class="pill">Advance · Centro de Simulación</span>
+        <h1>Centro Avanzado de <em>Simulación Clínica</em> e Innovación Tecnológica</h1>
+        <p class="lead">Desarrolla talento humano en salud en nuestro Centro de Simulación Clínica de 2.000 m², con simuladores de alta fidelidad y equipos tecnológicos para una formación de la más alta calidad.</p>
+        <div class="btns"><button class="btn red" data-scroll="sim-programas">Ver programación →</button><button class="btn ghost" data-focus="sim-org">Formación para empresas e instituciones</button></div>
+      </div>
+      <div class="simphoto"><img src="advance-img/ui-591aec83.jpg" alt="Salas del Centro de Simulación Clínica"><div class="chipbar"><span>2.000 m²</span><span>Simuladores de alta fidelidad</span><span>Certificación AHA</span></div></div>
+    </div>
+  </section>
+
+  <section class="band" id="sim-calidad">
+    <div class="wrap">
+      <div class="head" data-rv><p class="eyebrow">Calidad y experiencia</p><h2 class="wide">Calidad académica y <em>experiencia</em> en formación</h2><p class="lead">Formamos talento humano en salud con simulación de alta fidelidad, el respaldo de la Escuela de Medicina y Ciencias de la Salud y certificaciones internacionales.</p></div>
+      <div class="kpis" data-rv="stagger" style="margin-top:0">
+        <article class="kpi"><span class="kic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V9l8-5 8 5v12"/><path d="M9 21v-6h6v6M4 21h16"/></svg></span><p class="kn"><span data-count="2000">2.000</span> m²</p><p class="kt">Centro de simulación clínica</p><p class="kd">Simuladores de alta fidelidad y equipos tecnológicos.</p></article>
+        <article class="kpi"><span class="kic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V4M4 20h16"/><path d="M8 16v-5M12 16V8M16 16v-8"/></svg></span><p class="kn" data-count="558">558</p><p class="kt">Programas de Medicina y Ciencias de la Salud</p><p class="kd">La escuela con más programas ejecutados en Educación Continua.</p></article>
+        <article class="kpi"><span class="kic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14l-1.5 7 5-3 5 3-1.5-7"/></svg></span><p class="kn">AHA</p><p class="kt">Certificación internacional</p><p class="kd">Cursos BLS y ACLS de la American Heart Association.</p></article>
+        <article class="kpi"><span class="kic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><p class="kn">ISO 9001</p><p class="kt">Gestión de calidad certificada</p><p class="kd">Con la acreditación institucional de alta calidad de la Universidad.</p></article>
+      </div>
+      <div class="grid g3" data-rv="stagger" style="margin-top:20px">
+        <article class="lcard"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></span><h3>Aprendizaje inmersivo y experiencial</h3><p>Con una de las mejores infraestructuras tecnológicas del país y de Latinoamérica.</p></article>
+        <article class="lcard"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><h3>Seguridad del paciente</h3><p>La simulación integra teoría y práctica, permite ensayar toda la secuencia de atención y ayuda a prevenir eventos adversos.</p></article>
+        <article class="lcard"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span><h3>Práctica repetida y retroalimentación</h3><p>Las habilidades clínicas se desarrollan repitiendo y recibiendo retroalimentación constructiva.</p></article>
+      </div>
+      <div class="closer long" data-rv><p><span class="eyebrow">Nuestra visión</span>Queremos ser reconocidos en 2030 como <b>líderes en la formación de profesionales de salud</b> a través de la simulación clínica, la salud digital y la investigación.</p></div>
+    </div>
+  </section>
+
+  <section class="band alt" id="sim-proximos">
+    <div class="wrap">
+      <div class="head" data-rv><p class="eyebrow">Inscripciones abiertas</p><h2>Programas próximos a <em>iniciar</em></h2></div>
+      <div class="grid g3" id="sim-next" data-rv="stagger"></div>
+    </div>
+  </section>
+
+  <section class="band" id="sim-programas">
+    <div class="wrap">
+      <div class="head" data-rv><p class="eyebrow">Oferta del centro</p><h2>Conoce toda nuestra <em>programación</em></h2></div>
+      <div class="catbar" id="sim-cats" role="group" aria-label="Filtrar por área"></div>
+      <div class="progs" id="sim-list"></div>
+    </div>
+  </section>
+
+  <section class="band alt" id="sim-instalaciones">
+    <div class="wrap">
+      <div class="head" data-rv><p class="eyebrow">Nuestras instalaciones</p><h2 class="wide">Un entorno <em>hospitalario</em> real para practicar</h2><p class="lead">Recrean las instalaciones y los circuitos propios de un hospital.</p></div>
+      <div class="grid g5" id="sim-rooms" data-rv="stagger"></div>
+    </div>
+  </section>
+
+  <section class="band deep" id="sim-medida">
+    <div class="wrap">
+      <div class="medida">
+        <div class="copy" data-rv>
+          <span class="pill">Empresas e instituciones</span>
+          <h2>Diseñemos juntos tu programa de <em>formación</em></h2>
+          <p class="lead">Formación a la medida y eventos académicos en el Centro de Simulación para clínicas, hospitales, instituciones de salud e instituciones educativas.</p>
+          <ul class="checks"><li>Contenidos según los objetivos y las competencias de tu equipo.</li><li>Modalidad presencial, virtual o híbrida.</li><li>Escenarios que recrean un entorno hospitalario real.</li><li>Respaldo de la Escuela de Medicina y Ciencias de la Salud.</li></ul>
+          <div class="btns"><a class="btn ghost" href="https://wa.me/573114435740">Escríbenos por WhatsApp</a><a class="btn ghost" href="https://heyzine.com/flip-book/1601006171.html">Descarga nuestro portafolio</a></div>
+        </div>
+        <form class="form wide" id="sim-form" data-rv>
+          <h2>Formación a la medida</h2>
+          <p class="muted">Cuéntanos qué necesita tu organización y te contactamos.</p>
+          <div class="fgrid">
+            <div class="fld full"><label for="sim-org">Empresa o institución</label><input id="sim-org" placeholder="Nombre de la organización" autocomplete="organization" required></div>
+            <div class="fld"><label for="sim-nombre">Contacto</label><input id="sim-nombre" placeholder="Nombre completo" autocomplete="name" required></div>
+            <div class="fld"><label for="sim-cargo">Cargo</label><input id="sim-cargo" placeholder="Cargo en la organización" autocomplete="organization-title"></div>
+            <div class="fld"><label for="sim-correo">Correo electrónico</label><input id="sim-correo" type="email" placeholder="nombre@institucion.com" autocomplete="email" required></div>
+            <div class="fld"><label for="sim-tel">Teléfono</label><input id="sim-tel" type="tel" placeholder="Número de contacto" autocomplete="tel"></div>
+            <div class="fld"><label for="sim-sector">Sector</label><select id="sim-sector"><option value="">Selecciona el sector</option><option>Clínica</option><option>Hospital</option><option>Institución educativa</option><option>Otro</option></select></div>
+            <div class="fld"><label for="sim-tema">Temática</label><select id="sim-tema"><option value="">Área de formación de interés</option><option>Programas AHA</option><option>Ultrasonido</option><option>Ventilación mecánica</option><option>Vía aérea</option><option>Neurología</option><option>Cuidadores legos</option><option>Ginecología y Obstetricia</option><option>Enfermería</option><option>Otra</option></select></div>
+            <div class="fld"><label for="sim-part">Participantes</label><input id="sim-part" type="number" min="1" inputmode="numeric" placeholder="Número estimado de asistentes"></div>
+            <div class="fld"><label for="sim-mod">Modalidad</label><select id="sim-mod"><option value="">Selecciona la modalidad</option><option>Presencial</option><option>Virtual</option><option>Híbrida</option></select></div>
+            <div class="fld full"><label for="sim-nec">Necesidad de formación</label><textarea id="sim-nec" placeholder="Objetivos y competencias que se desean desarrollar"></textarea></div>
+            <div class="fld full"><label for="sim-fecha">Fecha tentativa</label><input id="sim-fecha" placeholder="Periodo esperado para la capacitación"></div>
+            <label class="consent" for="sim-datos"><input id="sim-datos" type="checkbox" required><span>Autorizo el tratamiento de mis datos personales según la <a href="https://repository.urosario.edu.co/server/api/core/bitstreams/79f9bc01-3363-455a-bd5c-11da864f2fc3/content">política de tratamiento de datos personales</a> de la Universidad del Rosario.</span></label>
+          </div>
+          <button class="btn red" type="submit">Enviar solicitud</button>
+          <p class="ok" hidden>Formulario de demostración. En el sitio final esta solicitud llega al equipo del Centro de Simulación.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- ============ INFORMACIÓN (menú «Información» del sitio actual, con la línea gráfica del sitio) ============ -->
+<!-- ============ DOCENTES (nueva) ============ -->
+<div class="view spkv" id="v-docentes" hidden>
+  <section class="spk-hero">
+    <div class="wrap">
+      <div class="copy">
+        <nav class="crumb" aria-label="Ruta de navegación"><a href="#inicio" data-go="inicio">Educación Continua</a><span aria-hidden="true">›</span><span aria-current="page">Conferencistas</span></nav>
+        <p class="eyebrow">Conferencistas Rosario</p>
+        <h1>Conferencistas que <em>transforman</em> a tu equipo</h1>
+        <p class="lead">Magistrados, investigadores y expertos del sector real. Llévalos a tu empresa en una conferencia, un taller o un programa a la medida, con el respaldo de la Universidad del Rosario.</p>
+        <div class="btns"><button class="btn red" type="button" data-agenda="">Agenda un conferencista →</button><button class="btn ghost" type="button" data-scroll="spk-todos">Ver conferencistas</button></div>
+        <ul class="spk-facts"><li><b id="spk-n">10</b><span>conferencistas</span></li><li><b>6</b><span>áreas de conocimiento</span></li><li><b>3</b><span>formatos: presencial, virtual o híbrido</span></li></ul>
+      </div>
+      <div class="spk-slider" id="spk-slider" aria-roledescription="carrusel" aria-label="Conferencistas destacados">
+        <div class="spk-slides" id="spk-slides"></div>
+        <div class="spk-ctrl"><button class="spk-arr" type="button" data-sl="-1" aria-label="Anterior">‹</button><div class="spk-dots" id="spk-dots"></div><button class="spk-arr" type="button" data-sl="1" aria-label="Siguiente">›</button></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band tight spk-cats-band">
+    <div class="wrap">
+      <div class="head row"><h2>Nuestras <em>temáticas</em></h2><p class="muted spk-swipe">Desliza para ver más →</p></div>
+      <div class="spk-cats" id="spk-cats" role="group" aria-label="Temáticas"></div>
+    </div>
+  </section>
+
+  <section class="band spk-feat-band">
+    <div class="wrap"><div class="spk-feat" id="spk-feat"></div></div>
+  </section>
+
+  <section class="band alt" id="spk-todos">
+    <div class="wrap">
+      <div class="head"><h2>Nuestros <em>conferencistas</em></h2><p class="lead">Expertos reales, con trayectoria que se siente en cada sesión.</p></div>
+      <div class="spk-tools">
+        <input class="lsearch" id="doc-q" type="search" placeholder="Buscar conferencista por nombre o tema" aria-label="Buscar conferencista por nombre o tema">
+        <div class="dfilters" id="doc-f" role="group" aria-label="Filtrar por temática"></div>
+      </div>
+      <p class="count" id="doc-count" aria-live="polite"></p>
+      <div class="spk-grid" id="doc-grid"></div>
+    </div>
+  </section>
+
+  <section class="band spk-why">
+    <div class="wrap">
+      <div class="head center"><p class="eyebrow">¿Por qué elegirnos?</p><h2>Conocimiento con <em>respaldo</em> universitario</h2><p class="lead">Conectamos a tu organización con los expertos que ya forman a miles de profesionales en el Rosario.</p></div>
+      <div class="grid g3">
+        <div class="spk-pill"><span class="spk-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a3 3 0 0 1 3 3v5a3 3 0 0 1-6 0V6a3 3 0 0 1 3-3z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M8 21h8"/></svg></span><h3>Conferencias y talleres</h3><p>Charlas de alto impacto y talleres prácticos sobre los temas que hoy mueven a las organizaciones.</p></div>
+        <div class="spk-pill"><span class="spk-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.6 2.7-5.8 6-5.8s6 2.2 6 5.8"/><path d="M16.2 5.3a3 3 0 0 1 0 5.4M21 20c0-2.6-1.1-4.6-2.9-5.5"/></svg></span><h3>Formación a la medida</h3><p>Si tu equipo necesita ir más allá del escenario, convertimos la conferencia en un programa diseñado para tu empresa.</p><a class="spk-link" href="#empresas" data-go="empresas">Ver formación a la medida →</a></div>
+        <div class="spk-pill"><span class="spk-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 20 6v6c0 4.5-3.2 7.6-8 9-4.8-1.4-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><h3>Respaldo Rosario</h3><p>370 años de tradición, acreditación institucional de alta calidad y certificación universitaria.</p></div>
+      </div>
+      <ul class="spk-formats"><li>Presencial</li><li>Virtual</li><li>Híbrido</li></ul>
+    </div>
+  </section>
+
+  <section class="band alt">
+    <div class="wrap spk-faqw">
+      <div class="head"><p class="eyebrow">Preguntas frecuentes</p><h2>Lo que más nos <em>preguntan</em></h2></div>
+      <div class="spk-faq">
+        <details><summary>¿Qué tipo de conferencistas tienen?</summary><p>Profesores, investigadores y expertos del sector real que dictan programas en la Universidad del Rosario. Abordan temas técnicos y estratégicos —derecho, datos, transformación digital, marketing— y temas humanos como bienestar, liderazgo y educación emocional.</p></details>
+        <details><summary>¿Las conferencias son solo presenciales?</summary><p>No. Pueden ser presenciales, virtuales o híbridas, según lo que mejor funcione para tu equipo o evento.</p></details>
+        <details><summary>¿Cómo funciona el proceso para agendar un conferencista?</summary><p>Primero escuchamos qué necesitas y a quién va dirigida la sesión. Luego te proponemos los perfiles que mejor se ajustan a tus objetivos y te acompañamos hasta el día del evento.</p></details>
+        <details><summary>¿Pueden adaptar la conferencia a mi empresa?</summary><p>Sí. Ajustamos el enfoque, la duración y los ejemplos al contexto y los objetivos de tu organización.</p></details>
+        <details><summary>¿Solo ofrecen conferencias?</summary><p>No. También diseñamos talleres, seminarios y programas completos de formación para equipos.</p></details>
+        <details><summary>¿Cuál es el valor de una conferencia?</summary><p>Depende del conferencista, el formato y la duración. Cuéntanos qué tienes en mente y te enviamos una propuesta.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="band deep" id="spk-contacto">
+    <div class="wrap">
+      <div class="medida">
+        <div class="copy">
+          <span class="pill">Hablemos hoy</span>
+          <h2>Lleva el conocimiento del Rosario a tu <em>evento</em></h2>
+          <p class="lead">Déjanos tus datos y te ayudamos a elegir el conferencista ideal para tu equipo.</p>
+          <ul class="checks"><li>Propuesta de perfiles según tu audiencia y objetivos.</li><li>Formato presencial, virtual o híbrido.</li><li>Acompañamiento de principio a fin.</li></ul>
+          <div class="btns"><a class="btn ghost" href="https://wa.me/573219295847?text=Hola%2C%20quiero%20agendar%20un%20conferencista%20de%20la%20Universidad%20del%20Rosario">Escríbenos por WhatsApp</a></div>
+        </div>
+        <form class="form wide" id="spk-form">
+          <div class="fgrid">
+            <div class="fld"><label for="spk-nombre">Nombre</label><input id="spk-nombre" placeholder="Nombre completo" autocomplete="name" required></div>
+            <div class="fld"><label for="spk-correo">Correo</label><input id="spk-correo" type="email" placeholder="nombre@empresa.com" autocomplete="email" required></div>
+            <div class="fld"><label for="spk-org">Empresa</label><input id="spk-org" placeholder="Nombre de la organización" autocomplete="organization"></div>
+            <div class="fld"><label for="spk-tel">Teléfono</label><input id="spk-tel" type="tel" placeholder="Número de contacto" autocomplete="tel"></div>
+            <div class="fld"><label for="spk-tema">Temática</label><select id="spk-tema"><option value="">Selecciona una temática</option></select></div>
+            <div class="fld"><label for="spk-quien">Conferencista</label><select id="spk-quien"><option value="">Aún no lo sé</option></select></div>
+            <div class="fld"><label for="spk-fmt">Formato</label><select id="spk-fmt"><option value="">Selecciona el formato</option><option>Presencial</option><option>Virtual</option><option>Híbrido</option></select></div>
+            <div class="fld"><label for="spk-asis">Asistentes</label><input id="spk-asis" type="number" min="1" inputmode="numeric" placeholder="Número estimado"></div>
+            <div class="fld full"><label for="spk-msg">Cuéntanos sobre tu evento</label><textarea id="spk-msg" placeholder="Fecha tentativa, objetivo y perfil de la audiencia"></textarea></div>
+            <label class="consent" for="spk-datos"><input id="spk-datos" type="checkbox" required><span>Autorizo el tratamiento de mis datos personales según la <a href="https://repository.urosario.edu.co/server/api/core/bitstreams/79f9bc01-3363-455a-bd5c-11da864f2fc3/content">política de tratamiento de datos personales</a> de la Universidad del Rosario.</span></label>
+          </div>
+          <button class="btn red" type="submit">Quiero agendar un conferencista</button>
+          <p class="ok" hidden>Formulario de demostración. En el sitio final esta solicitud llega al equipo comercial.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ PROGRAMA (página interna) ============ -->
+<div class="view" id="v-programa" hidden><div class="pg" id="pg-root"></div></div>
+
+<div class="view" id="v-informacion" hidden>
+  <section class="lhero split">
+    <div class="wrap">
+      <div class="copy">
+        <span class="pill">Advance · Información</span>
+        <h1>Estamos para <em>ayudarte</em>.</h1>
+        <p class="lead">Si necesitas más información sobre nuestros programas, comunícate con la Línea de Atención de Educación Continua.</p>
+        <div class="btns"><a class="btn red" href="https://wa.me/573219295847">Habla con un asesor →</a><a class="btn ghost" href="https://urosario.edu.co/destino-urosario">Sedes y horarios</a></div>
+      </div>
+      <div class="form infocard">
+        <h2>Línea de atención</h2>
+        <p class="bigline">(+57) 601 297 0200</p>
+        <p class="muted">Opción 4 · Educación Continua</p>
+        <dl class="dl">
+          <div><dt>WhatsApp</dt><dd>(+57) 321 929 5847</dd></div>
+          <div><dt>Horario</dt><dd>Lunes a viernes de 7:00 a. m. a 7:00 p. m.<br>Sábados de 8:00 a. m. a 1:00 p. m.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="info-participantes">
+    <div class="wrap">
+      <div class="head" data-rv><p class="eyebrow">Para los participantes</p><h2>Financiación y <em>devoluciones</em></h2></div>
+      <div class="grid g2" data-rv="stagger">
+        <article class="lcard">
+          <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span><h3>¿Cómo financiarme?</h3>
+          <p>Contamos con aliados que te acompañan en la financiación de seminarios, cursos y diplomados.</p>
+          <ul class="checks">
+            <li><span><b>Pago electrónico:</b> PSE o tarjeta débito o crédito.</span></li>
+            <li><span><b>Pago en efectivo:</b> con cupón de pago en oficinas BBVA o Bancolombia.</span></li>
+            <li><span><b>Pago por empresa:</b> la factura se gestiona con la línea de atención.</span></li>
+            <li><span><b>Descuentos:</b> pronto pago, grupos empresariales desde tres personas, comunidad rosarista y participantes frecuentes. Aplica un solo descuento por inscripción.</span></li>
+          
+            <li><span><b>Aliados de crédito:</b> AV Villas, Sufi Bancolombia y Banco Pichincha.</span></li>
+          </ul>
+          <a class="more" href="financiacion.html">Ver opciones de financiación →</a>
         </article>
-
-        <article class="card" data-area="tecnologia" data-animate>
-          <div class="card__media"><span class="card__sello"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M9 13 7 22l5-3 5 3-2-9"/></svg>Insignia digital</span><span class="card__badge">Premium</span><span class="card__estado">Inscripciones abiertas</span></div>
-          <div class="card__body">
-            <span class="card__meta">Diplomado · Tecnología, Datos e IA</span>
-            <span class="card__aval">Avalado por la Escuela de Medicina y Ciencias de la Salud</span>
-            <h3><a href="programa.html">Inteligencia Artificial para el Análisis de Datos en Salud</a></h3>
-            <p class="card__desc">Aplica IA y analítica a la toma de decisiones clínicas y de gestión en salud.</p>
-            <ul class="card__datos">
-              <li>Remoto</li><li>Inicia 14 de julio</li><li>10 semanas</li>
-            </ul>
-            <div class="card__footer">
-              <span class="card__precio tabular">$&nbsp;3.480.000<small>COP</small></span>
-              <span class="card__nivel">Avanzado</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="card" data-area="derecho" data-animate>
-          <div class="card__media"><span class="card__sello"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Homologable</span><span class="card__estado">Inscripciones abiertas</span></div>
-          <div class="card__body">
-            <span class="card__meta">Taller · Derecho y Gestión Pública</span>
-            <span class="card__aval">Avalado por la Escuela de Administración</span>
-            <h3><a href="programa.html">Taller SECOP II</a></h3>
-            <p class="card__desc">Contratación estatal en la práctica: publica, gestiona y adjudica en SECOP&nbsp;II.</p>
-            <ul class="card__datos">
-              <li>Remoto</li><li>Inicia 22 de junio</li><li>5 días</li>
-            </ul>
-            <div class="card__footer">
-              <span class="card__precio tabular">$&nbsp;690.000<small>COP</small></span>
-              <span class="card__nivel">Introductorio</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-      <p style="margin-top:2rem;" data-animate><a class="btn btn--ghost" href="buscar.html">Ver todo el catálogo</a></p>
-    </div>
-  </section>
-
-  <!-- PREMIUM -->
-  <section class="section premium">
-    <div class="container">
-      <p class="kicker" data-animate>✦ Programas premium</p>
-      <h2 class="display display--lg" data-animate>Diplomados y programas <em>ejecutivos</em></h2>
-      <p class="lead" data-animate>Formación profunda con posibilidad de homologación de créditos y puente a la oferta formal de posgrados del Rosario.</p>
-      <div style="display:grid; gap:0.9rem; margin-top:2rem;">
-        <a class="premium-item" href="https://gsb.urosario.edu.co/exed/ia-para-el-liderazgo" target="_blank" rel="noopener" data-animate>
-          <div><h3>Inteligencia Artificial para el Liderazgo</h3><p>Rosario GSB · 32 horas · 5 semanas · Remoto · Inicia 03 de noviembre</p></div>
-          <strong>COP $2.300.000</strong>
-        </a>
-        <a class="premium-item" href="https://gsb.urosario.edu.co/exed/liderazgo-y-productividad-para-equipos-de-alto-desempeno" target="_blank" rel="noopener" data-animate>
-          <div><h3>Liderazgo y Productividad para Equipos de Alto Desempeño</h3><p>Rosario GSB · 45 horas · 7 semanas · Inicia 20 de octubre</p></div>
-          <strong>COP $2.800.000</strong>
-        </a>
-        <a class="premium-item" href="https://gsb.urosario.edu.co/exed/diplomacia-culinaria" target="_blank" rel="noopener" data-animate>
-          <div><h3>Diplomacia Culinaria</h3><p>Rosario GSB · 41 horas · 8 semanas · Presencial y remoto · Inicia 27 de octubre</p></div>
-          <strong>COP $3.000.000</strong>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CUERPO DOCENTE (teaser de docentes.html) -->
-  <section class="section section--alt">
-    <div class="container">
-      <p class="kicker" data-animate="left">Cuerpo docente</p>
-      <h2 class="display display--lg" data-animate="left">Aprende de quienes <em>ejercen</em></h2>
-      <p class="lead" data-animate>Magistrados, investigadores y expertos del sector real dictan nuestros programas. Estos son algunos de ellos.</p>
-      <div class="grid grid--speakers" style="margin-top:2.2rem;">
-        <a class="speaker" href="docentes.html" data-fac="economia" data-animate="zoom">
-          <img class="speaker__img" src="assets/img/docentes/lina-echeverri.jpg" alt="" loading="lazy">
-          <span class="speaker__facultad">Economía y Negocios</span>
-          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
-          <span class="speaker__overlay"><h3>Lina María Echeverri Cañas</h3><p>PhD · Top Voice LATAM en marketing y branding</p></span>
-        </a>
-        <a class="speaker" href="docentes.html" data-fac="derecho" data-animate="zoom">
-          <img class="speaker__img" src="assets/img/docentes/erick-rincon.jpg" alt="" loading="lazy">
-          <span class="speaker__facultad">Jurisprudencia</span>
-          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
-          <span class="speaker__overlay"><h3>Erick Rincón Cárdenas</h3><p>Doctor en Derecho · Experto en Fintech y Legaltech</p></span>
-        </a>
-        <a class="speaker" href="docentes.html" data-fac="derecho" data-animate="zoom">
-          <img class="speaker__img" src="assets/img/docentes/gloria-amparo-rodriguez.jpg" alt="" loading="lazy">
-          <span class="speaker__facultad">Jurisprudencia</span>
-          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
-          <span class="speaker__overlay"><h3>Gloria Amparo Rodríguez</h3><p>Magistrada JEP · Doctora en Sociología Jurídica</p></span>
-        </a>
-        <a class="speaker" href="docentes.html" data-fac="salud" data-animate="zoom">
-          <img class="speaker__img" src="assets/img/docentes/diana-paez.jpg" alt="" loading="lazy">
-          <span class="speaker__facultad">Salud</span>
-          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
-          <span class="speaker__overlay"><h3>Diana Carolina Páez Rubiano</h3><p>Mg. en Salud Pública · Coach de salud y bienestar</p></span>
-        </a>
-        <a class="speaker" href="docentes.html" data-fac="bienestar" data-animate="zoom">
-          <img class="speaker__img" src="assets/img/docentes/rafael-bisquerra.jpg" alt="" loading="lazy">
-          <span class="speaker__facultad">Bienestar</span>
-          <span class="speaker__ver" aria-hidden="true">Ver perfil</span>
-          <span class="speaker__overlay"><h3>Rafael Bisquerra Alzina</h3><p>Catedrático emérito U. de Barcelona · Educación emocional</p></span>
-        </a>
-      </div>
-      <p data-animate style="margin-top:2rem;">
-        <a class="btn btn--primary" href="docentes.html">Conoce a todos los docentes</a>
-      </p>
-    </div>
-  </section>
-
-  <!-- TESTIMONIOS -->
-  <section class="section">
-    <div class="container">
-      <p class="kicker" data-animate>Historias rosaristas</p>
-      <h2 class="display display--lg" data-animate>Carreras transformadas, no solo <em>certificados</em></h2>
-      <div class="grid grid--3" style="margin-top:2.2rem;">
-        <figure class="testimonio testimonio--indigo" data-animate>
-          <blockquote>El curso me dio el marco para asumir la coordinación presupuestal de mi entidad en menos de un año. El respaldo del Rosario abre puertas reales.</blockquote>
-          <figcaption>
-            <span class="testimonio__avatar" aria-hidden="true">DR</span>
-            <div><strong>Diana R.</strong><span>Coordinadora de presupuesto · Sector público</span></div>
-          </figcaption>
-        </figure>
-        <figure class="testimonio testimonio--rojo" data-animate>
-          <blockquote>El nivel de los docentes y los casos reales que trabajamos no se comparan con ningún curso en línea genérico.</blockquote>
-          <figcaption>
-            <span class="testimonio__avatar" aria-hidden="true">AC</span>
-            <div><strong>Andrés C.</strong><span>Abogado litigante · Firma legal</span></div>
-          </figcaption>
-        </figure>
-        <figure class="testimonio testimonio--azul" data-animate>
-          <blockquote>Llevamos a 40 líderes por un programa a la medida. El reporte de impacto convenció al comité directivo de renovar.</blockquote>
-          <figcaption>
-            <span class="testimonio__avatar" aria-hidden="true">MV</span>
-            <div><strong>María V.</strong><span>Directora de talento · Sector retail</span></div>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- AGENDA DE EVENTOS (A10) -->
-  <section class="section section--alt" id="eventos">
-    <div class="container">
-      <p class="kicker" data-animate="left">Agenda</p>
-      <h2 class="display display--lg" data-animate="left">Eventos <em>destacados</em></h2>
-      <div class="grid grid--3" style="margin-top:2.2rem;">
-        <article class="evento-card evento-card--verde" data-animate="zoom">
-          <div class="evento-fecha" aria-hidden="true"><strong>03</strong><span>Dic</span></div>
-          <div>
-            <span class="evento-card__tipo">Congreso · Presencial + streaming</span>
-            <h3><a href="evento.html">Congreso Internacional de Innovación en Educación en Salud</a></h3>
-            <p class="evento-card__meta"><span>3 y 4 de diciembre</span><span>Claustro · Bogotá</span></p>
-            <p class="evento-card__cupo">Inscripciones abiertas →</p>
-          </div>
-        </article>
-        <article class="evento-card evento-card--cian" data-animate="zoom">
-          <div class="evento-fecha" aria-hidden="true"><strong>18</strong><span>Nov</span></div>
-          <div>
-            <span class="evento-card__tipo">Webinar · Virtual</span>
-            <h3><a href="eventos.html">IA aplicada a la gestión pública: casos reales</a></h3>
-            <p class="evento-card__meta"><span>18 de noviembre · 5:00 p. m.</span><span>Gratuito con registro</span></p>
-            <p class="evento-card__cupo">Reservar cupo →</p>
-          </div>
-        </article>
-        <article class="evento-card evento-card--dorado" data-animate="zoom">
-          <div class="evento-fecha" aria-hidden="true"><strong>26</strong><span>Nov</span></div>
-          <div>
-            <span class="evento-card__tipo">Masterclass · Presencial</span>
-            <h3><a href="eventos.html">Liderazgo en tiempos de incertidumbre</a></h3>
-            <p class="evento-card__meta"><span>26 de noviembre · 6:30 p. m.</span><span>Claustro · Entrada libre</span></p>
-            <p class="evento-card__cupo">Registrarme →</p>
-          </div>
+        <article class="lcard">
+          <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 14l-4-4 4-4"/><path d="M5 10h9a5 5 0 0 1 0 10h-3"/></svg></span><h3>Devoluciones</h3>
+          <p>Para tramitar una devolución, reúne los documentos según el método de pago y radica la solicitud.</p>
+          <ul class="checks">
+            <li><span><b>Cuenta de ahorros o corriente:</b> hasta 15 días hábiles después de radicada la solicitud.</span></li>
+            <li><span><b>Tarjeta de crédito:</b> hasta 30 días hábiles, según el trámite de la franquicia.</span></li>
+            <li><span><b>Reembolso a un tercero:</b> requiere carta de autorización del titular de la inscripción.</span></li>
+            <li><span><b>Billeteras digitales:</b> no se hacen reembolsos a Nequi, Daviplata ni plataformas similares.</span></li>
+          </ul>
+          <a class="more" href="https://educacioncontinua.urosario.edu.co/devoluciones">Ver política de devoluciones →</a>
         </article>
       </div>
-      <p style="margin-top:2rem;" data-animate><a class="btn btn--ghost" href="eventos.html">Ver toda la agenda</a></p>
     </div>
   </section>
 
-  <!-- CIFRAS (banda con gradiente institucional — estilo PalanteU adaptado al kit) -->
-  <section class="section section--gradiente cifras">
-    <div class="container">
-      <div class="cifras__intro">
-        <p class="kicker" data-animate>Nuestro impacto</p>
-        <h2 class="display display--lg" data-animate>Resultados que <em>hablan</em> por nosotros</h2>
-        <p class="lead" data-animate>Una comunidad que crece con cada programa: personas y organizaciones que se transforman con el respaldo de la Universidad del Rosario.</p>
-      </div>
-      <div class="grid grid--4">
-        <div class="cifra cifra--cian" data-animate="zoom">
-          <p class="cifra__num"><span data-countup="97">97</span><sup>%</sup></p>
-          <p class="cifra__label">Cubrimiento nacional</p>
-        </div>
-        <div class="cifra cifra--naranja" data-animate="zoom">
-          <p class="cifra__num"><span data-countup="600">600</span><sup>+</sup></p>
-          <p class="cifra__label">Eventos realizados</p>
-        </div>
-        <div class="cifra cifra--verde" data-animate="zoom">
-          <p class="cifra__num"><span data-countup="19000">19.000</span><sup>+</sup></p>
-          <p class="cifra__label">Participantes en el país</p>
-        </div>
-        <div class="cifra cifra--azul" data-animate="zoom">
-          <p class="cifra__num"><span data-countup="350">350</span><sup>+</sup></p>
-          <p class="cifra__label">Empresas certificadas</p>
-        </div>
+  <section class="band alt" id="info-servicio">
+    <div class="wrap">
+      <div class="head" data-rv><p class="eyebrow">Atención</p><h2>Servicio, sedes e <em>identidad</em></h2></div>
+      <div class="grid g3" data-rv="stagger">
+        <article class="lcard">
+          <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.3c2.2.8 3.5 2.8 3.5 5.7"/></svg></span><h3>Servicio al cliente</h3>
+          <div class="contact"><b>Natalia Reyes Salas</b><span>Gestora de Servicio y Logística</span></div>
+          <div class="contact">Cel. 322 366 1729<br>natalia.reyess@urosario.edu.co</div>
+        </article>
+        <article class="lcard">
+          <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><h3>Sedes y horarios</h3>
+          <p>Consulta las sedes de la Universidad del Rosario, cómo llegar y sus horarios de atención.</p>
+          <a class="more" href="https://urosario.edu.co/destino-urosario">Ver sedes y horarios →</a>
+        </article>
+        <article class="lcard">
+          <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg></span><h3>Identidad visual</h3>
+          <p>Kit de Marca Educon: firma de correo, fondos para reuniones, hoja membrete, plantilla de presentaciones y versiones del logo. De uso institucional.</p>
+          <a class="more" href="kit-de-marca.html">Abrir el kit de marca →</a>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- POR QUÉ ESTUDIAR EN EDUCACIÓN CONTINUA -->
-  <section class="section">
-    <div class="container">
-      <p class="kicker" data-animate>Respaldo institucional</p>
-      <h2 class="display display--lg" data-animate style="max-width:24ch;">¿Por qué estudiar en Educación Continua de la Universidad del Rosario?</h2>
-      <div class="porque" style="margin-top:2rem; max-width:56rem;">
-        <div class="razon" data-animate>
-          <span class="razon__num" aria-hidden="true">1</span>
-          <div>
-            <h3>Liderazgo en rankings de universidades en Colombia</h3>
-            <p>Nos consolidamos entre las mejores universidades de Colombia y Latinoamérica según el ranking World University, destacando por excelencia en docencia, innovación y proyección internacional desde Bogotá.</p>
-          </div>
-        </div>
-        <div class="razon" data-animate>
-          <span class="razon__num" aria-hidden="true">2</span>
-          <div>
-            <h3>Acreditación institucional de alta calidad</h3>
-            <p>Contamos con la máxima certificación otorgada por el Ministerio de Educación Nacional. Cada una de nuestras facultades asegura estándares de calidad global para tu formación profesional.</p>
-          </div>
-        </div>
-        <div class="razon" data-animate>
-          <span class="razon__num" aria-hidden="true">3</span>
-          <div>
-            <h3>Referente en investigación e impacto social</h3>
-            <p>Lideramos semilleros de investigación con enfoque en paz, posconflicto y salud comunitaria, transformando realidades territoriales mediante el conocimiento académico y la innovación social.</p>
-          </div>
-        </div>
+  <section class="band" id="info-redes">
+    <div class="wrap">
+      <div class="head" data-rv><p class="eyebrow">Síguenos</p><h2>Educación Continua en <em>redes</em></h2></div>
+      <div class="social" data-rv="stagger">
+        <a class="btn ghost" href="https://www.facebook.com/EduContinuaURosario/">Facebook</a>
+        <a class="btn ghost" href="https://twitter.com/RosarioContinua">X (Twitter)</a>
+        <a class="btn ghost" href="https://www.youtube.com/channel/UCi7bJae3Ku7aBEcgGnHAIpA">YouTube</a>
+        <a class="btn ghost" href="https://www.instagram.com/rosariocontinua/">Instagram</a>
+        <a class="btn ghost" href="https://www.linkedin.com/showcase/educaci%C3%B3n-continua---universidad-del-rosario/">LinkedIn</a>
       </div>
     </div>
   </section>
-
-  <!-- CTA FINAL -->
-  <section class="section cta-final">
-    <div class="container">
-      <h2 class="display display--lg" data-animate>Comienza hoy con el respaldo de <em>370&nbsp;años</em></h2>
-      <p class="lead" data-animate style="margin-inline:auto;">Inscríbete a tu primer programa o agenda una conversación con nuestro equipo.</p>
-      <div data-animate>
-        <a class="btn btn--primary" href="buscar.html">Explorar programas</a>
-        <a class="btn btn--ghost" href="https://wa.me/573219295847" rel="noopener">Hablar con un asesor</a>
-      </div>
-    </div>
-  </section>
+</div>
 </main>
+<button class="fab" id="fab" type="button" data-focus="sim-org" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V9l8-5 8 5v12"/><path d="M9 21v-6h6v6M4 21h16"/></svg><span id="fab-t">Formación para empresas e instituciones</span></button>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div>
-        <a class="brand" href="index.html" style="margin-bottom:1rem;">
-          <span class="brand__logo" aria-hidden="true">UR</span>
-          <span class="brand__name"><strong style="color:var(--crema)">Educación Continua</strong><span>Universidad del Rosario</span></span>
-        </a>
-        <p style="max-width:38ch;">Educación continua con el rigor, la red y el respaldo de 370 años de tradición rosarista.</p>
-        <div class="footer__badges">
-          <span>Acreditación CNA</span><span>QS Stars</span><span>ISO 9001</span>
-        </div>
-      </div>
-      <nav aria-label="Aprender">
-        <h4>Aprender</h4>
-        <ul>
-          <li><a href="buscar.html">Catálogo de programas</a></li>
-          <li><a href="area-salud.html">Áreas de conocimiento</a></li>
-          <li><a href="docentes.html">Nuestros docentes</a></li>
-          <li><a href="eventos.html">Eventos</a></li>
-          <li><a href="programa.html">Programas premium</a></li>
-          <li><a href="https://programas-virtuales-educon-urosario.vercel.app/" rel="noopener">Campus virtual</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Audiencias">
-        <h4>Audiencias</h4>
-        <ul>
-          <li><a href="buscar.html">Profesionales</a></li>
-          <li><a href="empresas.html">Empresas</a></li>
-          <li><a href="ur-senior.html">UR Senior</a></li>
-          <li><a href="centro-simulacion.html">Centro de Simulación</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Recursos">
-        <h4>Recursos</h4>
-        <ul>
-          <li><a href="financiacion.html">Financiación</a></li>
-          <li><a href="devoluciones.html">Devoluciones</a></li>
-          <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
-          <li><a href="contactenos.html">Contáctenos</a></li>
-          <li><a href="kit-de-marca.html">Kit de marca</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Servicios académicos">
-        <h4>Servicios académicos</h4>
-        <ul>
-          <li><a href="https://pasaporte.urosario.edu.co" rel="noopener">Pasaporte virtual</a></li>
-          <li><a href="https://e-aulas.urosario.edu.co" rel="noopener">E-Aulas</a></li>
-          <li><a href="https://urosario.edu.co/financiacion" rel="noopener">Becas, descuentos y apoyo financiero</a></li>
-          <li><a href="https://urosario.edu.co/registro-y-control" rel="noopener">Registro y control</a></li>
-          <li><a href="https://urosario.edu.co/servicios-virtuales" rel="noopener">Servicios en línea</a></li>
-          <li><a href="https://urosario.edu.co/consultorio-juridico" rel="noopener">Consultorio jurídico</a></li>
-          <li><a href="https://urosario.edu.co/recorrido-virtual" rel="noopener">Recorrido virtual</a></li>
-          <li><a href="https://urosario.edu.co/felicitaciones-quejas-y-reclamos" rel="noopener">Felicitaciones, quejas y reclamos</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="footer__legal">
-      <span>© 2026 Universidad del Rosario · Educación Continua y Consultoría</span>
-      <span><a href="https://urosario.edu.co/aviso-de-privacidad" rel="noopener">Aviso de privacidad</a> · <a href="https://urosario.edu.co/terminos-y-condiciones/" rel="noopener">Términos de uso</a> · Línea: (+57)&nbsp;601&nbsp;297&nbsp;0200 op.&nbsp;4</span>
-    </div>
+<footer>
+  <div class="wrap">
+    <div><a class="brand" href="#inicio" data-go="inicio" aria-label="Universidad del Rosario | ADVANCE Educación Continua, ir al inicio"><img class="logo" src="advance-img/ui-65115494.png" alt=""></a>
+      <p class="muted" style="margin-top:12px;max-width:42ch">Educación continua y consultoría con el rigor, la red y el respaldo de 370 años de tradición rosarista.</p></div>
+    <div><h4>Aprender</h4><ul><li><a href="#inicio" data-go="inicio">Inicio</a></li><li><a href="#cursos" data-go="cursos">Programas</a></li><li><a href="#simulacion" data-go="simulacion">Centro de Simulación</a></li><li><a href="#informacion" data-go="informacion">Información</a></li><li><a href="#docentes" data-go="docentes">Conferencistas</a></li></ul></div>
+    <div><h4>Organizaciones</h4><ul><li><a href="#empresas" data-go="empresas">Empresas</a></li><li><a href="#consultoria" data-go="consultoria">Consultoría</a></li></ul></div>
+    <p class="legal">© 2026 Universidad del Rosario · Educación Continua y Consultoría · Línea: (+57) 601 297 0200 op. 4</p>
   </div>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/573219295847" rel="noopener" aria-label="Escríbenos por WhatsApp">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.4 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.3 1.3Z"/></svg>
-</a>
+<p class="toast" id="toast" role="status" hidden></p>
+<dialog id="dlg" aria-labelledby="dlg-name"><div class="profile" id="dlg-body"></div></dialog>
 
-<script src="assets/js/educon.js" defer></script>
+
+
+<script src="assets/js/advance.js"></script>
 </body>
 </html>

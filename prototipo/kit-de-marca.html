@@ -1,215 +1,176 @@
-<!DOCTYPE html>
-<html lang="es" class="no-js">
+<!doctype html>
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kit de Marca EDUCON | Recursos de identidad visual (uso interno)</title>
-<meta name="description" content="Recursos oficiales de identidad visual de Educación Continua UR: paleta, tipografía, logos, firma de correo, fondos y plantillas. Uso interno.">
-<meta name="theme-color" content="#01030c">
-<meta name="robots" content="noindex, nofollow">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Serif+Display:ital@1&family=Inter:wght@400;500;600;700;800;900&display=swap">
-<link rel="stylesheet" href="assets/css/educon.css">
+<title>Kit de marca | ADVANCE Educación Continua – Universidad del Rosario</title>
+<meta name="description" content="Design system del sitio ADVANCE: colores, gradientes, tipografías, radios, sombras y componentes.">
+<meta name="theme-color" content="#000000">
+<link rel="stylesheet" href="assets/css/advance.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Serif+Display:ital@1&family=Inter:wght@400;700&display=swap">
+<style>
+/* estilos propios de esta página (muestras del design system) */
+.sw-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px;margin-top:8px}
+.sw{border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;background:var(--surface)}
+.sw .muestra{height:92px}
+.sw .info{padding:12px 14px;font-size:.8rem}
+.sw .info b{display:block;font-size:.86rem}
+.sw .info code{color:var(--mut);font-size:.75rem}
+.sw-acc .muestra{height:64px}
+.grad .muestra{height:110px}
+.tipo-card{border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);padding:26px;margin-top:16px}
+.tipo-card .ej{font-size:2rem;line-height:1.15;margin:.4rem 0 .6rem}
+.tipo-card .nota{color:var(--mut);font-size:.84rem;max-width:70ch}
+.tok-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:16px;align-items:center}
+.tok{border:1px solid var(--line);background:var(--surface);padding:12px 18px;font-size:.8rem;color:var(--mut)}
+.r-sm{border-radius:var(--r-sm)}.r-md{border-radius:var(--r-md)}.r-lg{border-radius:var(--r-lg)}.r-xl{border-radius:var(--r-xl)}
+.sombra{box-shadow:0 12px 40px -10px rgba(216,15,35,.45)}
+.logo-caja{display:inline-flex;padding:28px 36px;border:1px dashed var(--line-2);border-radius:var(--r-lg);background:#000}
+.f-archivo{font-family:"Archivo Black",sans-serif;text-transform:uppercase;letter-spacing:-0.02em}
+.f-dmserif{font-family:"DM Serif Display",Georgia,serif;font-style:italic}
+.f-inter{font-family:"Inter",sans-serif}
+</style>
 </head>
 <body>
-<div class="proto-ribbon">Prototipo de nueva interfaz — los datos son de demostración.</div>
-<a class="skip-link" href="#contenido">Saltar al contenido principal</a>
-
-<header class="header">
-  <div class="container header__inner">
-    <a class="brand" href="index.html">
-      <img class="brand__img" src="assets/img/logo-educon-urosario.webp" alt="Advance, Educación Continua — Universidad del Rosario" width="600" height="106">
-    </a>
-    <nav class="nav" aria-label="Navegación principal">
-      <a href="index.html">Inicio</a>
-      <a href="buscar.html">Oferta</a>
-      <div class="nav-item-drop">
-        <button class="nav-drop-btn" type="button" aria-haspopup="true" aria-expanded="false">Facultades</button>
-        <div class="nav-dropdown">
-          <a href="facultad-economia-negocios.html">Escuela de Economía y Negocios</a>
-          <a href="facultad-jurisprudencia.html">Facultad de Jurisprudencia</a>
-          <a href="facultad-ciencias-ingenieria.html">Escuela de Ciencias e Ingeniería</a>
-          <a href="facultad-creacion.html">Facultad de Creación</a>
-          <a href="area-salud.html">Escuela de Medicina y Ciencias de la Salud</a>
-          <a href="https://gsb.urosario.edu.co/executive-education" target="_blank" rel="noopener">GSB – Executive Education</a>
-          <a href="facultad-estudios-sociales.html">Escuela de Estudios Sociales, Políticos e Internacionales</a>
-        </div>
-      </div>
-      <a href="empresas.html">Empresas</a>
-      <a href="centro-simulacion.html">Centro de Simulación</a>
-      <a href="eventos.html">Eventos</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Universidad del Rosario | ADVANCE Educación Continua, ir al inicio"><img class="logo" src="advance-img/ui-65115494.png" alt=""></a>
+    <nav class="nav" id="nav-main" aria-label="Principal">
+      <a href="index.html#inicio">Inicio</a>
+      <a href="index.html#cursos">Programas</a>
+      <a href="index.html#empresas">Formación a la medida</a>
+      <a href="index.html#consultoria">Consultoría</a>
+      <a href="index.html#docentes">Conferencistas</a>
+      <a href="index.html#simulacion">Centro de simulación</a>
+      <a href="index.html#informacion">Información</a>
     </nav>
-    <a class="btn btn--ghost header__cta" href="https://mentoria.jerrejerre.com/demourosario" target="_blank" rel="noopener">Ruta de aprendizaje</a>
-    <a class="btn btn--primary header__cta" href="https://wa.me/573219295847" rel="noopener">Habla con un asesor</a>
-    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="menu-movil" aria-label="Abrir menú">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-    </button>
+    <div class="acts">
+      <a class="btn red navb" href="https://wa.me/573219295847">Habla con un asesor</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="nav-main" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    </div>
   </div>
-  <nav id="menu-movil" class="mobile-nav" hidden aria-label="Menú móvil">
-    <a href="index.html">Inicio</a>
-    <a href="buscar.html">Oferta académica</a>
-    <span class="mobile-nav__grupo">Facultades</span>
-    <a class="mobile-nav__sub" href="facultad-economia-negocios.html">Escuela de Economía y Negocios</a>
-    <a class="mobile-nav__sub" href="facultad-jurisprudencia.html">Facultad de Jurisprudencia</a>
-    <a class="mobile-nav__sub" href="facultad-ciencias-ingenieria.html">Escuela de Ciencias e Ingeniería</a>
-    <a class="mobile-nav__sub" href="facultad-creacion.html">Facultad de Creación</a>
-    <a class="mobile-nav__sub" href="area-salud.html">Escuela de Medicina y Ciencias de la Salud</a>
-    <a class="mobile-nav__sub" href="https://gsb.urosario.edu.co/executive-education" target="_blank" rel="noopener">GSB – Executive Education</a>
-    <a class="mobile-nav__sub" href="facultad-estudios-sociales.html">Escuela de Estudios Sociales, Políticos e Internacionales</a>
-    <a href="empresas.html">Empresas</a>
-    <a href="centro-simulacion.html">Centro de Simulación</a>
-    <a href="eventos.html">Eventos</a>
-    <a class="btn btn--primary" href="https://wa.me/573219295847" rel="noopener">Habla con un asesor</a>
-  </nav>
 </header>
 
-<main id="contenido">
-
-  <section class="section" style="padding-block:2.4rem 1rem;">
-    <div class="container">
-      <nav class="breadcrumbs" aria-label="Miga de pan">
-        <ol><li><a href="index.html">Educación Continua</a></li><li><a href="index.html">Recursos</a></li><li aria-current="page">Kit de Marca</li></ol>
-      </nav>
-      <p class="kicker" style="margin-top:1.6rem;">Kit de marca oficial · Uso interno</p>
-      <h1 class="display display--lg" style="max-width:20ch;">Identidad <em>EDUCON</em></h1>
-      <p class="lead">La fuente de verdad visual de este rediseño. Recursos para colaboradores y aliados autorizados de Educación Continua — Universidad del Rosario.</p>
-      <p class="aviso" style="margin-top:1.2rem; max-width:56rem;">Fuente oficial: <a href="https://educacioncontinua.urosario.edu.co/identidad-visual/kit-de-marca-educon" rel="noopener">educacioncontinua.urosario.edu.co/identidad-visual/kit-de-marca-educon</a>. Uso exclusivamente institucional; su reproducción o distribución externa no autorizada está prohibida. En el sitio final esta página va con <code>noindex</code> y fuera del sitemap (plan de rediseño, Fase 5).</p>
+<main>
+  <section class="lhero">
+    <div class="wrap" style="padding-block:72px;">
+      <p class="kicker">Identidad visual · Prototipo ADVANCE</p>
+      <h1 style="max-width:20ch;">Kit de <em>marca</em></h1>
+      <p class="lead">Tokens del design system que usa todo el sitio: colores, gradientes, tipografías, radios, sombras y componentes base.</p>
     </div>
   </section>
 
-  <section class="section" style="padding-block:2.5rem;">
-    <div class="container">
-      <h2 class="display display--md" data-animate>Paleta <em>oficial</em></h2>
-      <p class="lead" data-animate style="max-width:60ch;">Design system Rosario Advance (Futurista v2): fondo noche azul-negro, Rojo UR como energía y el Índigo UR como acento profundo.</p>
-      <div class="swatches" style="margin-top:1.4rem;" data-animate>
-        <figure class="swatch"><div class="swatch__color" style="background:#d81125;"></div><figcaption><strong>Rojo UR (CTA)</strong><code>#D81125</code></figcaption></figure>
-        <figure class="swatch"><div class="swatch__color" style="background:#ea2126;"></div><figcaption><strong>Rojo vivo (hover)</strong><code>#EA2126</code></figcaption></figure>
-        <figure class="swatch"><div class="swatch__color" style="background:#323084;"></div><figcaption><strong>Índigo UR (acento)</strong><code>#323084</code></figcaption></figure>
-        <figure class="swatch"><div class="swatch__color" style="background:#4a37bf;"></div><figcaption><strong>Índigo claro</strong><code>#4A37BF</code></figcaption></figure>
-        <figure class="swatch"><div class="swatch__color" style="background:#01030c; border:1px solid rgba(255,255,255,0.18);"></div><figcaption><strong>Fondo noche</strong><code>#01030C</code></figcaption></figure>
-        <figure class="swatch"><div class="swatch__color" style="background:#030819; border:1px solid rgba(255,255,255,0.18);"></div><figcaption><strong>Superficie (card)</strong><code>#030819</code></figcaption></figure>
-        <figure class="swatch"><div class="swatch__color" style="background:#0b0b14; border:1px solid rgba(255,255,255,0.18);"></div><figcaption><strong>Tinta (texto en claro)</strong><code>#0B0B14</code></figcaption></figure>
-        <figure class="swatch"><div class="swatch__color" style="background:#a2a4b1;"></div><figcaption><strong>Texto secundario</strong><code>#A2A4B1</code></figcaption></figure>
+  <section class="band tight">
+    <div class="wrap">
+      <div class="head"><h2>Colores <em>base</em></h2></div>
+      <div class="sw-grid">
+        <div class="sw"><div class="muestra" style="background:#000000"></div><div class="info"><b>Negro base</b><code>--bg · #000000</code></div></div>
+        <div class="sw"><div class="muestra" style="background:#1a0044"></div><div class="info"><b>Violeta profundo</b><code>--surface · #1a0044</code></div></div>
+        <div class="sw"><div class="muestra" style="background:#d80f23"></div><div class="info"><b>Rojo Advance</b><code>--rojo / --accion · #d80f23</code></div></div>
+        <div class="sw"><div class="muestra" style="background:#b20c2a"></div><div class="info"><b>Rojo oscuro (hover)</b><code>--rojo-dk · #b20c2a</code></div></div>
+        <div class="sw"><div class="muestra" style="background:#a01068"></div><div class="info"><b>Magenta</b><code>gradientes · #a01068</code></div></div>
+        <div class="sw"><div class="muestra" style="background:#432e66"></div><div class="info"><b>Azul violeta</b><code>--azul · #432e66</code></div></div>
+        <div class="sw"><div class="muestra" style="background:#8d80a2"></div><div class="info"><b>Violeta claro</b><code>--violeta · #8d80a2</code></div></div>
+        <div class="sw"><div class="muestra" style="background:#bfb8cb"></div><div class="info"><b>Niebla (texto suave)</b><code>--mut · #bfb8cb</code></div></div>
+        <div class="sw"><div class="muestra" style="background:#ffffff"></div><div class="info"><b>Blanco</b><code>--ink · #ffffff</code></div></div>
       </div>
-      <div class="grid grid--2" style="margin-top:1rem;" data-animate>
-        <figure class="swatch"><div class="swatch__color" style="background:linear-gradient(135deg,#2d0c89 0%,#100043 55%,#04001e 100%);"></div><figcaption><strong>Gradiente hero (índigo)</strong><code>135° #2D0C89 → #100043 → #04001E</code></figcaption></figure>
-        <figure class="swatch"><div class="swatch__color" style="background:linear-gradient(135deg,#d81125 0%,#7d0094 50%,#323084 100%);"></div><figcaption><strong>Gradiente futurista</strong><code>135° #D81125 → #7D0094 → #323084</code></figcaption></figure>
-      </div>
+    </div>
+  </section>
 
-      <h2 class="display display--md" style="margin-top:3rem;" data-animate>Tipografía</h2>
-      <div class="grid grid--3" style="margin-top:1.4rem;">
-        <div class="camino" data-animate>
-          <h3 style="font-size:1.5rem;">Archivo Black</h3>
-          <p>Titulares (h1–h3) siempre en mayúsculas, con tracking −0.02em.</p>
-        </div>
-        <div class="camino" data-animate>
-          <h3 style="font-family:var(--font-serif); font-style:italic; font-weight:400; font-size:1.8rem; text-transform:none;">DM Serif Display</h3>
-          <p>Firma editorial: una palabra itálica por titular, en rojo vivo. Uso con moderación.</p>
-        </div>
-        <div class="camino" data-animate>
-          <h3 style="font-family:var(--font-sans); font-size:1.5rem; text-transform:none; letter-spacing:-0.01em;">Inter</h3>
-          <p>Cuerpo de texto, UI, botones y etiquetas. Pesos 400–900.</p>
-        </div>
+  <section class="band alt">
+    <div class="wrap">
+      <div class="head"><h2>Acentos por <em>categoría</em></h2><p class="lead">Cada área temática y facultad conserva su acento sobre el esquema oscuro.</p></div>
+      <div class="sw-grid">
+        <div class="sw sw-acc"><div class="muestra" style="background:#ff9944"></div><div class="info"><b>Negocios · Finanzas</b><code>#ff9944</code></div></div>
+        <div class="sw sw-acc"><div class="muestra" style="background:#54bae2"></div><div class="info"><b>Derecho · Jurisprudencia</b><code>#54bae2</code></div></div>
+        <div class="sw sw-acc"><div class="muestra" style="background:#3a8cef"></div><div class="info"><b>Tecnología · Ingeniería</b><code>#3a8cef</code></div></div>
+        <div class="sw sw-acc"><div class="muestra" style="background:#209b89"></div><div class="info"><b>Salud</b><code>#209b89</code></div></div>
+        <div class="sw sw-acc"><div class="muestra" style="background:#9897d3"></div><div class="info"><b>Innovación · Creación</b><code>#9897d3</code></div></div>
+        <div class="sw sw-acc"><div class="muestra" style="background:#85d3c6"></div><div class="info"><b>Bienestar</b><code>#85d3c6</code></div></div>
+        <div class="sw sw-acc"><div class="muestra" style="background:#b8ad2e"></div><div class="info"><b>Cs. sociales · Educación</b><code>#b8ad2e</code></div></div>
+        <div class="sw sw-acc"><div class="muestra" style="background:#e45765"></div><div class="info"><b>Rojo acento (caminos)</b><code>#e45765</code></div></div>
       </div>
+    </div>
+  </section>
 
-      <h2 class="display display--md" style="margin-top:3rem;" data-animate>Recursos <em>descargables</em></h2>
-      <div style="display:grid; gap:0.8rem; margin-top:1.4rem;">
-        <div class="recurso" data-animate>
-          <div><h3>Versiones del logo EDUCON</h3><p>Positivo, negativo y monocromático · SVG, PNG, PDF y AI, con zona de seguridad.</p></div>
-          <a class="btn btn--ghost" href="https://drive.google.com/drive/folders/1R3sx-lrvRE4vLqRSm9GEXdhOWPa_QpLu" rel="noopener">Abrir en Drive</a>
-        </div>
-        <div class="recurso" data-animate>
-          <div><h3>Firma de correo</h3><p>HTML y PNG con instrucciones para Outlook y Gmail.</p></div>
-          <a class="btn btn--ghost" href="https://drive.google.com/drive/folders/1rAmv3B5Z_RPENHqXP2Kkn6LH0PXVfBDj" rel="noopener">Abrir en Drive</a>
-        </div>
-        <div class="recurso" data-animate>
-          <div><h3>Fondos para reuniones</h3><p>JPG y PNG con identidad EDUCON para Meet, Teams y Zoom.</p></div>
-          <a class="btn btn--ghost" href="https://drive.google.com/drive/folders/1E363z6RQQj5WX91H4RUoiaXeWTffbm6j" rel="noopener">Abrir en Drive</a>
-        </div>
-        <div class="recurso" data-animate>
-          <div><h3>Hoja membrete</h3><p>Plantilla de carta oficial en Word y PDF para comunicaciones formales.</p></div>
-          <a class="btn btn--ghost" href="https://drive.google.com/drive/folders/1qWuWxEf9CajVnV_dCC65JvE52i54Xe1e" rel="noopener">Abrir en Drive</a>
-        </div>
-        <div class="recurso" data-animate>
-          <div><h3>Plantilla de presentaciones</h3><p>PowerPoint y Google Slides para ponencias, informes y eventos académicos.</p></div>
-          <a class="btn btn--ghost" href="https://drive.google.com/drive/folders/1tC76HwNrDSFnPJMcVR0yo0sH3kAs6ca2" rel="noopener">Abrir en Drive</a>
-        </div>
+  <section class="band">
+    <div class="wrap">
+      <div class="head"><h2>Gradientes</h2></div>
+      <div class="sw-grid">
+        <div class="sw grad"><div class="muestra" style="background:linear-gradient(135deg,#d80f23 0%,#a01068 50%,#1a0044 100%)"></div><div class="info"><b>Degradado principal</b><code>135° rojo → magenta → violeta</code></div></div>
+        <div class="sw grad"><div class="muestra" style="background:radial-gradient(ellipse 90% 80% at 50% 100%,rgba(216,15,35,.5) 0%,rgba(160,16,104,.3) 38%,#000 100%)"></div><div class="info"><b>Halo hero</b><code>radial inferior rojo/magenta</code></div></div>
+        <div class="sw grad"><div class="muestra" style="background:radial-gradient(circle at 15% 20%,rgba(216,15,35,.35),transparent 55%),radial-gradient(circle at 92% 30%,rgba(160,16,104,.3),transparent 55%),#000"></div><div class="info"><b>Fondo lovable</b><code>brillos en esquinas sobre negro</code></div></div>
+        <div class="sw grad"><div class="muestra" style="background:linear-gradient(90deg,#d80f23 0%,#a01068 100%)"></div><div class="info"><b>Raya</b><code>90° rojo → magenta</code></div></div>
       </div>
+    </div>
+  </section>
 
-      <p class="aviso" style="margin-top:2.5rem;" data-animate>¿Necesitas un formato especial o autorización de uso? Escribe al equipo de Marketing de Educación Continua.</p>
+  <section class="band alt">
+    <div class="wrap">
+      <div class="head"><h2>Tipografías</h2></div>
+      <div class="tipo-card">
+        <p class="kicker">Display y cuerpo · todo el sitio</p>
+        <p class="ej" style="font-family:var(--f-display);font-weight:900">Acumin Variable Concept</p>
+        <p class="nota">Titulares en negrita (weight 800–900) y texto de cuerpo. Fuente variable embebida (licencia Adobe).</p>
+      </div>
+      <div class="tipo-card">
+        <p class="kicker">Acento serif · palabras destacadas en itálica</p>
+        <p class="ej" style="font-family:var(--f-accent);font-style:italic">ABC Arizona Flare — <em>avanzar</em></p>
+        <p class="nota">Se usa en los <code>&lt;em&gt;</code> de los titulares, en color rojo. Fuente embebida (licencia ABC Dinamo).</p>
+      </div>
+      <div class="tipo-card">
+        <p class="kicker">Plantilla de programa (página interna)</p>
+        <p class="ej"><span class="f-archivo">Archivo Black</span> · <span class="f-dmserif">DM Serif Display</span> · <span class="f-inter">Inter</span></p>
+        <p class="nota">La página interna de programa usa su propio set tipográfico (Google Fonts): Archivo Black para titulares en mayúsculas, DM Serif Display itálica para la palabra firma e Inter para el cuerpo.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="head"><h2>Radios, sombras y <em>botones</em></h2></div>
+      <div class="tok-row">
+        <div class="tok r-sm">--r-sm · 6px</div>
+        <div class="tok r-md">--r-md · 10px</div>
+        <div class="tok r-lg">--r-lg · 14px</div>
+        <div class="tok r-xl">--r-xl · 18px</div>
+        <div class="tok r-lg sombra">sombra elegante (roja)</div>
+      </div>
+      <div class="tok-row">
+        <a class="btn red" href="#">Botón primario</a>
+        <a class="btn ghost" href="#">Botón fantasma</a>
+        <a class="btn navb ruta" href="#"><span aria-hidden="true">✦</span>Camino de aprendizaje</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band alt">
+    <div class="wrap">
+      <div class="head"><h2>Logo</h2><p class="lead">Siempre sobre fondo oscuro, con margen de respeto.</p></div>
+      <div class="logo-caja"><img class="logo" src="advance-img/ui-65115494.png" alt="Universidad del Rosario | ADVANCE Educación Continua" style="height:44px"></div>
     </div>
   </section>
 </main>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div>
-        <a class="brand" href="index.html" style="margin-bottom:1rem;">
-          <span class="brand__logo" aria-hidden="true">UR</span>
-          <span class="brand__name"><strong style="color:var(--crema)">Educación Continua</strong><span>Universidad del Rosario</span></span>
-        </a>
-        <p style="max-width:38ch;">Educación continua con el rigor, la red y el respaldo de 370 años de tradición rosarista.</p>
-        <div class="footer__badges">
-          <span>Acreditación CNA</span><span>QS Stars</span><span>ISO 9001</span>
-        </div>
-      </div>
-      <nav aria-label="Aprender">
-        <h4>Aprender</h4>
-        <ul>
-          <li><a href="buscar.html">Catálogo de programas</a></li>
-          <li><a href="area-salud.html">Áreas de conocimiento</a></li>
-          <li><a href="docentes.html">Nuestros docentes</a></li>
-          <li><a href="eventos.html">Eventos</a></li>
-          <li><a href="programa.html">Programas premium</a></li>
-          <li><a href="https://programas-virtuales-educon-urosario.vercel.app/" rel="noopener">Campus virtual</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Audiencias">
-        <h4>Audiencias</h4>
-        <ul>
-          <li><a href="buscar.html">Profesionales</a></li>
-          <li><a href="empresas.html">Empresas</a></li>
-          <li><a href="ur-senior.html">UR Senior</a></li>
-          <li><a href="centro-simulacion.html">Centro de Simulación</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Recursos">
-        <h4>Recursos</h4>
-        <ul>
-          <li><a href="financiacion.html">Financiación</a></li>
-          <li><a href="devoluciones.html">Devoluciones</a></li>
-          <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
-          <li><a href="contactenos.html">Contáctenos</a></li>
-          <li><a href="kit-de-marca.html">Kit de marca</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Servicios académicos">
-        <h4>Servicios académicos</h4>
-        <ul>
-          <li><a href="https://pasaporte.urosario.edu.co" rel="noopener">Pasaporte virtual</a></li>
-          <li><a href="https://e-aulas.urosario.edu.co" rel="noopener">E-Aulas</a></li>
-          <li><a href="https://urosario.edu.co/financiacion" rel="noopener">Becas, descuentos y apoyo financiero</a></li>
-          <li><a href="https://urosario.edu.co/registro-y-control" rel="noopener">Registro y control</a></li>
-          <li><a href="https://urosario.edu.co/servicios-virtuales" rel="noopener">Servicios en línea</a></li>
-          <li><a href="https://urosario.edu.co/consultorio-juridico" rel="noopener">Consultorio jurídico</a></li>
-          <li><a href="https://urosario.edu.co/recorrido-virtual" rel="noopener">Recorrido virtual</a></li>
-          <li><a href="https://urosario.edu.co/felicitaciones-quejas-y-reclamos" rel="noopener">Felicitaciones, quejas y reclamos</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="footer__legal">
-      <span>© 2026 Universidad del Rosario · Educación Continua y Consultoría</span>
-      <span><a href="https://urosario.edu.co/aviso-de-privacidad" rel="noopener">Aviso de privacidad</a> · <a href="https://urosario.edu.co/terminos-y-condiciones/" rel="noopener">Términos de uso</a> · Línea: (+57)&nbsp;601&nbsp;297&nbsp;0200 op.&nbsp;4</span>
-    </div>
+<footer>
+  <div class="wrap">
+    <div><a class="brand" href="index.html" aria-label="Universidad del Rosario | ADVANCE Educación Continua, ir al inicio"><img class="logo" src="advance-img/ui-65115494.png" alt=""></a>
+      <p class="muted" style="margin-top:12px;max-width:42ch">Educación continua y consultoría con el rigor, la red y el respaldo de 370 años de tradición rosarista.</p></div>
+    <div><h4>Aprender</h4><ul><li><a href="index.html#inicio">Inicio</a></li><li><a href="index.html#cursos">Programas</a></li><li><a href="index.html#simulacion">Centro de Simulación</a></li><li><a href="index.html#informacion">Información</a></li><li><a href="index.html#docentes">Conferencistas</a></li></ul></div>
+    <div><h4>Organizaciones</h4><ul><li><a href="index.html#empresas">Empresas</a></li><li><a href="index.html#consultoria">Consultoría</a></li></ul></div>
+    <p class="legal">© 2026 Universidad del Rosario · Educación Continua y Consultoría · Línea: (+57) 601 297 0200 op. 4</p>
   </div>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/573219295847" rel="noopener" aria-label="Escríbenos por WhatsApp">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.4 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.3 1.3Z"/></svg>
-</a>
-
-<script src="assets/js/educon.js" defer></script>
+<script>
+(function(){
+  var top = document.querySelector('.top'), bg = document.querySelector('.burger');
+  if(bg) bg.addEventListener('click', function(){
+    var abierto = top.classList.toggle('navopen');
+    bg.setAttribute('aria-expanded', String(abierto));
+    bg.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
+  });
+})();
+</script>
 </body>
 </html>
