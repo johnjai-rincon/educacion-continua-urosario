@@ -20,21 +20,21 @@
 <!-- ===== HEADER (idéntico al de Rosario Advance) ===== -->
 <header class="hdr">
   <div class="hdr-in">
-    <a class="brand" href="#inicio" aria-label="Advance Nexus — Universidad del Rosario, inicio">
-      <img src="advance-img/programa-logo.png" alt="">
-      <span><b>Advance Nexus</b><small>Universidad del Rosario</small></span>
+    <a class="brand" href="index.html" aria-label="ADVANCE Educación Continua — Universidad del Rosario, ir al inicio">
+      <img src="advance-img/logo-educacion-continua.png" alt="">
     </a>
     <nav class="nav" aria-label="Navegación principal">
-      <a href="#inicio">Cursos</a>
-      <a href="#inicio">Rutas</a>
-      <a href="#inicio" aria-current="page">Programas</a>
-      <a href="#inicio">Empresas</a>
-      <a href="#inicio">Comunidad</a>
+      <a href="index.html#inicio">Inicio</a>
+      <a href="index.html#cursos" aria-current="page">Programas</a>
+      <a href="index.html#empresas">Formación a la medida</a>
+      <a href="index.html#consultoria">Consultoría</a>
+      <a href="index.html#docentes">Conferencistas</a>
+      <a href="index.html#simulacion">Centro de simulación</a>
+      <a href="index.html#informacion">Información</a>
     </nav>
     <div class="hdr-r">
-      <button class="ibtn" type="button" aria-label="Buscar"><svg class="ic" sc-camel-view-box="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg></button>
-      <a class="login" href="#inicio">Iniciar sesión</a>
-      <a class="btn btn-pri btn-sm" href="#formulario">Inscríbeme</a>
+      <a class="btn-ruta" href="https://mentoria.jerrejerre.com/demourosario"><span aria-hidden="true">✦</span> Camino de aprendizaje</a>
+      <a class="btn-asesor" href="https://wa.me/573219295847">Habla con un asesor</a>
     </div>
   </div>
 </header>
@@ -200,12 +200,12 @@
       </div>
       <p class="doc-vacio" id="doc-vacio" hidden>Ningún profesor coincide con la búsqueda.</p>
       <div class="dgrid">
-        <div class="card doc"><span class="av" aria-hidden="true">CJ</span><h3>Dr. Carlos Ignacio Jaramillo</h3><p>Ex-Magistrado Corte Suprema de Justicia</p></div>
-        <div class="card doc"><span class="av" aria-hidden="true">MA</span><h3>Dr. Marco Antonio Álvarez</h3><p>Experto en Derecho Procesal</p></div>
-        <div class="card doc"><span class="av" aria-hidden="true">OT</span><h3>Dr. Octavio Augusto Tejeiro</h3><p>Magistrado Corte Suprema de Justicia</p></div>
-        <div class="card doc"><span class="av" aria-hidden="true">UC</span><h3>Dr. Ulises Canosa</h3><p>Experto en Responsabilidad Civil</p></div>
-        <div class="card doc"><span class="av" aria-hidden="true">HG</span><h3>Dra. Hilda González</h3><p>Especialista en Derecho Societario</p></div>
-        <div class="card doc"><span class="av" aria-hidden="true">EV</span><h3>Dr. Edgardo Villamil</h3><p>Ex-Magistrado y experto en Títulos Valores</p></div>
+        <button class="card doc" type="button" data-docente-card data-modal="modal-jaramillo"><span class="av" aria-hidden="true">CJ</span><h3>Dr. Carlos Ignacio Jaramillo</h3><p>Ex-Magistrado Corte Suprema de Justicia</p></button>
+        <button class="card doc" type="button" data-docente-card data-modal="modal-alvarez"><span class="av" aria-hidden="true">MA</span><h3>Dr. Marco Antonio Álvarez</h3><p>Experto en Derecho Procesal</p></button>
+        <button class="card doc" type="button" data-docente-card data-modal="modal-tejeiro"><span class="av" aria-hidden="true">OT</span><h3>Dr. Octavio Augusto Tejeiro</h3><p>Magistrado Corte Suprema de Justicia</p></button>
+        <button class="card doc" type="button" data-docente-card data-modal="modal-canosa"><span class="av" aria-hidden="true">UC</span><h3>Dr. Ulises Canosa</h3><p>Experto en Responsabilidad Civil</p></button>
+        <button class="card doc" type="button" data-docente-card data-modal="modal-gonzalez"><span class="av" aria-hidden="true">HG</span><h3>Dra. Hilda González</h3><p>Especialista en Derecho Societario</p></button>
+        <button class="card doc" type="button" data-docente-card data-modal="modal-villamil"><span class="av" aria-hidden="true">EV</span><h3>Dr. Edgardo Villamil</h3><p>Ex-Magistrado y experto en Títulos Valores</p></button>
       </div>
     </section>
 
@@ -241,14 +241,26 @@
   <aside class="side" aria-label="Reserva tu cupo">
     <div class="card form" id="formulario">
       <p class="eyebrow">Reserva tu cupo</p>
-      <h2 class="disp">Solicita información</h2>
+      <h2 class="disp">Quiero más información</h2>
       <p class="sub-t">Déjanos tus datos y una asesora te contactará para resolver tus dudas y acompañar tu inscripción.</p>
-      <div class="fld"><label for="f-nombre">Nombre completo</label><input id="f-nombre" type="text" placeholder="Tu nombre y apellido" autocomplete="name"></div>
-      <div class="fld"><label for="f-email">Correo electrónico</label><input id="f-email" type="email" placeholder="tu@correo.com" autocomplete="email" spellcheck="false"></div>
-      <div class="fld"><label for="f-cel">Celular (WhatsApp)</label><input id="f-cel" type="tel" placeholder="+57 312 345 6789" autocomplete="tel"></div>
-      <div class="chk"><input id="f-habeas" type="checkbox"><label for="f-habeas">Autorizo el tratamiento de mis datos personales según la <a href="#formulario">Política de Tratamiento de Datos</a> de la Universidad del Rosario.</label></div>
-      <div class="chk"><input id="f-msj" type="checkbox"><label for="f-msj">Autorizo recibir información por mensajería instantánea.</label></div>
-      <button class="btn btn-pri" type="button">Enviar solicitud <svg class="ic ic-r" sc-camel-view-box="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></button>
+      <div class="fld2">
+            <div class="fld"><label for="f-nombre">Nombre</label><input id="f-nombre" type="text" placeholder="Tu nombre" autocomplete="given-name"></div>
+            <div class="fld"><label for="f-apellido">Apellido</label><input id="f-apellido" type="text" placeholder="Tu apellido" autocomplete="family-name"></div>
+          </div>
+          <div class="fld"><label for="f-email">Correo electrónico</label><input id="f-email" type="email" placeholder="tu@correo.com" autocomplete="email" spellcheck="false"></div>
+          <div class="fld"><label for="f-email2">Confirmar correo electrónico</label><input id="f-email2" type="email" placeholder="tu@correo.com" autocomplete="email" spellcheck="false"></div>
+          <div class="fld"><label for="f-cel">Celular</label><input id="f-cel" type="tel" placeholder="312 555 5555" autocomplete="tel"></div>
+          <div class="fld2">
+            <div class="fld"><label for="f-tipodoc">Tipo de documento</label><select id="f-tipodoc"><option>Cédula de ciudadanía</option><option>Cédula de extranjería</option><option>Pasaporte</option><option>Tarjeta de identidad</option></select></div>
+            <div class="fld"><label for="f-numdoc">Número de documento</label><input id="f-numdoc" type="text" inputmode="numeric" placeholder="80897375"></div>
+          </div>
+          <div class="fld"><label for="f-pais">País</label><input id="f-pais" type="text" value="Colombia" autocomplete="country-name"></div>
+          <div class="fld"><label for="f-ciudad">Ciudad</label><input id="f-ciudad" type="text" placeholder="Bogotá, D.C. - Bogotá, D.C." autocomplete="address-level2"></div>
+          <div class="chk"><input id="f-habeas" type="checkbox"><label for="f-habeas"><a href="https://repository.urosario.edu.co/server/api/core/bitstreams/79f9bc01-3363-455a-bd5c-11da864f2fc3/content" target="_blank" rel="noopener">Autorizo el tratamiento de mis datos personales</a> a la Universidad del Rosario bajo su <a href="https://repository.urosario.edu.co/server/api/core/bitstreams/79f9bc01-3363-455a-bd5c-11da864f2fc3/content" target="_blank" rel="noopener">Política de Tratamiento de Datos Personales</a>.</label></div>
+          <div class="chk"><input id="f-msj" type="checkbox"><label for="f-msj">Autorizo recibir información a través de cualquier sistema de mensajería instantánea utilizado por la Universidad (WhatsApp, Telegram, Signal).</label></div>
+          <p class="form-aviso">Al hacer clic en Enviar, aceptas que Universidad del Rosario almacene y procese la información personal suministrada arriba para proporcionarte el contenido solicitado.</p>
+          <div class="recaptcha-ph" aria-hidden="true"><span class="rc-azul">protección de reCAPTCHA</span><svg viewBox="0 0 24 24" width="26" height="26"><path fill="#4788f4" d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5z"/><path fill="#fff" d="M12 5.5l5 1.9v3.8c0 3.3-2.1 6.3-5 7.5-2.9-1.2-5-4.2-5-7.5V7.4z" opacity=".35"/></svg></div>
+          <button class="btn btn-pri" type="button">Inscríbete <svg class="ic ic-r" sc-camel-view-box="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></button>
       <div class="alt"><span>¿Prefieres hablar ahora?</span><a href="https://wa.me/573219295847"><svg class="ic" sc-camel-view-box="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"></path></svg>WhatsApp</a></div>
     </div>
   </aside>
@@ -306,13 +318,12 @@
 <footer class="ftr">
   <div class="ftr-in">
     <div>
-      <div class="lg"><i>R</i><div><b>Rosario Advance</b><small>El Claustro Digital</small></div></div>
-      <p class="desc">Educación continua con el rigor, la red y el respaldo de 370 años de tradición rosarista.</p>
-      <p class="copy">© 2026 Universidad del Rosario.<br>Acreditación institucional de alta calidad.</p>
+      <a class="brand" href="index.html" aria-label="ADVANCE Educación Continua — Universidad del Rosario, ir al inicio"><img src="advance-img/logo-educacion-continua.png" alt="" style="height:42px;width:auto"></a>
+      <p class="desc">Educación continua y consultoría con el rigor, la red y el respaldo de 370 años de tradición rosarista.</p>
+      <p class="copy">© 2026 Universidad del Rosario · Educación Continua y Consultoría · Línea: (+57) 601 297 0200 op. 4</p>
     </div>
-    <nav aria-label="Aprender"><h4>Aprender</h4><ul><li><a href="#inicio">Cursos</a></li><li><a href="#inicio">Rutas de aprendizaje</a></li><li><a href="#inicio">Programas premium</a></li><li><a href="#inicio">Comunidad</a></li></ul></nav>
-    <nav aria-label="Audiencias"><h4>Audiencias</h4><ul><li><a href="#inicio">Profesionales</a></li><li><a href="#inicio">Egresados</a></li><li><a href="#inicio">Empresas</a></li><li><a href="#inicio">Internacional</a></li></ul></nav>
-    <nav aria-label="Universidad"><h4>Universidad</h4><ul><li><a href="#inicio">Sobre el Rosario</a></li><li><a href="#inicio">Acreditaciones</a></li><li><a href="#inicio">Contacto</a></li><li><a href="#inicio">Política de datos</a></li></ul></nav>
+    <nav aria-label="Aprender"><h4>Aprender</h4><ul><li><a href="index.html#inicio">Inicio</a></li><li><a href="index.html#cursos">Programas</a></li><li><a href="index.html#simulacion">Centro de Simulación</a></li><li><a href="index.html#informacion">Información</a></li><li><a href="index.html#docentes">Conferencistas</a></li></ul></nav>
+    <nav aria-label="Organizaciones"><h4>Organizaciones</h4><ul><li><a href="index.html#empresas">Empresas</a></li><li><a href="index.html#consultoria">Consultoría</a></li></ul></nav>
   </div>
 </footer>
 
@@ -344,4 +355,140 @@
 <a class="wa-burbuja" href="https://wa.me/573219295847" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
   <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.7c-1.4 0-3.2-.5-4.6-1.3l-.5-.3-4.3 1.4 1.4-4.2-.3-.5c-1.2-1.7-1.9-3.7-1.9-5.9 0-5.5 4.6-10 10.2-10s10.2 4.5 10.2 10-4.6 10-10.2 10zm5.6-7.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2.1-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.6 5.6 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
 </a>
+
+<!-- Modales de docentes (adaptadas del programa anterior) -->
+<dialog class="modal-docente" id="modal-jaramillo" aria-labelledby="mj-nombre">
+    <div class="modal-docente__inner">
+      <button class="modal-docente__cerrar" type="button" aria-label="Cerrar">✕</button>
+      <div class="modal-docente__head">
+        <span class="modal-docente__foto" aria-hidden="true">CJ</span>
+        <div>
+          <h3 id="mj-nombre">Dr. Carlos Ignacio Jaramillo</h3>
+          <p class="modal-docente__cargo">Ex-Magistrado Corte Suprema de Justicia</p>
+          <p class="modal-docente__bio">Reconocido jurista con una vasta trayectoria en la Rama Judicial. Experto en Derecho Civil y Comercial, autor de numerosas publicaciones y referente académico a nivel nacional.</p>
+        </div>
+      </div>
+      <hr>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Formación Académica</h4>
+      <ul>
+        <li>Abogado, Universidad del Rosario</li>
+        <li>Doctor en Derecho, Universidad de Salamanca</li>
+      </ul>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Experiencia Profesional</h4>
+      <ul>
+        <li>Magistrado de la Sala de Casación Civil de la Corte Suprema de Justicia (2002-2010)</li>
+        <li>Conjuez de la Corte Constitucional</li>
+        <li>Árbitro en disputas comerciales nacionales e internacionales</li>
+      </ul>
+    </div>
+  </dialog>
+<dialog class="modal-docente" id="modal-alvarez" aria-labelledby="ma-nombre">
+    <div class="modal-docente__inner">
+      <button class="modal-docente__cerrar" type="button" aria-label="Cerrar">✕</button>
+      <div class="modal-docente__head">
+        <span class="modal-docente__foto" aria-hidden="true">MA</span>
+        <div>
+          <h3 id="ma-nombre">Dr. Marco Antonio Álvarez</h3>
+          <p class="modal-docente__cargo">Experto en Derecho Procesal</p>
+          <p class="modal-docente__bio">Procesalista con amplia experiencia en litigio de alta complejidad y docencia universitaria. Conferencista habitual en congresos de derecho procesal. (Perfil de demostración.)</p>
+        </div>
+      </div>
+      <hr>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Formación Académica</h4>
+      <ul><li>Abogado, Universidad del Rosario</li><li>Magíster en Derecho Procesal</li></ul>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Experiencia Profesional</h4>
+      <ul><li>Litigante en procesos civiles y comerciales de alta complejidad</li><li>Profesor de posgrado en derecho procesal</li></ul>
+    </div>
+  </dialog>
+<dialog class="modal-docente" id="modal-tejeiro" aria-labelledby="ot-nombre">
+    <div class="modal-docente__inner">
+      <button class="modal-docente__cerrar" type="button" aria-label="Cerrar">✕</button>
+      <div class="modal-docente__head">
+        <span class="modal-docente__foto" aria-hidden="true">OT</span>
+        <div>
+          <h3 id="ot-nombre">Dr. Octavio Augusto Tejeiro</h3>
+          <p class="modal-docente__cargo">Magistrado Corte Suprema de Justicia</p>
+          <p class="modal-docente__bio">Magistrado de la Sala de Casación Civil, con destacada trayectoria en la jurisdicción ordinaria y la academia. (Perfil de demostración.)</p>
+        </div>
+      </div>
+      <hr>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Formación Académica</h4>
+      <ul><li>Abogado</li><li>Especialista en Derecho Procesal Civil</li></ul>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Experiencia Profesional</h4>
+      <ul><li>Magistrado de la Sala de Casación Civil</li><li>Juez y magistrado de tribunal en la jurisdicción ordinaria</li></ul>
+    </div>
+  </dialog>
+<dialog class="modal-docente" id="modal-canosa" aria-labelledby="uc-nombre">
+    <div class="modal-docente__inner">
+      <button class="modal-docente__cerrar" type="button" aria-label="Cerrar">✕</button>
+      <div class="modal-docente__head">
+        <span class="modal-docente__foto" aria-hidden="true">UC</span>
+        <div>
+          <h3 id="uc-nombre">Dr. Ulises Canosa</h3>
+          <p class="modal-docente__cargo">Experto en Responsabilidad Civil</p>
+          <p class="modal-docente__bio">Referente en responsabilidad civil y derecho de seguros, con amplia trayectoria gremial y académica. (Perfil de demostración.)</p>
+        </div>
+      </div>
+      <hr>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Formación Académica</h4>
+      <ul><li>Abogado, Universidad del Rosario</li><li>Especialista en Derecho Comercial</li></ul>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Experiencia Profesional</h4>
+      <ul><li>Directivo gremial del sector asegurador</li><li>Profesor de responsabilidad civil y contratos</li></ul>
+    </div>
+  </dialog>
+<dialog class="modal-docente" id="modal-gonzalez" aria-labelledby="hg-nombre">
+    <div class="modal-docente__inner">
+      <button class="modal-docente__cerrar" type="button" aria-label="Cerrar">✕</button>
+      <div class="modal-docente__head">
+        <span class="modal-docente__foto" aria-hidden="true">HG</span>
+        <div>
+          <h3 id="hg-nombre">Dra. Hilda González</h3>
+          <p class="modal-docente__cargo">Especialista en Derecho Societario</p>
+          <p class="modal-docente__bio">Asesora de juntas directivas y experta en gobierno corporativo y derecho de sociedades. (Perfil de demostración.)</p>
+        </div>
+      </div>
+      <hr>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Formación Académica</h4>
+      <ul><li>Abogada</li><li>Magíster en Derecho Comercial</li></ul>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Experiencia Profesional</h4>
+      <ul><li>Consultora en estructuración societaria</li><li>Miembro de juntas directivas</li></ul>
+    </div>
+  </dialog>
+<dialog class="modal-docente" id="modal-villamil" aria-labelledby="ev-nombre">
+    <div class="modal-docente__inner">
+      <button class="modal-docente__cerrar" type="button" aria-label="Cerrar">✕</button>
+      <div class="modal-docente__head">
+        <span class="modal-docente__foto" aria-hidden="true">EV</span>
+        <div>
+          <h3 id="ev-nombre">Dr. Edgardo Villamil</h3>
+          <p class="modal-docente__cargo">Ex-Magistrado y experto en Títulos Valores</p>
+          <p class="modal-docente__bio">Ex-magistrado con reconocida trayectoria en derecho comercial y títulos valores. (Perfil de demostración.)</p>
+        </div>
+      </div>
+      <hr>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Formación Académica</h4>
+      <ul><li>Abogado</li><li>Especialista en Derecho Comercial y Financiero</li></ul>
+      <h4><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Experiencia Profesional</h4>
+      <ul><li>Magistrado de la Corte Suprema de Justicia</li><li>Autor y conferencista en títulos valores</li></ul>
+    </div>
+  </dialog>
+
+<script>
+(function(){
+  document.querySelectorAll('[data-docente-card][data-modal]').forEach(function(card){
+    card.addEventListener('click', function(){
+      var dlg = document.getElementById(card.getAttribute('data-modal'));
+      if(dlg && typeof dlg.showModal === 'function') dlg.showModal();
+    });
+  });
+  document.querySelectorAll('.modal-docente').forEach(function(dlg){
+    var btn = dlg.querySelector('.modal-docente__cerrar');
+    if(btn) btn.addEventListener('click', function(){ dlg.close(); });
+    dlg.addEventListener('click', function(e){
+      var r = dlg.getBoundingClientRect();
+      if(e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) dlg.close();
+    });
+  });
+})();
+</script>
 </body></html>

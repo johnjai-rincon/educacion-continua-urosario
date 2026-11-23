@@ -179,7 +179,6 @@
     var facts=next?'<span>'+sv('cal')+'Inicia '+c.ini+'</span><span>'+sv('clock')+c.dur+'</span><span>'+c.mod+'</span>':'<span>'+sv('star')+c.r+'</span><span>'+sv('users')+c.n+'</span><span>'+sv('clock')+c.h+' h</span>';
     return '<article class="ccard">'+cover(c.area,tags,c.img)+'<div class="body"><p class="kicker">'+c.fac+'</p><h3><a class="plink" href="programa.html">'+c.t+'</a></h3><p class="desc">'+c.d+'</p><div class="facts">'+facts+'</div><div class="foot"><div><small>'+c.tipo+' | '+c.mod+'</small><b>$'+c.p+'</b></div><span class="lvl">'+(c.nivel||'COP')+'</span></div></div></article>';
   }
-  $('#next-cursos').innerHTML=NEXT.map(function(c){return ccard(c,true)}).join('');
 
   /* catálogo con filtros */
   var state={q:'',area:[],nivel:[],mod:[]};

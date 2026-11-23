@@ -648,3 +648,59 @@ body{margin:0;background:#01030c}
 .wa-burbuja{position:fixed;right:20px;bottom:20px;z-index:90;width:54px;height:54px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.45);transition:transform .2s}
 .wa-burbuja:hover{transform:scale(1.08)}
 .wa-burbuja svg{width:28px;height:28px;fill:#fff}
+
+
+/* ===== Header/footer compartidos con el sitio ===== */
+.hdr .brand img{height:38px;width:auto}
+.hdr-r{display:flex;align-items:center;gap:10px}
+.btn-asesor{display:inline-flex;align-items:center;border-radius:999px;background:var(--pri-btn);color:#fff;font-weight:700;font-size:.76rem;letter-spacing:.04em;padding:10px 18px;text-decoration:none;white-space:nowrap;transition:background .2s}
+.btn-asesor:hover{background:#c4141a}
+.btn-ruta{display:inline-flex;align-items:center;gap:6px;border-radius:999px;background:linear-gradient(135deg,#7a0090,#4a37be);color:#fff;font-weight:700;font-size:.76rem;padding:10px 18px;text-decoration:none;white-space:nowrap;transition:filter .2s}
+.btn-ruta:hover{filter:brightness(1.15)}
+@media (max-width:1250px){.btn-ruta{display:none}}
+.ftr .brand img{display:block;margin-bottom:6px}
+
+/* ===== Formulario completo ===== */
+.fld2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fld2 .fld{margin-top:16px}
+.fld select{width:100%;height:46px;padding:0 10px;border-radius:8px;border:1px solid var(--bd);background:var(--sec);color:var(--fg);font:inherit;font-size:.9rem}
+.fld select:focus{outline:none;border-color:rgba(234,33,38,.55)}
+.form-aviso{margin-top:14px;font-size:11px;line-height:1.5;color:var(--mut)}
+.recaptcha-ph{margin-top:12px;display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid var(--bd);border-radius:8px;background:var(--sec);padding:8px 12px}
+.recaptcha-ph .rc-azul{background:#4788f4;color:#fff;font-size:11px;padding:6px 10px;border-radius:4px}
+
+/* ===== Tarjetas de docentes clicables + modal ===== */
+button.doc{appearance:none;cursor:pointer;text-align:left;font:inherit;color:inherit;width:100%}
+button.doc:hover{border-color:rgba(234,33,38,.4);box-shadow:var(--elegant)}
+.modal-docente{font-family:'Studio Feixen Sans','Inter',system-ui,sans-serif;border:1px solid var(--bd);border-radius:14px;background:var(--card);color:var(--fg);padding:0;max-width:640px;width:calc(100% - 40px)}
+.modal-docente::backdrop{background:rgba(1,3,12,.72);backdrop-filter:blur(3px)}
+.modal-docente__inner{padding:28px;position:relative}
+.modal-docente__cerrar{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;border:1px solid var(--bd);background:transparent;color:var(--mut);cursor:pointer;font-size:14px;line-height:1}
+.modal-docente__cerrar:hover{color:var(--fg);border-color:var(--pri)}
+.modal-docente__head{display:flex;gap:16px;align-items:flex-start;padding-right:36px}
+.modal-docente__foto{flex:none;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:1.05rem;color:#fff;background:linear-gradient(135deg,var(--pri) 0%,#7a0090 100%)}
+.modal-docente h3{margin:0 0 2px;font-size:1.2rem}
+.modal-docente__cargo{margin:0 0 10px;color:var(--pri-txt);font-size:.85rem;font-weight:600}
+.modal-docente__bio{margin:0;color:var(--mut);font-size:.9rem;line-height:1.6}
+.modal-docente hr{border:0;border-top:1px solid var(--bd);margin:20px 0 4px}
+.modal-docente h4{display:flex;align-items:center;gap:8px;margin:18px 0 8px;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ind-txt)}
+.modal-docente h4 svg{stroke:currentColor;fill:none;flex:none}
+.modal-docente ul{margin:0;padding-left:1.15em;color:var(--mut);font-size:.9rem;line-height:1.6}
+.modal-docente li{margin-bottom:.35em}
+
+/* hidden debe ganar a los display de las tarjetas */
+[hidden]{display:none!important}
+
+/* tokens también en :root para elementos fuera de .ra (modales) */
+:root{--bg:#01030c;--card:#030819;--sec:#070e21;--fg:#f8f8fc;--mut:#a2a3b1;--bd:rgba(255,255,255,.10);--pri:#ea2126;--pri-btn:#dd1b22;--pri-txt:#f2555a;--ind:#4a37be;--ind-txt:#b3a8ff;--elegant:0 12px 40px -10px rgba(234,33,38,.35)}
+
+.modal-docente h3{font-family:'Greed Condensed','Archivo Black',sans-serif;letter-spacing:.01em}
+.modal-docente h4{font-family:'Studio Feixen Sans','Inter',sans-serif}
+/* nav compacta para los 7 enlaces del sitio */
+.hdr .nav{flex-wrap:nowrap;gap:16px}
+.hdr .nav a{white-space:nowrap;font-size:.7rem}
+.hdr .brand img{height:32px}
+.hdr-r{flex:none}
+.btn-asesor,.btn-ruta{padding:9px 14px;font-size:.72rem}
+.ra{overflow-x:clip}
+@media (max-width:1700px){.btn-ruta{display:none}}
