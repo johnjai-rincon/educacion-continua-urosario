@@ -1,6 +1,9 @@
+@font-face{font-family:"Greed Condensed";font-weight:700 900;font-style:normal;font-display:swap;src:url(../fonts/GreedCondensed-Bold.woff2) format("woff2")}
+@font-face{font-family:"Faculty Glyphic UR";font-weight:400;font-style:normal;font-display:swap;src:url(../fonts/FacultyGlyphic-Regular-UR.woff2) format("woff2")}
+@font-face{font-family:"Studio Feixen Sans";font-weight:400 700;font-style:normal;font-display:swap;src:url(../fonts/StudioFeixenSans-Regular.woff2) format("woff2")}
 /* latin-ext */
 @font-face {
-  font-family: 'Archivo Black';
+  font-family: 'Greed Condensed','Archivo Black';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -9,7 +12,7 @@
 }
 /* latin */
 @font-face {
-  font-family: 'Archivo Black';
+  font-family: 'Greed Condensed','Archivo Black';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -18,7 +21,7 @@
 }
 /* latin-ext */
 @font-face {
-  font-family: 'DM Serif Display';
+  font-family: 'Faculty Glyphic UR','DM Serif Display';
   font-style: italic;
   font-weight: 400;
   font-display: swap;
@@ -27,7 +30,7 @@
 }
 /* latin */
 @font-face {
-  font-family: 'DM Serif Display';
+  font-family: 'Faculty Glyphic UR','DM Serif Display';
   font-style: italic;
   font-weight: 400;
   font-display: swap;
@@ -36,7 +39,7 @@
 }
 /* latin-ext */
 @font-face {
-  font-family: 'DM Serif Display';
+  font-family: 'Faculty Glyphic UR','DM Serif Display';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -45,7 +48,7 @@
 }
 /* latin */
 @font-face {
-  font-family: 'DM Serif Display';
+  font-family: 'Faculty Glyphic UR','DM Serif Display';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -370,20 +373,20 @@
 
 
 body{margin:0;background:#01030c}
-.ra{--bg:#01030c;--card:#030819;--sec:#070e21;--fg:#f8f8fc;--mut:#a2a3b1;--bd:rgba(255,255,255,.10);--pri:#ea2126;--pri-btn:#dd1b22;--pri-txt:#f2555a;--ind:#4a37be;--ind-txt:#b3a8ff;--elegant:0 12px 40px -10px rgba(234,33,38,.35);background:var(--bg);color:var(--fg);font-family:'Inter',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.ra{--bg:#01030c;--card:#030819;--sec:#070e21;--fg:#f8f8fc;--mut:#a2a3b1;--bd:rgba(255,255,255,.10);--pri:#ea2126;--pri-btn:#dd1b22;--pri-txt:#f2555a;--ind:#4a37be;--ind-txt:#b3a8ff;--elegant:0 12px 40px -10px rgba(234,33,38,.35);background:var(--bg);color:var(--fg);font-family:'Studio Feixen Sans','Inter',system-ui,sans-serif;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
 .ra *{box-sizing:border-box}
 .ra a{color:inherit;text-decoration:none}
 .ra h1,.ra h2,.ra h3,.ra h4,.ra p,.ra ul{margin:0}
 .ra ul{padding:0;list-style:none}
 .ra :focus-visible{outline:2px solid var(--pri-txt);outline-offset:3px;border-radius:8px}
-.disp{font-family:'Archivo Black','Inter',sans-serif;text-transform:uppercase;letter-spacing:-.02em;font-weight:400}
-.ital{font-family:'DM Serif Display',Georgia,serif;font-style:italic;font-weight:400;text-transform:none;letter-spacing:-.01em}
+.disp{font-family:'Greed Condensed','Archivo Black',sans-serif;text-transform:uppercase;letter-spacing:-.02em;font-weight:400}
+.ital{font-family:'Faculty Glyphic UR','DM Serif Display',Georgia,serif;font-style:italic;font-weight:400;text-transform:none;letter-spacing:-.01em}
 .ic{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
 .eyebrow{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--pri-txt)}
 .h2{margin-top:12px;font-size:34px;line-height:1.05}
 
 /* Botones */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 26px;border-radius:8px;border:1px solid transparent;font:700 13px/1 'Inter',sans-serif;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:background .25s,transform .25s,box-shadow .25s,border-color .25s}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 26px;border-radius:8px;border:1px solid transparent;font:700 13px/1 'Studio Feixen Sans','Inter',sans-serif;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:background .25s,transform .25s,box-shadow .25s,border-color .25s}
 .btn .ic{width:16px;height:16px;transition:transform .25s}
 .btn:hover .ic-r{transform:translateX(4px)}
 .btn-pri{background:var(--pri-btn);color:#fff;box-shadow:var(--elegant)}
@@ -402,7 +405,7 @@ body{margin:0;background:#01030c}
 .hdr-in{max-width:1280px;margin:0 auto;padding:0 32px;height:64px;display:flex;align-items:center;gap:32px}
 .brand{display:flex;align-items:center;gap:10px;flex:none}
 .brand img{height:34px;width:auto;display:block}
-.brand b{display:block;font-family:'Archivo Black','Inter',sans-serif;font-weight:400;font-size:13px;letter-spacing:.02em;line-height:1.1;text-transform:uppercase}
+.brand b{display:block;font-family:'Greed Condensed','Archivo Black',sans-serif;font-weight:400;font-size:13px;letter-spacing:.02em;line-height:1.1;text-transform:uppercase}
 .brand small{display:block;font-size:9px;letter-spacing:.18em;color:rgba(248,248,252,.65);text-transform:uppercase;margin-top:2px}
 .nav{display:flex;gap:26px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
 .nav a{position:relative;display:block;padding:23px 0;color:rgba(248,248,252,.75);transition:color .2s}
@@ -451,8 +454,8 @@ body{margin:0;background:#01030c}
 .fi-l{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
 .fi-v{margin-top:2px;font-size:14.5px;font-weight:700;line-height:1.3}
 .fprice{margin-top:22px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
-.price{font-family:'Archivo Black','Inter',sans-serif;font-size:34px;letter-spacing:-.02em;line-height:1.05}
-.price small{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--mut);margin-left:6px}
+.price{font-family:'Greed Condensed','Archivo Black',sans-serif;font-size:34px;letter-spacing:-.02em;line-height:1.05}
+.price small{font-family:'Studio Feixen Sans','Inter',sans-serif;font-size:12px;font-weight:600;letter-spacing:.08em;color:var(--mut);margin-left:6px}
 .okline{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:rgba(248,248,252,.8)}
 .okline .ic{width:15px;height:15px;color:#34d399}
 
@@ -482,7 +485,7 @@ body{margin:0;background:#01030c}
 .feat h3,.cred h3{margin-top:16px;font-size:17px;font-weight:700;line-height:1.25}
 .feat p,.cred p{margin-top:8px;font-size:14px;line-height:1.65;color:var(--mut)}
 .obj{margin-top:32px}
-.obj .num{font-family:'Archivo Black','Inter',sans-serif;font-size:48px;line-height:1;color:rgba(234,33,38,.22)}
+.obj .num{font-family:'Greed Condensed','Archivo Black',sans-serif;font-size:48px;line-height:1;color:rgba(234,33,38,.22)}
 .obj p{margin-top:14px;font-size:15.5px;line-height:1.65;color:rgba(248,248,252,.85)}
 .chips{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
 .chip{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border:1px solid var(--bd);border-radius:999px;background:var(--card);font-size:14.5px;font-weight:500;transition:border-color .25s,box-shadow .25s,transform .25s}
@@ -491,7 +494,7 @@ body{margin:0;background:#01030c}
 .stats{margin-top:28px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:1px solid var(--bd);border-radius:14px;background:var(--card);overflow:hidden}
 .stats div{padding:20px 24px}
 .stats div+div{border-left:1px solid var(--bd)}
-.stats b{display:block;font-family:'Archivo Black','Inter',sans-serif;font-weight:400;font-size:34px;letter-spacing:-.02em;line-height:1}
+.stats b{display:block;font-family:'Greed Condensed','Archivo Black',sans-serif;font-weight:400;font-size:34px;letter-spacing:-.02em;line-height:1}
 .stats span{display:block;margin-top:8px;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
 .acc{margin-top:20px;display:flex;flex-direction:column;gap:12px}
 .acc details{border:1px solid var(--bd);background:var(--card);border-radius:14px;transition:border-color .3s,box-shadow .3s}
@@ -499,7 +502,7 @@ body{margin:0;background:#01030c}
 .acc details[open]{box-shadow:var(--elegant)}
 .acc summary{list-style:none;display:flex;align-items:center;gap:18px;padding:18px 24px;min-height:68px;cursor:pointer;border-radius:14px}
 .acc summary::-webkit-details-marker{display:none}
-.acc .mn{min-width:40px;font-family:'Archivo Black','Inter',sans-serif;font-size:22px;letter-spacing:-.02em;color:var(--pri-txt)}
+.acc .mn{min-width:40px;font-family:'Greed Condensed','Archivo Black',sans-serif;font-size:22px;letter-spacing:-.02em;color:var(--pri-txt)}
 .acc .mt{flex:1;font-size:16px;font-weight:700;line-height:1.3}
 .acc .pm{display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:50%;border:1px solid rgba(255,255,255,.2);transition:transform .3s,background .3s,border-color .3s}
 .acc details[open] .pm{transform:rotate(45deg);background:var(--pri-btn);border-color:var(--pri-btn)}
@@ -508,7 +511,7 @@ body{margin:0;background:#01030c}
 .dgrid{margin-top:32px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .doc{display:flex;flex-direction:column;align-items:flex-start;padding:24px}
 .doc:hover{transform:translateY(-4px);border-color:rgba(234,33,38,.4);box-shadow:var(--elegant)}
-.av{display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#d8151e 0%,#7a0090 50%,#2d0c89 100%);border:2px solid rgba(255,255,255,.18);font-family:'Archivo Black','Inter',sans-serif;font-size:20px;color:#fff}
+.av{display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#d8151e 0%,#7a0090 50%,#2d0c89 100%);border:2px solid rgba(255,255,255,.18);font-family:'Greed Condensed','Archivo Black',sans-serif;font-size:20px;color:#fff}
 .doc h3{margin-top:18px;font-size:16px;font-weight:700;line-height:1.25}
 .doc p{margin-top:6px;font-size:13.5px;line-height:1.5;color:var(--mut)}
 .cred{margin-top:32px}
@@ -529,7 +532,7 @@ body{margin:0;background:#01030c}
 .form .sub-t{margin-top:8px;font-size:13.5px;color:var(--mut);line-height:1.55}
 .fld{margin-top:16px}
 .fld label{display:block;margin-bottom:6px;font-size:12px;font-weight:600;color:rgba(248,248,252,.9)}
-.fld input[type=text],.fld input[type=email],.fld input[type=tel]{width:100%;height:46px;padding:0 14px;border-radius:8px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.05);color:#fff;font:400 14.5px 'Inter',sans-serif;transition:border-color .2s,background .2s,box-shadow .2s}
+.fld input[type=text],.fld input[type=email],.fld input[type=tel]{width:100%;height:46px;padding:0 14px;border-radius:8px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.05);color:#fff;font:400 14.5px 'Studio Feixen Sans','Inter',sans-serif;transition:border-color .2s,background .2s,box-shadow .2s}
 .fld input::placeholder{color:#a2a3b1}
 .fld input:hover{border-color:rgba(255,255,255,.4)}
 .fld input:focus{outline:none;border-color:var(--pri-txt);background:rgba(255,255,255,.08);box-shadow:0 0 0 3px rgba(242,85,90,.28)}
@@ -557,7 +560,7 @@ body{margin:0;background:#01030c}
 .cc .tc{position:absolute;top:12px;right:12px;border-radius:999px;background:rgba(1,3,12,.88);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);padding:5px 11px;font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
 .cc .bdy{display:flex;flex-direction:column;flex:1;padding:20px}
 .cc .fac{font-size:10.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--pri-txt)}
-.cc h3{margin-top:8px;font-family:'Archivo Black','Inter',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:-.01em;font-size:15px;line-height:1.25;transition:color .25s}
+.cc h3{margin-top:8px;font-family:'Greed Condensed','Archivo Black',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:-.01em;font-size:15px;line-height:1.25;transition:color .25s}
 .cc:hover h3{color:var(--pri-txt)}
 .cc .ds{margin-top:8px;font-size:14px;line-height:1.5;color:var(--mut)}
 .cc .mt{margin-top:16px;display:flex;align-items:center;gap:16px;font-size:12px;color:var(--mut)}
@@ -584,8 +587,8 @@ body{margin:0;background:#01030c}
 .ftr{margin-top:96px;border-top:1px solid rgba(255,255,255,.10);background:#04041a;color:rgba(248,248,252,.85)}
 .ftr-in{max-width:1280px;margin:0 auto;padding:56px 32px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
 .ftr .lg{display:flex;align-items:center;gap:10px}
-.ftr .lg i{display:grid;place-items:center;width:40px;height:40px;border-radius:8px;background:var(--pri-btn);color:#fff;font-style:normal;font-family:'Archivo Black','Inter',sans-serif;font-size:20px}
-.ftr .lg b{display:block;font-family:'Archivo Black','Inter',sans-serif;font-weight:400;font-size:17px;letter-spacing:-.01em}
+.ftr .lg i{display:grid;place-items:center;width:40px;height:40px;border-radius:8px;background:var(--pri-btn);color:#fff;font-style:normal;font-family:'Greed Condensed','Archivo Black',sans-serif;font-size:20px}
+.ftr .lg b{display:block;font-family:'Greed Condensed','Archivo Black',sans-serif;font-weight:400;font-size:17px;letter-spacing:-.01em}
 .ftr .lg small{display:block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.65)}
 .ftr .desc{margin-top:16px;max-width:360px;font-size:14px;line-height:1.6;color:rgba(255,255,255,.75)}
 .ftr .copy{margin-top:16px;font-size:12px;line-height:1.6;color:rgba(255,255,255,.62)}
@@ -640,3 +643,8 @@ body{margin:0;background:#01030c}
 .doc-vacio{margin-top:16px;color:var(--mut);font-size:.9rem}
 .sr-solo{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap}
 .doc-buscar + .dgrid{margin-top:22px}
+
+/* ===== Burbuja flotante de WhatsApp (Trobbit) ===== */
+.wa-burbuja{position:fixed;right:20px;bottom:20px;z-index:90;width:54px;height:54px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.45);transition:transform .2s}
+.wa-burbuja:hover{transform:scale(1.08)}
+.wa-burbuja svg{width:28px;height:28px;fill:#fff}

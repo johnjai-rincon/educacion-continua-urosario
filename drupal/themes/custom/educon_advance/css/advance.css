@@ -1,4 +1,7 @@
 
+@font-face{font-family:"Greed Condensed";font-weight:700 900;font-style:normal;font-display:swap;src:url(../fonts/GreedCondensed-Bold.woff2) format("woff2")}
+@font-face{font-family:"Faculty Glyphic UR";font-weight:400;font-style:normal;font-display:swap;src:url(../fonts/FacultyGlyphic-Regular-UR.woff2) format("woff2")}
+@font-face{font-family:"Studio Feixen Sans";font-weight:400 700;font-style:normal;font-display:swap;src:url(../fonts/StudioFeixenSans-Regular.woff2) format("woff2")}
 @font-face{font-family:"ABC Arizona Flare";font-weight:400;font-style:normal;font-display:swap;src:url(../fonts/abc-arizona-flare-400-78e7d2.woff2) format("woff2")}
 @font-face{font-family:"Acumin Variable Concept";font-weight:100 900;font-stretch:50% 115%;font-style:normal;font-display:swap;src:url(../fonts/acumin-variable-concept-100-900-c92bae.woff2) format("woff2")}
 html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}
@@ -11,9 +14,9 @@ html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}
   --rojo:#d80f23; --rojo-dk:#b20c2a; --azul:#432e66; --violeta:#8d80a2;
   --grad-hero:radial-gradient(ellipse 90% 80% at 50% 100%,rgba(216,15,35,.30) 0%,rgba(160,16,104,.16) 38%,#000000 100%);
   --grad-lovable:radial-gradient(circle at 15% 20%,rgba(216,15,35,.24),transparent 55%),radial-gradient(circle at 92% 30%,rgba(160,16,104,.18),transparent 55%),#000000;
-  --f-display:"Acumin Variable Concept",acumin-variable,Arial,sans-serif;
-  --f-accent:"ABC Arizona Flare",Georgia,"Times New Roman",serif;
-  --f-body:"Acumin Variable Concept",acumin-variable,Arial,sans-serif;
+  --f-display:"Greed Condensed","Acumin Variable Concept",Arial,sans-serif;
+  --f-accent:"Faculty Glyphic UR","ABC Arizona Flare",Georgia,serif;
+  --f-body:"Studio Feixen Sans","Acumin Variable Concept",Arial,sans-serif;
   --r-sm:6px; --r-md:10px; --r-lg:14px; --r-xl:18px;
 }
 *{box-sizing:border-box}
@@ -935,3 +938,8 @@ footer .brand img{height:46px}
 .ccard:has(.plink:focus-visible){outline:2px solid #fff;outline-offset:3px}
 .ccard .more{position:relative;z-index:3}
 
+
+/* ===== Burbuja flotante de WhatsApp (Trobbit) ===== */
+.wa-burbuja{position:fixed;right:20px;bottom:20px;z-index:90;width:54px;height:54px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.45);transition:transform .2s}
+.wa-burbuja:hover{transform:scale(1.08)}
+.wa-burbuja svg{width:28px;height:28px;fill:#fff}

@@ -1,195 +1,255 @@
-<!DOCTYPE html>
-<html lang="es" class="no-js">
+<!doctype html>
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Preguntas frecuentes | Educación Continua – Universidad del Rosario</title>
-<meta name="description" content="Resuelve tus dudas sobre inscripciones, pagos y descuentos, certificados, requisitos académicos y devoluciones en Educación Continua UR.">
-<meta name="theme-color" content="#01030c">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {"@type": "Question", "name": "¿Qué certificado recibo al terminar un programa?", "acceptedAnswer": {"@type": "Answer", "text": "Un certificado digital de Educación Continua de la Universidad del Rosario, verificable en línea, siempre que cumplas la asistencia mínima y los requisitos académicos del programa."}},
-    {"@type": "Question", "name": "¿Qué descuentos existen?", "acceptedAnswer": {"@type": "Answer", "text": "Estudiantes activos UR, egresados rosaristas, grupos de 3 o más personas, pronto pago y convenios empresariales. Los descuentos no son acumulables."}},
-    {"@type": "Question", "name": "¿Los programas son homologables con posgrados?", "acceptedAnswer": {"@type": "Answer", "text": "Algunos diplomados permiten homologación parcial de créditos con especializaciones y maestrías de la Universidad del Rosario. Consulta la ficha de cada programa."}},
-    {"@type": "Question", "name": "¿Cómo solicito una devolución?", "acceptedAnswer": {"@type": "Answer", "text": "Reúne los documentos de tu caso y radica la solicitud en la página de devoluciones. Recibirás un número de radicado para hacer seguimiento."}}
-  ]
-}
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Serif+Display:ital@1&family=Inter:wght@400;500;600;700;800;900&display=swap">
-<link rel="stylesheet" href="assets/css/educon.css">
+<title>Preguntas frecuentes | ADVANCE Educación Continua – Universidad del Rosario</title>
+<meta name="description" content="Respuestas a las preguntas más comunes sobre programas, certificados, semestre de actualización y políticas de descuento de Educación Continua.">
+<meta name="theme-color" content="#000000">
+<link rel="stylesheet" href="assets/css/advance.css">
+<style>
+/* estilos propios de esta página (acordeones) */
+.faq-lista{display:flex;flex-direction:column;gap:12px;max-width:860px}
+.faq{border:1px solid var(--line);border-radius:var(--r-lg);background:var(--surface);overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;font-weight:700;font-size:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;font-size:1.4rem;font-weight:400;color:var(--rojo);transition:transform .25s}
+.faq[open] summary::after{transform:rotate(45deg)}
+.faq[open] summary{border-bottom:1px solid var(--line)}
+.faq .resp{padding:18px 22px;color:var(--mut);font-size:.95rem;line-height:1.6}
+.faq .resp p{margin:0 0 .8em}
+.faq .resp p:last-child{margin-bottom:0}
+.faq .resp ul{margin:.4em 0 .8em;padding-left:1.2em}
+.faq .resp li{margin-bottom:.45em}
+.faq .resp b{color:var(--ink)}
+.faq .resp a{color:var(--rojo);text-decoration:none}
+.faq .resp a:hover{text-decoration:underline}
+.faq .nota-desc{display:block;margin-top:.6em;font-size:.82rem;color:var(--mut);font-style:italic}
+.desc-sub{margin:1.1em 0 .4em;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--rojo)}
+.btns-faq{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
+</style>
 </head>
 <body>
-<div class="proto-ribbon">Prototipo de nueva interfaz — los datos son de demostración.</div>
-<a class="skip-link" href="#contenido">Saltar al contenido principal</a>
-
-<header class="header">
-  <div class="container header__inner">
-    <a class="brand" href="index.html">
-      <img class="brand__img" src="assets/img/logo-educon-urosario.webp" alt="Advance, Educación Continua — Universidad del Rosario" width="600" height="106">
-    </a>
-    <nav class="nav" aria-label="Navegación principal">
-      <a href="index.html">Inicio</a>
-      <a href="buscar.html">Oferta</a>
-      <div class="nav-item-drop">
-        <button class="nav-drop-btn" type="button" aria-haspopup="true" aria-expanded="false">Facultades</button>
-        <div class="nav-dropdown">
-          <a href="facultad-economia-negocios.html">Escuela de Economía y Negocios</a>
-          <a href="facultad-jurisprudencia.html">Facultad de Jurisprudencia</a>
-          <a href="facultad-ciencias-ingenieria.html">Escuela de Ciencias e Ingeniería</a>
-          <a href="facultad-creacion.html">Facultad de Creación</a>
-          <a href="area-salud.html">Escuela de Medicina y Ciencias de la Salud</a>
-          <a href="https://gsb.urosario.edu.co/executive-education" target="_blank" rel="noopener">GSB – Executive Education</a>
-          <a href="facultad-estudios-sociales.html">Escuela de Estudios Sociales, Políticos e Internacionales</a>
-        </div>
-      </div>
-      <a href="empresas.html">Empresas</a>
-      <a href="centro-simulacion.html">Centro de Simulación</a>
-      <a href="eventos.html">Eventos</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Universidad del Rosario | ADVANCE Educación Continua, ir al inicio"><img class="logo" src="advance-img/ui-65115494.png" alt=""></a>
+    <nav class="nav" id="nav-main" aria-label="Principal">
+      <a href="index.html#inicio">Inicio</a>
+      <a href="index.html#cursos">Programas</a>
+      <a href="index.html#empresas">Formación a la medida</a>
+      <a href="index.html#consultoria">Consultoría</a>
+      <a href="index.html#docentes">Conferencistas</a>
+      <a href="index.html#simulacion">Centro de simulación</a>
+      <a href="index.html#informacion">Información</a>
     </nav>
-    <a class="btn btn--ghost header__cta" href="https://mentoria.jerrejerre.com/demourosario" target="_blank" rel="noopener">Ruta de aprendizaje</a>
-    <a class="btn btn--primary header__cta" href="https://wa.me/573219295847" rel="noopener">Habla con un asesor</a>
-    <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="menu-movil" aria-label="Abrir menú">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-    </button>
+    <div class="acts">
+      <a class="btn navb ruta desk-only" href="https://mentoria.jerrejerre.com/demourosario"><span aria-hidden="true">✦</span>Camino de aprendizaje</a>
+      <a class="btn red navb" href="https://wa.me/573219295847">Habla con un asesor</a>
+      <button class="burger" type="button" aria-expanded="false" aria-controls="nav-main" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    </div>
   </div>
-  <nav id="menu-movil" class="mobile-nav" hidden aria-label="Menú móvil">
-    <a href="index.html">Inicio</a>
-    <a href="buscar.html">Oferta académica</a>
-    <span class="mobile-nav__grupo">Facultades</span>
-    <a class="mobile-nav__sub" href="facultad-economia-negocios.html">Escuela de Economía y Negocios</a>
-    <a class="mobile-nav__sub" href="facultad-jurisprudencia.html">Facultad de Jurisprudencia</a>
-    <a class="mobile-nav__sub" href="facultad-ciencias-ingenieria.html">Escuela de Ciencias e Ingeniería</a>
-    <a class="mobile-nav__sub" href="facultad-creacion.html">Facultad de Creación</a>
-    <a class="mobile-nav__sub" href="area-salud.html">Escuela de Medicina y Ciencias de la Salud</a>
-    <a class="mobile-nav__sub" href="https://gsb.urosario.edu.co/executive-education" target="_blank" rel="noopener">GSB – Executive Education</a>
-    <a class="mobile-nav__sub" href="facultad-estudios-sociales.html">Escuela de Estudios Sociales, Políticos e Internacionales</a>
-    <a href="empresas.html">Empresas</a>
-    <a href="centro-simulacion.html">Centro de Simulación</a>
-    <a href="eventos.html">Eventos</a>
-    <a class="btn btn--primary" href="https://wa.me/573219295847" rel="noopener">Habla con un asesor</a>
-  </nav>
 </header>
 
-<main id="contenido">
-
-  <section class="section" style="padding-block:2.4rem 1rem;">
-    <div class="container">
-      <nav class="breadcrumbs" aria-label="Miga de pan">
-        <ol><li><a href="index.html">Educación Continua</a></li><li><a href="index.html">Recursos</a></li><li aria-current="page">Preguntas frecuentes</li></ol>
-      </nav>
-      <p class="kicker" style="margin-top:1.6rem;">Centro de ayuda</p>
-      <h1 class="display display--lg" style="max-width:18ch;">Preguntas <em>frecuentes</em></h1>
-      <div class="field" style="max-width:480px; margin-top:1.4rem;">
-        <label for="faq-buscar">Busca tu duda</label>
-        <input id="faq-buscar" type="search" data-faq-buscar placeholder="Busca: certificado, descuento, pago…" autocomplete="off">
-      </div>
-      <p style="font-size:0.85rem; color:var(--ink-2);" aria-live="polite"><span data-faq-count>12</span> preguntas</p>
+<main>
+  <section class="lhero">
+    <div class="wrap" style="padding-block:72px;">
+      <p class="kicker">Para los participantes</p>
+      <h1 style="max-width:22ch;">Preguntas <em>frecuentes</em></h1>
+      <p class="lead">A continuación encontrarás un listado de preguntas que se presentan de manera muy común, las cuales podrán responder a muchas de tus inquietudes.</p>
     </div>
   </section>
 
-  <section class="section" style="padding-block:1.5rem 4rem;">
-    <div class="container prosa" style="max-width:52rem;" data-faq>
+  <section class="band tight">
+    <div class="wrap">
+      <div class="head"><h2>Lo que más nos <em>preguntan</em></h2></div>
+      <div class="faq-lista">
+        <details class="faq">
+          <summary>¿Qué nota debo tener para pasar mi seminario, curso o diplomado?</summary>
+          <div class="resp"><p>La Educación Continua es educación no formal, por lo que no se asignan notas. Para obtener tu certificado debes cumplir como mínimo con el <b>85% de asistencia</b> al programa.</p></div>
+        </details>
+        <details class="faq">
+          <summary>¿Puedo tener acceso a formación a la medida de las necesidades de las empresas en otros lugares del país?</summary>
+          <div class="resp"><p>Sí, tenemos aliados estratégicos a través de los cuales se tiene acceso a formación de calidad desde las diferentes regiones del país. Para solicitar mayor información de nuestros programas a la medida puedes escribir a <a href="mailto:diana.clavijo@urosario.edu.co">diana.clavijo@urosario.edu.co</a>.</p></div>
+        </details>
+        <details class="faq">
+          <summary>¿Los cursos de Educación Continua aportan créditos como materias electivas?</summary>
+          <div class="resp"><p>No. Sin embargo, algunos de nuestros cursos en EduCon te ayudarán como <b>«semestre de actualización»</b> y podrás escoger los temas de tu interés.</p></div>
+        </details>
+        <details class="faq">
+          <summary>¿Desde Educación Continua puedo acceder a un programa que se articule con posgrado?</summary>
+          <div class="resp"><p>Sí. En Educación Continua sabemos que siempre quieres estar en constante crecimiento, por lo que ofrecemos programas que se articulan con estudios de posgrado.</p></div>
+        </details>
+        <details class="faq">
+          <summary>¿Si soy estudiante de la Universidad tengo un descuento especial para tomar un curso de Educación Continua?</summary>
+          <div class="resp"><p>Sí, el estudiante activo de la Universidad tiene el <b>40% de descuento</b> en nuestra oferta académica.</p><p><em>*Este descuento NO aplica para los eventos del Centro de Simulación y está sujeto a la política de cada evento.</em></p></div>
+        </details>
+        <details class="faq">
+          <summary>¿Puedo tomar un diplomado de Educación Continua para realizar semestre de actualización ante mi facultad?</summary>
+          <div class="resp"><p>Sí. Para ello es necesario presentar el programa y solicitar a la Secretaría Académica de cada facultad la autorización para tomar el diplomado como semestre de actualización.</p></div>
+        </details>
+        <details class="faq">
+          <summary>¿Cómo realizo una verificación de título?</summary>
+          <div class="resp"><p>Debes enviar tu solicitud por correo electrónico a <a href="mailto:natalia.reyess@urosario.edu.co">natalia.reyess@urosario.edu.co</a>. Dentro de los 3 días hábiles siguientes de recibida la solicitud se enviará la respuesta por correo electrónico.</p><p>Se solicita adjuntar a la solicitud la autorización de tratamiento de datos personales firmada por el titular.</p></div>
+        </details>
+        <details class="faq">
+          <summary>¿Cómo puedo solicitar un certificado o un duplicado de diploma?</summary>
+          <div class="resp"><p>Para solicitar tu certificado o duplicado de diploma, por favor contáctate directamente con Casa UR: <b>297 0200, opción 6</b>.</p><p>Si requieres información virtual puedes conectarte a <a href="https://urosario.edu.co/casa-ur" target="_blank" rel="noopener">urosario.edu.co/casa-ur</a>.</p></div>
+        </details>
+        <details class="faq">
+          <summary>¿Qué puedo hacer para recoger mi certificado del evento?</summary>
+          <div class="resp"><p>Puedes dirigirte a la oficina de Educación Continua: Cra 7 N.º 12b-41, oficina 703 del Edificio Casur, de lunes a viernes de 8:00 a. m. a 5:00 p. m. en jornada continua.</p><p>Si el programa cursado hace parte de algún evento corporativo (con alguna empresa), el participante debe dirigirse directamente a la entidad, pues Educon no conserva estos certificados, sino que los hace llegar a la empresa.</p></div>
+        </details>
+        <details class="faq">
+          <summary>¿Qué necesito para llevar a cabo el proceso de actualización ante mi facultad?</summary>
+          <div class="resp"><p>En primer lugar es necesario que la facultad autorice al estudiante tomar el diplomado como semestre de actualización. Posteriormente, es requisito que el estudiante cumpla con el porcentaje de asistencia exigido por Educación Continua y haya aprobado la entrega del trabajo final, cuyos requisitos y fechas de entrega serán informados por el Coordinador Académico del diplomado durante el primer día de clase. Con estas aprobaciones, el estudiante podrá dirigirse a la Secretaría Académica de la facultad para llevar a cabo el proceso de homologación.</p></div>
+        </details>
+        <details class="faq">
+          <summary>Precios de derechos pecuniarios para servicios de Educación Continua y Consultoría</summary>
+          <div class="resp"><p>En el siguiente enlace descarga y conoce los precios: <a href="https://urosario.edu.co/sites/default/files/2024-12/acuerdo-311-precios-otros-pecunarios-2025.pdf" target="_blank" rel="noopener">Descargue aquí el PDF</a>.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
 
-      <h2 class="display display--md">Inscripción y <em>pagos</em></h2>
-      <details class="acordeon"><summary>¿Cómo me inscribo a un programa?</summary><div class="acordeon__body">Desde la página del programa: haz clic en "Pago online" para pagar de inmediato, o en "Quiero que me contacten" para que un asesor complete tu inscripción.</div></details>
-      <details class="acordeon"><summary>¿Qué formas de pago aceptan?</summary><div class="acordeon__body">Tarjeta de crédito, débito, PSE, financiación con aliados y facturación empresarial. Ver la página de <a href="financiacion.html">financiación</a>.</div></details>
-      <details class="acordeon"><summary>¿Qué descuentos existen?</summary><div class="acordeon__body">Estudiantes activos UR (40%), egresados (15%), grupos de 3+ (10%), pronto pago (10%) y convenios empresariales. No son acumulables.</div></details>
-      <details class="acordeon"><summary>¿Puedo pagar en cuotas?</summary><div class="acordeon__body">Sí, con las entidades financieras aliadas o con tu tarjeta de crédito según tu banco.</div></details>
-
-      <h2 class="display display--md" style="margin-top:2.5rem;">Certificados</h2>
-      <details class="acordeon"><summary>¿Qué certificado recibo al terminar?</summary><div class="acordeon__body">Un certificado digital de Educación Continua de la Universidad del Rosario, verificable en línea, al cumplir la asistencia mínima y los requisitos del programa.</div></details>
-      <details class="acordeon"><summary>¿Cómo verifico o descargo mi certificado?</summary><div class="acordeon__body">Los certificados digitales incluyen un código de verificación. Si estudiaste un programa virtual, también puedes descargarlo desde el Campus Virtual EDUCON.</div></details>
-      <details class="acordeon"><summary>¿Puedo pedir un duplicado?</summary><div class="acordeon__body">Sí. Escríbenos con tu nombre completo, documento y programa cursado, y te reenviamos el certificado digital.</div></details>
-
-      <h2 class="display display--md" style="margin-top:2.5rem;">Académico</h2>
-      <details class="acordeon"><summary>¿Cuál es la asistencia mínima?</summary><div class="acordeon__body">En general, el 80% de las sesiones. Cada programa puede definir requisitos adicionales en su ficha.</div></details>
-      <details class="acordeon"><summary>¿Los diplomados son homologables con posgrados?</summary><div class="acordeon__body">Algunos permiten homologación parcial de créditos con especializaciones y maestrías del Rosario. Está indicado en la ficha del programa.</div></details>
-      <details class="acordeon"><summary>¿Las clases remotas quedan grabadas?</summary><div class="acordeon__body">Sí, las sesiones remotas en vivo quedan grabadas y disponibles para los participantes durante el programa.</div></details>
-
-      <h2 class="display display--md" style="margin-top:2.5rem;">Devoluciones</h2>
-      <details class="acordeon"><summary>¿Cómo solicito una devolución?</summary><div class="acordeon__body">Sigue el paso a paso de la página de <a href="devoluciones.html">devoluciones</a>: identifica tu escenario, reúne los documentos y radica la solicitud.</div></details>
-      <details class="acordeon"><summary>¿Qué pasa si la Universidad cancela el programa?</summary><div class="acordeon__body">Se devuelve el 100% del valor pagado, o puedes trasladar tu cupo a otra fecha o programa.</div></details>
-
-      <p data-faq-empty hidden style="text-align:center; padding:2.5rem 1rem; color:var(--ink-2);">No encontramos esa duda. <a href="https://wa.me/573219295847" rel="noopener">Escríbenos por WhatsApp</a> y te ayudamos directamente.</p>
-
-      <div class="aviso" style="margin-top:2.5rem;">¿No encontraste tu respuesta? Escríbenos por <a href="https://wa.me/573219295847" rel="noopener">WhatsApp</a>, llama a la línea (+57)&nbsp;601&nbsp;297&nbsp;0200 opción&nbsp;4, o usa el <a href="empresas.html#contacto-b2b">formulario de contacto</a>.</div>
+  <section class="band alt">
+    <div class="wrap">
+      <div class="head"><h2>Políticas de <em>descuento</em></h2><p class="lead">Ningún descuento es acumulable con otro.</p></div>
+      <div class="faq-lista">
+        <details class="faq">
+          <summary>Empresa</summary>
+          <div class="resp">
+            <p class="desc-sub">Conceptos y descuento</p>
+            <ul>
+              <li><b>5%</b> a cada entidad que inscriba entre tres (3) y cinco (5) participantes para un mismo evento.</li>
+              <li><b>10%</b> a cada entidad que inscriba entre seis (6) y diez (10) participantes para un mismo evento.</li>
+              <li><b>15%</b> a cada entidad que inscriba más de diez (10) participantes para un mismo evento.</li>
+            </ul>
+            <p class="desc-sub">Requisitos para acceder al descuento</p>
+            <p>Para los casos en que la entidad es la que cancela el valor de las inscripciones de los participantes:</p>
+            <ul>
+              <li>Cumplir con la inscripción del número mínimo de funcionarios descritos en cada ítem.</li>
+              <li>Carta de compromiso con membrete y firmada por el gerente de la entidad o su representante legal, con el nombre de los funcionarios que van a participar, números de cédula y la fecha de pago de la factura (no superior a 30 días calendario desde el inicio del evento).</li>
+              <li>RUT de la entidad.</li>
+            </ul>
+            <p>Si los funcionarios de una misma entidad cancelan directamente, deberán realizar una única consignación por el valor total de las inscripciones y anexar una carta con membrete de la entidad, firmada por el gerente de Talento Humano, que certifique que son empleados de la entidad.</p>
+            <span class="nota-desc">Nota: ningún descuento es acumulable con otro.</span>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Pronto pago</summary>
+          <div class="resp">
+            <p class="desc-sub">Conceptos y descuento</p>
+            <ul>
+              <li><b>10%</b> a las personas que realicen el pago del valor de la matrícula del programa entre cinco (5) y quince (15) días calendario antes de la iniciación del evento.</li>
+              <li><b>15%</b> a las personas que cancelen como mínimo con dieciséis (16) días calendario antes de la iniciación del evento.</li>
+            </ul>
+            <p class="desc-sub">Requisitos para acceder al descuento</p>
+            <p>A quienes soliciten financiación se les aprobará el descuento por pronto pago siempre y cuando la fecha de la carta de aprobación del crédito por parte de la entidad financiadora coincida con las fechas establecidas para descuentos por pronto pago.</p>
+            <p>Este descuento no aplica para cuentas de cobro (pago a 30 días).</p>
+            <span class="nota-desc">Nota: ningún descuento es acumulable con otro.</span>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Comunidad Rosarista — Estudiantes</summary>
+          <div class="resp">
+            <ul>
+              <li><b>20%</b> a alumnos que estén cursando efectivamente posgrados URosario.</li>
+              <li><b>40%</b> a alumnos que estén cursando efectivamente pregrado o estén en proceso de grado URosario.</li>
+            </ul>
+            <p><b>Requisito:</b> certificación expedida por la oficina de Registro y Control Académico de la Universidad.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Comunidad Rosarista — Egresados</summary>
+          <div class="resp">
+            <ul>
+              <li><b>10%</b> a egresados de los posgrados de la Universidad del Rosario.</li>
+              <li><b>20%</b> a egresados de los pregrados de la Universidad del Rosario.</li>
+            </ul>
+            <p><b>Requisito:</b> fotocopia del diploma, acta de grado o certificación expedida por la oficina de egresados.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Comunidad Rosarista — Profesores y funcionarios</summary>
+          <div class="resp">
+            <ul>
+              <li><b>15%</b> a cónyuges, compañeros permanentes o hijos de profesores y funcionarios de la Universidad (requiere certificación del PAI o extrajuicio que confirme el grado de familiaridad).</li>
+              <li><b>20%</b> a profesores vinculados mediante contrato de prestación de servicios o por hora cátedra.</li>
+              <li><b>30%</b> a profesores y funcionarios de medio tiempo vinculados mediante contrato laboral.</li>
+              <li><b>50%</b> a profesores y funcionarios de tiempo completo vinculados mediante contrato laboral a término indefinido.</li>
+            </ul>
+            <p><b>Requisito:</b> certificación expedida por el PAI que acredite el tipo de contrato y vinculación con la Universidad.</p>
+            <p class="desc-sub">Descuento adicional de hasta 50% (tiempo completo)</p>
+            <p>Para profesores y funcionarios de tiempo completo con contrato laboral podrá existir un descuento especial de hasta el 50% sobre el valor total del programa, adicional al anterior, previo cumplimiento de estos requisitos:</p>
+            <ul>
+              <li>El contenido del curso elegido debe estar íntimamente relacionado con el trabajo que desarrolla el funcionario dentro de la Universidad.</li>
+              <li>El funcionario deberá solicitar por escrito el descuento a su jefe inmediato, quien verificará la disponibilidad presupuestal de su área para capacitación.</li>
+              <li>Con la disponibilidad confirmada, el jefe inmediato enviará la solicitud de aprobación al comité de becas de la Universidad, indicando los datos del profesor o funcionario, el nombre del evento y su relación con sus actividades.</li>
+              <li>Las aprobaciones serán informadas a la Gerencia de Educación Continuada para los trámites correspondientes.</li>
+            </ul>
+            <p>El funcionario deberá cancelar el valor correspondiente a este 50% antes del inicio del curso y, una vez el trámite sea aprobado por el comité, tramitar la respectiva devolución. Si el comité no aprueba el beneficio, no habrá devolución de dinero.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Colegiales</summary>
+          <div class="resp">
+            <ul><li><b>40%</b> para Colegiales de Número URosario — decreto rectoral.</li></ul>
+            <p><b>Requisito:</b> carta de la facultad confirmando la vigencia del Colegial de Número.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Participantes de Formación Continua</summary>
+          <div class="resp">
+            <ul>
+              <li><b>10%</b> a personas que hayan participado en un (1) evento abierto de la Gerencia de Educación Continuada iniciado durante el mismo año o el inmediatamente anterior.</li>
+              <li><b>20%</b> a personas que hayan participado en dos (2) eventos abiertos iniciados durante el mismo año o el inmediatamente anterior.</li>
+            </ul>
+            <p><b>Requisito:</b> certificación expedida por la Gerencia de Formación Continua de la Universidad del Rosario.</p>
+          </div>
+        </details>
+        <details class="faq">
+          <summary>Asociación Rosarista</summary>
+          <div class="resp">
+            <ul>
+              <li><b>15%</b> a afiliados a la Asociación Rosarista, egresados de posgrado.</li>
+              <li><b>25%</b> a afiliados a la Asociación Rosarista, egresados de pregrado.</li>
+            </ul>
+            <p><b>Requisito:</b> certificación expedida por la Asociación Rosarista.</p>
+            <span class="nota-desc">Nota: ningún descuento es acumulable con otro.</span>
+          </div>
+        </details>
+      </div>
+      <div class="btns-faq">
+        <a class="btn red" href="https://wa.me/573219295847" rel="noopener">¿Tienes otra duda? Habla con un asesor</a>
+        <a class="btn ghost" href="financiacion.html">Ver financiación y pago</a>
+      </div>
     </div>
   </section>
 </main>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div>
-        <a class="brand" href="index.html" style="margin-bottom:1rem;">
-          <span class="brand__logo" aria-hidden="true">UR</span>
-          <span class="brand__name"><strong style="color:var(--crema)">Educación Continua</strong><span>Universidad del Rosario</span></span>
-        </a>
-        <p style="max-width:38ch;">Educación continua con el rigor, la red y el respaldo de 370 años de tradición rosarista.</p>
-        <div class="footer__badges">
-          <span>Acreditación CNA</span><span>QS Stars</span><span>ISO 9001</span>
-        </div>
-      </div>
-      <nav aria-label="Aprender">
-        <h4>Aprender</h4>
-        <ul>
-          <li><a href="buscar.html">Catálogo de programas</a></li>
-          <li><a href="area-salud.html">Áreas de conocimiento</a></li>
-          <li><a href="docentes.html">Nuestros docentes</a></li>
-          <li><a href="eventos.html">Eventos</a></li>
-          <li><a href="programa.html">Programas premium</a></li>
-          <li><a href="https://programas-virtuales-educon-urosario.vercel.app/" rel="noopener">Campus virtual</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Audiencias">
-        <h4>Audiencias</h4>
-        <ul>
-          <li><a href="buscar.html">Profesionales</a></li>
-          <li><a href="empresas.html">Empresas</a></li>
-          <li><a href="ur-senior.html">UR Senior</a></li>
-          <li><a href="centro-simulacion.html">Centro de Simulación</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Recursos">
-        <h4>Recursos</h4>
-        <ul>
-          <li><a href="financiacion.html">Financiación</a></li>
-          <li><a href="devoluciones.html">Devoluciones</a></li>
-          <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
-          <li><a href="contactenos.html">Contáctenos</a></li>
-          <li><a href="kit-de-marca.html">Kit de marca</a></li>
-        </ul>
-      </nav>
-      <nav aria-label="Servicios académicos">
-        <h4>Servicios académicos</h4>
-        <ul>
-          <li><a href="https://pasaporte.urosario.edu.co" rel="noopener">Pasaporte virtual</a></li>
-          <li><a href="https://e-aulas.urosario.edu.co" rel="noopener">E-Aulas</a></li>
-          <li><a href="https://urosario.edu.co/financiacion" rel="noopener">Becas, descuentos y apoyo financiero</a></li>
-          <li><a href="https://urosario.edu.co/registro-y-control" rel="noopener">Registro y control</a></li>
-          <li><a href="https://urosario.edu.co/servicios-virtuales" rel="noopener">Servicios en línea</a></li>
-          <li><a href="https://urosario.edu.co/consultorio-juridico" rel="noopener">Consultorio jurídico</a></li>
-          <li><a href="https://urosario.edu.co/recorrido-virtual" rel="noopener">Recorrido virtual</a></li>
-          <li><a href="https://urosario.edu.co/felicitaciones-quejas-y-reclamos" rel="noopener">Felicitaciones, quejas y reclamos</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="footer__legal">
-      <span>© 2026 Universidad del Rosario · Educación Continua y Consultoría</span>
-      <span><a href="https://urosario.edu.co/aviso-de-privacidad" rel="noopener">Aviso de privacidad</a> · <a href="https://urosario.edu.co/terminos-y-condiciones/" rel="noopener">Términos de uso</a> · Línea: (+57)&nbsp;601&nbsp;297&nbsp;0200 op.&nbsp;4</span>
-    </div>
+<footer>
+  <div class="wrap">
+    <div><a class="brand" href="index.html" aria-label="Universidad del Rosario | ADVANCE Educación Continua, ir al inicio"><img class="logo" src="advance-img/ui-65115494.png" alt=""></a>
+      <p class="muted" style="margin-top:12px;max-width:42ch">Educación continua y consultoría con el rigor, la red y el respaldo de 370 años de tradición rosarista.</p></div>
+    <div><h4>Aprender</h4><ul><li><a href="index.html#inicio">Inicio</a></li><li><a href="index.html#cursos">Programas</a></li><li><a href="index.html#simulacion">Centro de Simulación</a></li><li><a href="index.html#informacion">Información</a></li><li><a href="index.html#docentes">Conferencistas</a></li></ul></div>
+    <div><h4>Organizaciones</h4><ul><li><a href="index.html#empresas">Empresas</a></li><li><a href="index.html#consultoria">Consultoría</a></li></ul></div>
+    <p class="legal">© 2026 Universidad del Rosario · Educación Continua y Consultoría · Línea: (+57) 601 297 0200 op. 4</p>
   </div>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/573219295847" rel="noopener" aria-label="Escríbenos por WhatsApp">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.4-.1.7.2.3.8 1.4 1.8 2.2 1.2 1.1 2.3 1.4 2.6 1.6.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.3 1.3Z"/></svg>
+<a class="wa-burbuja" href="https://wa.me/573219295847" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.7c-1.4 0-3.2-.5-4.6-1.3l-.5-.3-4.3 1.4 1.4-4.2-.3-.5c-1.2-1.7-1.9-3.7-1.9-5.9 0-5.5 4.6-10 10.2-10s10.2 4.5 10.2 10-4.6 10-10.2 10zm5.6-7.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2.1-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.6 5.6 5 .8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
 </a>
 
-<script src="assets/js/educon.js" defer></script>
+<script>
+(function(){
+  var top = document.querySelector('.top'), bg = document.querySelector('.burger');
+  if(bg) bg.addEventListener('click', function(){
+    var abierto = top.classList.toggle('navopen');
+    bg.setAttribute('aria-expanded', String(abierto));
+    bg.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
+  });
+})();
+</script>
 </body>
 </html>
